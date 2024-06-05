@@ -22,11 +22,11 @@ jobs:
       run: npm ci
     - name: 'Test'
       run: npx vitest --coverage.enabled true
-    - name: 'Report Coverage'
-      # Set if: always() to also generate the report if tests are failing
-      # Only works if you set `reportOnFailure: true` in your vite config as specified above
-      if: always() 
-      uses:  davelosert/vitest-coverage-report-action@v2
+    # - name: 'Report Coverage'
+    #   # Set if: always() to also generate the report if tests are failing
+    #   # Only works if you set `reportOnFailure: true` in your vite config as specified above
+    #   if: always() 
+    #   uses:  davelosert/vitest-coverage-report-action@v2
     #   with:
     #     name: 'Frontend'
     #     json-summary-path: '../src/unit-tests/coverage/coverage-summary.json'
