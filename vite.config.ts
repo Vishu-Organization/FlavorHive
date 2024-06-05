@@ -15,13 +15,14 @@ export default defineConfig({
     coverage: {
       enabled: true,
       reporter: ["html", "json-summary", "json"],
-      reportsDirectory: "src/unit-tests/coverage",
+      reportsDirectory: "coverage",
       reportOnFailure: true,
       exclude: [
         "**/{playwright,postcss,tailwind}.config.*",
         "playwright-report/**",
         "html/**",
         "**/main.tsx",
+        "coverage/**",
         ...coverageConfigDefaults.exclude,
       ],
       thresholds: {
