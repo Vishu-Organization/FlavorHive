@@ -14,7 +14,7 @@ export default defineConfig({
     reporters: "default",
     coverage: {
       enabled: true,
-      reporter: ["html"],
+      reporter: ["html", "json-summary", "json"],
       reportsDirectory: "src/unit-tests/coverage",
       reportOnFailure: true,
       exclude: [
