@@ -1,0 +1,42 @@
+
+vitest:
+  - changed-files:
+    - any-glob-to-any-file: 'src/unit-tests/*'
+
+playwright:
+  - changed-files:
+    - any-glob-to-any-file: 'e2e/*'
+    
+configuration:
+  - changed-files:
+    - any-glob-to-any-file: '**/*.config.*'
+
+netlify-configuration:
+  - changed-files:
+    - any-glob-to-any-file: 'netlify.toml'
+    
+base-configuration:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'package.json'
+      - 'package.lock.json'
+    
+app:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - ['src/App.tsx', 'src/App.css', 'src/index.css']
+
+main:
+- changed-files:
+  - any-glob-to-any-file: 
+    - 'src/main.tsx'
+    - 'index.html'
+
+lint-configuration:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.eslintrc.cjs'
+
+workflow:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
