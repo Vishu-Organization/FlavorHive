@@ -24,7 +24,9 @@ base-configuration:
 app:
   - changed-files:
     - any-glob-to-any-file: 
-      - ['src/App.tsx', 'src/App.css', 'src/index.css']
+      - 'src/App.tsx'
+      - 'src/App.css'
+      - 'src/index.css'
 
 main:
 - changed-files:
