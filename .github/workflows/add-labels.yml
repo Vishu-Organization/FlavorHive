@@ -1,6 +1,5 @@
 name: "Add labels to pull requests"
 on:
-# - pull_request_target
 - push
 - pull_request
 
