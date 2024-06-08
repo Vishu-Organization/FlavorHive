@@ -1,11 +1,9 @@
+import { RouterProvider } from "@tanstack/react-router";
 import "./App.css";
+import { router } from "./router.config";
 
 function App() {
-  return (
-    <>
-      <h1 className="text-xs">Vite + React + Typescript</h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
