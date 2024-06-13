@@ -1,12 +1,17 @@
 import { Outlet } from "@tanstack/react-router";
 import Footer from "./Footer";
+import { ReactNode } from "react";
 
-const DefaultLayout = () => {
+type DefaultLayoutProps = {
+  children: ReactNode;
+};
+
+const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <>
-      <Outlet />
+    <div className="flex flex-col min-h-screen">
+      {children}
       <Footer />
-    </>
+    </div>
   );
 };
 
