@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 const FooterLink = (props: any) => {
-  //   const { title, links, className, children } = props;
-  return <>Hello</>;
+  return <div>{`Hello`}</div>;
 };
 
 export default FooterLink;

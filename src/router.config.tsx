@@ -13,7 +13,7 @@ const rootRoute = createRootRoute({
     <>
       <ScrollRestoration />
       <Outlet />
-      <TanStackRouterDevtools />
+      <TanStackRouterDevtools initialIsOpen={false} />
     </>
   ),
 });
