@@ -8,7 +8,7 @@ type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-screen">
       {children}
       <Footer />
     </div>

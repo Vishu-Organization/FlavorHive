@@ -34,7 +34,19 @@ const aboutRoute = createRoute({
   },
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+const helpCenterRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/help-center",
+  component: function About() {
+    return <div className="p-2">Help Center coming up here</div>;
+  },
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  aboutRoute,
+  helpCenterRoute,
+]);
 
 export const router = createRouter({ routeTree });
 

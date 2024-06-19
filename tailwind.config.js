@@ -9,6 +9,10 @@ export default {
         primary: {
           DEFAULT: "#0f346c",
         },
+        "footer-text": {
+          primary: "#a1bce6",
+          hover: "#b7c1d1",
+        },
       },
     },
   },

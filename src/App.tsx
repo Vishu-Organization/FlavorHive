@@ -17,26 +17,9 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
-  // const getData = async () => {
-  //   const { data } = await supabase
-  //     .schema("footer_navigation")
-  //     .from("team")
-  //     .select();
-
-  //   console.log(data);
-  // };
-
-  // const data = useGetAllCustomerSupportLinks();
-
-  // console.log(data);
-
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
