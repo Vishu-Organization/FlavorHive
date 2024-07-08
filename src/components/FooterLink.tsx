@@ -1,27 +1,36 @@
 import { Link } from "@tanstack/react-router";
 import { ReactNode } from "react";
-import { CustomerSupportLinkType } from "../types/types";
+import { LinkType } from "../types/types";
 
 type FooterLinkProps = {
   title: string | null;
-  type: number | null;
+  type?: number | null;
   to: string | null;
   children?: ReactNode;
 };
 
 const FooterLink = ({ title, type, to, children }: FooterLinkProps) => {
-  if (!type || type === CustomerSupportLinkType.Link) {
-    return (
+  const navigation =
+    !type || type === LinkType.Link
+      ? to
+      : type === LinkType.Email
+        ? `mailto:${title}`
+        : `tel:${title}`;
+
+  return (
+    navigation && (
       <Link
-        to={`/${to}`}
-        className="text-footer-text-primary capitalize hover:text-footer-text-hover"
+        to={navigation}
+        aria-label={title ?? ""}
+        className="inline-block justify-items-start capitalize leading-[2em] text-gray-500 hover:text-footer-hover md:text-footer-primary"
         activeProps={{
-          className: "underline text-footer-text-hover",
-        }}>
+          className: "text-footer-hover underline",
+        }}
+      >
         {title}
       </Link>
-    );
-  }
+    )
+  );
 };
 
 export default FooterLink;

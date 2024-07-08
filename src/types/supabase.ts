@@ -56,21 +56,24 @@ export type Database = {
         }
         Relationships: []
       }
-      discounted_people: {
+      heroes: {
         Row: {
           created_at: string
           id: number
           name: string | null
+          to: string
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
+          to: string
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
+          to?: string
         }
         Relationships: []
       }
@@ -79,16 +82,19 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          to: string | null
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
+          to?: string | null
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
+          to?: string | null
         }
         Relationships: []
       }
@@ -97,16 +103,19 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          to: string
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
+          to: string
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
+          to?: string
         }
         Relationships: []
       }
@@ -115,18 +124,32 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          to: string
+          type: number | null
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
+          to: string
+          type?: number | null
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
+          to?: string
+          type?: number | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "team_type_fkey"
+            columns: ["type"]
+            isOneToOne: false
+            referencedRelation: "customer_support_type"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {

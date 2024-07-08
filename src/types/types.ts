@@ -3,7 +3,7 @@ import type { Database } from './supabase';
 
 export type TypedSupabaseClient = SupabaseClient<Database>
 
-export enum CustomerSupportLinkType  {
+export enum LinkType  {
     Link = 1,
     Email,
     Phone
