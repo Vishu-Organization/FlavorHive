@@ -48,7 +48,17 @@ const routeTree = rootRoute.addChildren([
   helpCenterRoute,
 ]);
 
-export const router = createRouter({ routeTree });
+export const router = createRouter({
+  routeTree,
+  notFoundMode: "fuzzy",
+  defaultNotFoundComponent: () => {
+    return (
+      <p className="flex w-screen justify-center align-middle">
+        This screen is being developed! Stay tuned 🤓
+      </p>
+    );
+  },
+});
 
 declare module "@tanstack/react-router" {
   interface Register {
