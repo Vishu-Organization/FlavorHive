@@ -14,7 +14,7 @@ export const getAllDiscountedPeopleLinks = async () => {
   const { data: discountedPeopleLinks } = await supabase
     .schema("footer_navigation")
     .from("heroes")
-    .select("id, name, to")
+    .select("id, name, to, type")
     .order("id");
   return discountedPeopleLinks;
 };
@@ -32,7 +32,7 @@ export const getProductsLinks = async () => {
   const { data: productsLinks } = await supabase
     .schema("footer_navigation")
     .from("product_links")
-    .select("id, name, to")
+    .select("id, name, to, type")
     .order("id");
   return productsLinks;
 };
@@ -41,7 +41,7 @@ export const getLegalLinks = async () => {
   const { data: legalLinks } = await supabase
     .schema("footer_navigation")
     .from("legal")
-    .select("id, name, to")
+    .select("id, name, to, type")
     .order("id");
   return legalLinks;
 };

@@ -9,6 +9,7 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import DefaultLayoutPage from "./pages/DefaultLayoutPage";
 
 const rootRoute = createRootRoute({
+  errorComponent: () => <>There was an error</>,
   component: () => (
     <>
       <ScrollRestoration />

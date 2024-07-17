@@ -9,7 +9,8 @@ type FooterLinkProps = {
   children?: ReactNode;
 };
 
-const FooterLink = ({ title, type, to, children }: FooterLinkProps) => {
+// const FooterLink = ({ title, type, to, children }: FooterLinkProps) => {
+function FooterLink({ title, type, to, children }: FooterLinkProps) {
   const navigation =
     !type || type === LinkType.Link
       ? to
@@ -22,7 +23,7 @@ const FooterLink = ({ title, type, to, children }: FooterLinkProps) => {
       <Link
         to={navigation}
         aria-label={title ?? ""}
-        className="inline-block justify-items-start capitalize leading-[2em] text-gray-500 hover:text-footer-hover md:text-footer-primary"
+        className="justify-self-start capitalize leading-[2em] text-gray-500 hover:text-footer-hover md:text-footer-primary"
         activeProps={{
           className: "text-footer-hover underline",
         }}

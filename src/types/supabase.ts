@@ -62,20 +62,31 @@ export type Database = {
           id: number
           name: string | null
           to: string
+          type: number | null
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
           to: string
+          type?: number | null
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
           to?: string
+          type?: number | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "heroes_type_fkey"
+            columns: ["type"]
+            isOneToOne: false
+            referencedRelation: "customer_support_type"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       legal: {
         Row: {
@@ -83,20 +94,31 @@ export type Database = {
           id: number
           name: string | null
           to: string | null
+          type: number | null
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
           to?: string | null
+          type?: number | null
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
           to?: string | null
+          type?: number | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "legal_type_fkey"
+            columns: ["type"]
+            isOneToOne: false
+            referencedRelation: "customer_support_type"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       product_links: {
         Row: {
@@ -104,20 +126,31 @@ export type Database = {
           id: number
           name: string | null
           to: string
+          type: number | null
         }
         Insert: {
           created_at?: string
           id?: number
           name?: string | null
           to: string
+          type?: number | null
         }
         Update: {
           created_at?: string
           id?: number
           name?: string | null
           to?: string
+          type?: number | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "product_links_type_fkey"
+            columns: ["type"]
+            isOneToOne: false
+            referencedRelation: "customer_support_type"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       team: {
         Row: {
