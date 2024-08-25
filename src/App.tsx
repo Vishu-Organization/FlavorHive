@@ -1,10 +1,25 @@
+import { RouterProvider } from "@tanstack/react-router";
 import "./App.css";
+import { router } from "./router.config";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 5,
+      retryDelay: 1000,
+    },
+  },
+});
 
 function App() {
+
   return (
-    <>
-      <h1 className="text-xs">Vite + React + Typescript</h1>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
