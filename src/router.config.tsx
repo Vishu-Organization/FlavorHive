@@ -14,7 +14,7 @@ const rootRoute = createRootRoute({
     <>
       <ScrollRestoration />
       <Outlet />
-      <TanStackRouterDevtools initialIsOpen={false} position="top-left" />
+      <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
     </>
   ),
 });
@@ -35,6 +35,19 @@ const aboutRoute = createRoute({
   },
 });
 
+const pagesRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/pages",
+});
+
+const visionRoute = createRoute({
+  getParentRoute: () => pagesRoute,
+  path: "/vision",
+  component: function Vision() {
+    return <p>This is our vision</p>;
+  },
+});
+
 const helpCenterRoute = createRoute({
   getParentRoute: () => indexRoute,
   path: "/help-center",
@@ -47,6 +60,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   helpCenterRoute,
+  pagesRoute.addChildren([visionRoute]),
 ]);
 
 export const router = createRouter({

@@ -10,7 +10,7 @@ type FooterLinkProps = {
 };
 
 // const FooterLink = ({ title, type, to, children }: FooterLinkProps) => {
-function FooterLink({ title, type, to, children }: FooterLinkProps) {
+function FooterLink({ title, type, to }: FooterLinkProps) {
   const navigation =
     !type || type === LinkType.Link
       ? to

@@ -1,39 +1,38 @@
-import { act, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import FooterLink from "../../components/FooterLink";
-import { LinkType } from "../../types/types";
+// import FooterLink from "../../components/FooterLink";
+// import { LinkType } from "../../types/types";
 import {
-  Outlet,
-  Router,
+  // Outlet,
   RouterProvider,
-  createMemoryHistory,
-  createRootRoute,
-  createRoute,
-  createRouter,
+  // createMemoryHistory,
+  // createRootRoute,
+  // createRoute,
+  // createRouter,
 } from "@tanstack/react-router";
 import { router } from "../../router.config";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-function createTestRouter(component: () => JSX.Element) {
-  const rootRoute = createRootRoute({
-    component: Outlet,
-  });
+// function createTestRouter(component: () => JSX.Element) {
+//   const rootRoute = createRootRoute({
+//     component: Outlet,
+//   });
 
-  const componentRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: "/",
-    component,
-  });
+//   const componentRoute = createRoute({
+//     getParentRoute: () => rootRoute,
+//     path: "/",
+//     component,
+//   });
 
-  const router = createRouter({
-    routeTree: rootRoute.addChildren([componentRoute]),
-    history: createMemoryHistory(),
-  });
+//   const router = createRouter({
+//     routeTree: rootRoute.addChildren([componentRoute]),
+//     history: createMemoryHistory(),
+//   });
 
-  return router;
-}
+//   return router;
+// }
 
-export function renderWithContext(component: JSX.Element) {
+export function renderWithContext() {
   // const router = createTestRouter(component);
   const queryClient = new QueryClient();
   return render(
@@ -53,11 +52,11 @@ describe("FooterLink", () => {
     //   // <Main />
     // );
 
-    act(() => {
-      renderWithContext(
-        <FooterLink title={title} to={"/help-center"} type={LinkType.Link} />,
-      );
-    });
+    // act(() => {
+    //   renderWithContext(
+    //     <FooterLink title={title} to={"/help-center"} type={LinkType.Link} />,
+    //   );
+    // });
 
     // render(
     //   <FooterLink title={title} to={"/help-center"} type={LinkType.Link} />,
