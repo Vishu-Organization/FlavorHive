@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import DefaultLayoutPage from "./pages/DefaultLayoutPage";
+import { useGetOurVisionScreenDetails } from "./services/use-queries";
 
 const rootRoute = createRootRoute({
   errorComponent: () => <>There was an error</>,
@@ -43,10 +44,10 @@ const pagesRoute = createRoute({
 const visionRoute = createRoute({
   getParentRoute: () => pagesRoute,
   path: "/vision",
-  component: function Vision() {
-    return <p>This is our vision</p>;
-  },
-});
+  loader: useGetOurVisionScreenDetails,
+}).lazy(() =>
+  import("./components/company-pages/OurVision").then((d) => d.Route),
+);
 
 const helpCenterRoute = createRoute({
   getParentRoute: () => indexRoute,
@@ -66,6 +67,8 @@ const routeTree = rootRoute.addChildren([
 export const router = createRouter({
   routeTree,
   notFoundMode: "fuzzy",
+  defaultPreload: "intent",
+  defaultPreloadStaleTime: 10000,
   defaultNotFoundComponent: () => {
     return (
       <p className="flex w-screen justify-center align-middle">

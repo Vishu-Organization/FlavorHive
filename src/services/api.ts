@@ -46,3 +46,11 @@ export const getLegalLinks = async () => {
   return legalLinks;
 };
 
+export const getOurVisionScreenDetails = async () => {
+  const { data: ourVisionData } = await supabase
+    .schema("our_vision")
+    .from("description")
+    .select("id, description");
+  return ourVisionData;
+};
+
