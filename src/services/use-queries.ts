@@ -3,9 +3,11 @@ import {
   getAllCustomerSupportLinks,
   getAllDiscountedPeopleLinks,
   getLegalLinks,
+  getOurVisionScreenDetails,
   getProductsLinks,
   getTeamLinks,
 } from "./api";
+import { queryClient } from "../App";
 
 export const useGetAllCustomerSupportLinks = () => {
   return useQuery({
@@ -47,5 +49,13 @@ export const useGetLegalLinks = () => {
     queryFn: getLegalLinks,
     _optimisticResults: "optimistic",
     refetchOnWindowFocus: false,
+  });
+};
+
+export const useGetOurVisionScreenDetails = () => {
+  return queryClient.ensureQueryData({
+    queryKey: ["our vision"],
+    queryFn: getOurVisionScreenDetails,
+    revalidateIfStale: true,
   });
 };
