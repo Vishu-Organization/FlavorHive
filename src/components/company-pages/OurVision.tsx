@@ -7,7 +7,7 @@ const OurVision = () => {
   const ourVision = useLoaderData({ from: "/pages/vision" });
 
   return (
-    <div className="grid place-items-center self-center text-center xl:max-w-7xl">
+    <div className="container grid space-y-10 text-center">
       <iframe
         className=""
         width="100%"
@@ -17,7 +17,7 @@ const OurVision = () => {
         frameBorder="10"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
-      <p className="m-10 text-balance font-our-vision text-[20px] leading-8 text-primary">
+      <p className="text-balance font-our-vision text-base leading-8 text-primary lg:text-[20px]">
         {ourVision && ourVision[0].description}
       </p>
       <div className="relative h-screen w-full bg-our-vision bg-cover bg-center text-5xl">
@@ -27,10 +27,10 @@ const OurVision = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto my-10 mt-5 w-4/5 font-our-vision-1 text-[18px] leading-7 text-primary-black">
+      <div className="mx-auto w-5/6 font-our-vision-1 text-base text-primary-black lg:text-lg">
         {ourVision && ourVision[1].description}
       </div>
-      <div className="grid w-full grid-cols-3 justify-items-center gap-4">
+      <div className="grid w-full grid-cols-3 justify-items-center gap-10">
         <img
           src={sustainableSeaFoodImg}
           className="h-48 w-48 rounded-full"
@@ -43,7 +43,7 @@ const OurVision = () => {
           alt="sprouting plant"
         />
       </div>
-      <div className="my-4 grid w-full grid-cols-3 justify-items-center gap-4 text-sm">
+      <div className="my-4 grid w-full grid-cols-3 justify-items-center gap-10 text-sm">
         <div className="w-1/2 font-bold">
           Sustainable seafood recommended by Seafood Watch®
         </div>

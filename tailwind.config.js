@@ -6,6 +6,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       fontFamily: {
         "our-vision": ["Chronicle Deck", "Times", "serif"],
         "our-vision-1": [
