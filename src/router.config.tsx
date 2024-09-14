@@ -41,6 +41,23 @@ const pagesRoute = createRoute({
   path: "/pages",
 });
 
+const usersRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/users",
+});
+
+const signInRoute = createRoute({
+  getParentRoute: () => usersRoute,
+  path: "sign-in",
+  component: () => <div>You'll login here</div>,
+});
+
+const signUpRoute = createRoute({
+  getParentRoute: () => usersRoute,
+  path: "sign-up",
+  component: () => <div>You'll sign up here</div>,
+});
+
 const visionRoute = createRoute({
   getParentRoute: () => pagesRoute,
   path: "/vision",
@@ -48,6 +65,18 @@ const visionRoute = createRoute({
 }).lazy(() =>
   import("./components/company-pages/OurVision").then((d) => d.Route),
 );
+
+const blogRoute = createRoute({
+  getParentRoute: () => pagesRoute,
+  path: "/blog",
+  component: () => <p>Blogs are being written!!</p>,
+});
+
+const menuRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/on-the-menu",
+  component: () => <p>We are building the menu</p>,
+});
 
 const helpCenterRoute = createRoute({
   getParentRoute: () => indexRoute,
@@ -61,7 +90,9 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   helpCenterRoute,
-  pagesRoute.addChildren([visionRoute]),
+  menuRoute,
+  pagesRoute.addChildren([visionRoute, blogRoute]),
+  usersRoute.addChildren([signInRoute, signUpRoute]),
 ]);
 
 export const router = createRouter({

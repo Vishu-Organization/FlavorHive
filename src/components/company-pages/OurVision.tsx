@@ -27,7 +27,7 @@ const OurVision = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto w-5/6 font-our-vision-1 text-base text-primary-black lg:text-lg">
+      <div className="mx-auto w-5/6 text-base text-primary-black lg:text-lg">
         {ourVision && ourVision[1].description}
       </div>
       <div className="grid w-full grid-cols-3 justify-items-center gap-10">
