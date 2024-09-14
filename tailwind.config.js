@@ -6,22 +6,11 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       fontFamily: {
         "our-vision": ["Chronicle Deck", "Times", "serif"],
-        "our-vision-1": [
-          "Cera Pro",
-          "HelveticaNeue",
-          "Helvetica Neue",
-          "HelveticaNeueRoman",
-          "HelveticaNeue-Roman",
-          "Helvetica Neue Roman",
-          "TeXGyreHerosRegular",
-          "Helvetica",
-          "Tahoma",
-          "Geneva",
-          "Arial",
-          "sans-serif",
-        ],
       },
       backgroundImage: {
         "our-vision":
@@ -35,6 +24,12 @@ export default {
         footer: {
           primary: "#a1bce6",
           hover: "#b7c1d1",
+        },
+        header: {
+          primary: "#696d75",
+          "login-link": "#f26c29",
+          "login-link-hover": "#ff8142",
+          "login-link-active": "#e65710",
         },
       },
     },

@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import { ReactNode } from "react";
+import Header from "./Header";
 
 type DefaultLayoutProps = {
   children: ReactNode;
@@ -7,10 +8,13 @@ type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <div className="flex min-h-screen w-screen flex-col">
-      {children}
-      <Footer />
-    </div>
+    <>
+      <Header />
+      <div className="mt-20 flex min-h-screen w-screen flex-col">
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 };
 
