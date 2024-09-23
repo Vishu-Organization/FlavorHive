@@ -52,8 +52,8 @@ export const useGetLegalLinks = () => {
   });
 };
 
-export const useGetOurVisionScreenDetails = () => {
-  return queryClient.ensureQueryData({
+export const useGetOurVisionScreenDetails = async () => {
+  return await queryClient.ensureQueryData({
     queryKey: ["our vision"],
     queryFn: getOurVisionScreenDetails,
     revalidateIfStale: true,

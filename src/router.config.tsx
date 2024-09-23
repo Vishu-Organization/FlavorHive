@@ -41,21 +41,16 @@ const pagesRoute = createRoute({
   path: "/pages",
 });
 
-const usersRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/users",
+const termsRoute = createRoute({
+  getParentRoute: () => pagesRoute,
+  path: "/terms",
+  component: () => <div>Your terms come up here</div>,
 });
 
-const signInRoute = createRoute({
-  getParentRoute: () => usersRoute,
-  path: "sign-in",
-  component: () => <div>You'll login here</div>,
-});
-
-const signUpRoute = createRoute({
-  getParentRoute: () => usersRoute,
-  path: "sign-up",
-  component: () => <div>You'll sign up here</div>,
+const privacyRoute = createRoute({
+  getParentRoute: () => pagesRoute,
+  path: "/privacy",
+  component: () => <div>Your privacy conditions load here</div>,
 });
 
 const visionRoute = createRoute({
@@ -71,6 +66,22 @@ const blogRoute = createRoute({
   path: "/blog",
   component: () => <p>Blogs are being written!!</p>,
 });
+
+const usersRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/users",
+}).lazy(() => import("./pages/UsersPage").then((d) => d.Route));
+
+const signInRoute = createRoute({
+  getParentRoute: () => usersRoute,
+  path: "sign-in",
+  component: () => <div>You'll login here</div>,
+});
+
+const signUpRoute = createRoute({
+  getParentRoute: () => usersRoute,
+  path: "/sign-up",
+}).lazy(() => import("./components/users/SignUp").then((d) => d.Route));
 
 const menuRoute = createRoute({
   getParentRoute: () => indexRoute,
@@ -91,7 +102,7 @@ const routeTree = rootRoute.addChildren([
   aboutRoute,
   helpCenterRoute,
   menuRoute,
-  pagesRoute.addChildren([visionRoute, blogRoute]),
+  pagesRoute.addChildren([visionRoute, blogRoute, termsRoute, privacyRoute]),
   usersRoute.addChildren([signInRoute, signUpRoute]),
 ]);
 
