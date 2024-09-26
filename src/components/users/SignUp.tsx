@@ -5,42 +5,47 @@ import { ChevronRight } from "lucide-react";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { z } from "zod";
 import { useState } from "react";
-import supabase from "../../supabaseClient";
-import { toast } from "react-toastify";
+import {
+  useSignInWithGoogle,
+  useSignUpWithPassword,
+} from "../../services/use-mutations";
+
+import google from "../../assets/google.svg";
 
 const SignUp = () => {
-  const [isContinue, setIsContinue] = useState(false);
-  const navigate = useNavigate({ from: "/users/sign-up" });
+  const [isContinue, setIsContinue] = useState<boolean>(false);
+  const {
+    mutate: signUpWithPasswordMutate,
+    isSuccess: isSignUpWithPasswordSuccess,
+  } = useSignUpWithPassword();
+  const { mutate: signInWithGoogleMutate } = useSignInWithGoogle();
+  const navigate = useNavigate();
+
+  const onSignUpWithGoogle = async (e: any) => {
+    e.preventDefault();
+    signInWithGoogleMutate();
+  };
+
+  if (isSignUpWithPasswordSuccess) {
+    navigate({ to: "/" });
+  }
+
   const { Field, handleSubmit, Subscribe } = useForm({
     defaultValues: {
+      name: "",
       email: "",
       password: "",
     },
-    validatorAdapter: zodValidator,
+    validatorAdapter: zodValidator(),
 
     onSubmit: async ({ value }) => {
-      if (!value.password) {
-        !isContinue && setIsContinue(true);
+      if (!value.password && !isContinue) {
+        setIsContinue(true);
         return;
       }
 
-      const { email, password } = value;
-
       if (value.email && value.password) {
-        console.log(value);
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password,
-        });
-
-        if (error) {
-          toast.error(error.message);
-        }
-
-        if (data.user?.role === "authenticated") {
-          navigate({ to: "/" });
-          toast.success("Signup successful");
-        }
+        signUpWithPasswordMutate(value);
       }
     },
   });
@@ -69,11 +74,41 @@ const SignUp = () => {
                 </Link>
               </section>
               <form
+                className="space-y-6"
                 onSubmit={(e) => {
                   e.preventDefault();
                   handleSubmit();
                 }}
               >
+                <Field
+                  name="name"
+                  validators={{
+                    onChange: z
+                      .string()
+                      .min(1, "Name is required")
+                      .min(3, "Name should be minimum 3 characters long"),
+                  }}
+                  children={({ state, handleChange, handleBlur }) => (
+                    <TextField
+                      id="name"
+                      size="small"
+                      label="Name"
+                      variant="outlined"
+                      defaultValue={state.value}
+                      onChange={(e) => handleChange(e.target.value)}
+                      onBlur={handleBlur}
+                      placeholder="Enter name"
+                      margin="dense"
+                      fullWidth
+                      error={!!state.meta.errors?.length}
+                      helperText={
+                        state.meta.errors[0]?.toString().split(",").length === 1
+                          ? state.meta.errors
+                          : state.meta.errors[0]?.toString().split(",")[0]
+                      }
+                    />
+                  )}
+                />
                 <Field
                   name="email"
                   validators={{
@@ -159,17 +194,34 @@ const SignUp = () => {
                     state.isTouched,
                   ]}
                   children={() => (
-                    <Button
-                      variant="contained"
-                      type="submit"
-                      fullWidth
-                      sx={{
-                        mt: 4,
-                        borderRadius: "20px",
-                      }}
-                    >
-                      {isContinue ? "Sign Up" : "Continue"}
-                    </Button>
+                    <div className="space-y-4">
+                      <Button
+                        variant="contained"
+                        type="submit"
+                        fullWidth
+                        sx={{
+                          borderRadius: "20px",
+                          backgroundColor: "#002684",
+                          fontSize: "13px",
+                          letterSpacing: "2px",
+                          ":hover": {
+                            backgroundColor: "#002c9b",
+                          },
+                        }}
+                      >
+                        {isContinue ? "Sign Up" : "Continue"}
+                      </Button>
+                      <div className="text-center text-sm font-medium">OR</div>
+                      <button
+                        className="hover:bg-signup-google flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc]"
+                        onClick={onSignUpWithGoogle}
+                      >
+                        <img src={google} className="size-4" />
+                        <span className="text-sm font-medium">
+                          Sign up with Google
+                        </span>
+                      </button>
+                    </div>
                   )}
                 />
               </form>

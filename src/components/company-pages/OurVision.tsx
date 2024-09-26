@@ -14,13 +14,12 @@ const OurVision = () => {
         height="550"
         src="https://www.youtube.com/embed/C_Xgn87CF-I"
         title="YouTube video player"
-        frameBorder="10"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
       <p className="text-balance font-our-vision text-base leading-8 text-primary lg:text-[20px]">
         {ourVision && ourVision[0].description}
       </p>
-      <div className="relative h-screen w-full bg-our-vision bg-cover bg-center text-5xl">
+      <div className="relative h-screen w-full bg-our-vision bg-cover bg-center text-5xl transition-all duration-200 ease-in hover:scale-[1.01]">
         <div className="absolute left-0 top-1/2 w-full -translate-y-1/2">
           <div className="float-none mx-auto w-[55%] font-bold leading-tight text-white">
             We're developing better standards for higher quality ingredients.

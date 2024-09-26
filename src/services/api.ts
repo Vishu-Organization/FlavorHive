@@ -1,4 +1,5 @@
 import supabase from "../supabaseClient";
+import { SignUpUser } from "../types/types";
 
 export const getAllCustomerSupportLinks = async () => {
   const { data: customerSupportLinks } = await supabase
@@ -52,5 +53,37 @@ export const getOurVisionScreenDetails = async () => {
     .from("description")
     .select("id, description");
   return ourVisionData;
+};
+
+export const signUpWithPassword = async (user: SignUpUser) => {
+  const { email, password, name } = user;
+  const { data, error: signUpError } = await supabase.auth.signUp({
+    email,
+    password,
+    options: { data: { name } },
+  });
+
+  if (signUpError) {
+    throw signUpError;
+  }
+  return data;
+};
+
+export const signInWithGoogle = async () => {
+  const { data, error: signInError } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+  });
+
+  if (signInError) {
+    throw signInError;
+  }
+  return data;
+};
+
+export const signOut = async () => {
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    throw error;
+  }
 };
 
