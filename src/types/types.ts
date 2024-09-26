@@ -8,3 +8,9 @@ export enum LinkType  {
     Email,
     Phone
 }
+
+export type SignUpUser = {
+  name: string;
+  email: string;
+  password: string;
+};

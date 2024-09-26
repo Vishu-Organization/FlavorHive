@@ -14,7 +14,6 @@ const OurVision = () => {
         height="550"
         src="https://www.youtube.com/embed/C_Xgn87CF-I"
         title="YouTube video player"
-        frameBorder="10"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
       <p className="text-balance font-our-vision text-base leading-8 text-primary lg:text-[20px]">

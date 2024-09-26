@@ -5,42 +5,46 @@ import { ChevronRight } from "lucide-react";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { z } from "zod";
 import { useState } from "react";
-import supabase from "../../supabaseClient";
-import { toast } from "react-toastify";
+import GoogleButton from "react-google-button";
+import {
+  useSignInWithGoogle,
+  useSignUpWithPassword,
+} from "../../services/use-mutations";
 
 const SignUp = () => {
-  const [isContinue, setIsContinue] = useState(false);
-  const navigate = useNavigate({ from: "/users/sign-up" });
+  const [isContinue, setIsContinue] = useState<boolean>(false);
+  const {
+    mutate: signUpWithPasswordMutate,
+    isSuccess: isSignUpWithPasswordSuccess,
+  } = useSignUpWithPassword();
+  const { mutate: signInWithGoogleMutate } = useSignInWithGoogle();
+  const navigate = useNavigate();
+
+  const onSignUpWithGoogle = async (e: any) => {
+    e.preventDefault();
+    signInWithGoogleMutate();
+  };
+
+  if (isSignUpWithPasswordSuccess) {
+    navigate({ to: "/" });
+  }
+
   const { Field, handleSubmit, Subscribe } = useForm({
     defaultValues: {
+      name: "",
       email: "",
       password: "",
     },
     validatorAdapter: zodValidator,
 
     onSubmit: async ({ value }) => {
-      if (!value.password) {
-        !isContinue && setIsContinue(true);
+      if (!value.password && !isContinue) {
+        setIsContinue(true);
         return;
       }
 
-      const { email, password } = value;
-
       if (value.email && value.password) {
-        console.log(value);
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password,
-        });
-
-        if (error) {
-          toast.error(error.message);
-        }
-
-        if (data.user?.role === "authenticated") {
-          navigate({ to: "/" });
-          toast.success("Signup successful");
-        }
+        signUpWithPasswordMutate(value);
       }
     },
   });
@@ -74,6 +78,35 @@ const SignUp = () => {
                   handleSubmit();
                 }}
               >
+                <Field
+                  name="name"
+                  validators={{
+                    onChange: z
+                      .string()
+                      .min(1, "Name is required")
+                      .min(3, "Name should be minimum 3 characters long"),
+                  }}
+                  children={({ state, handleChange, handleBlur }) => (
+                    <TextField
+                      id="name"
+                      size="small"
+                      label="Name"
+                      variant="outlined"
+                      defaultValue={state.value}
+                      onChange={(e) => handleChange(e.target.value)}
+                      onBlur={handleBlur}
+                      placeholder="Enter name"
+                      margin="dense"
+                      fullWidth
+                      error={!!state.meta.errors?.length}
+                      helperText={
+                        state.meta.errors[0]?.toString().split(",").length === 1
+                          ? state.meta.errors
+                          : state.meta.errors[0]?.toString().split(",")[0]
+                      }
+                    />
+                  )}
+                />
                 <Field
                   name="email"
                   validators={{
@@ -159,17 +192,31 @@ const SignUp = () => {
                     state.isTouched,
                   ]}
                   children={() => (
-                    <Button
-                      variant="contained"
-                      type="submit"
-                      fullWidth
-                      sx={{
-                        mt: 4,
-                        borderRadius: "20px",
-                      }}
-                    >
-                      {isContinue ? "Sign Up" : "Continue"}
-                    </Button>
+                    <>
+                      <Button
+                        variant="contained"
+                        type="submit"
+                        fullWidth
+                        sx={{
+                          mt: 4,
+                          borderRadius: "20px",
+                        }}
+                      >
+                        {isContinue ? "Sign Up" : "Continue"}
+                      </Button>
+                      <GoogleButton
+                        style={{
+                          marginTop: "1rem",
+                          width: "100%",
+                          borderRadius: "5px",
+                        }}
+                        onClick={onSignUpWithGoogle}
+                        type="light"
+                        label="Sign up with Google"
+                        aria-label="Sign up with Google"
+                        className="mt-4"
+                      />
+                    </>
                   )}
                 />
               </form>
