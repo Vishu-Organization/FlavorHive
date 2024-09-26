@@ -5,11 +5,12 @@ import { ChevronRight } from "lucide-react";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { z } from "zod";
 import { useState } from "react";
-import GoogleButton from "react-google-button";
 import {
   useSignInWithGoogle,
   useSignUpWithPassword,
 } from "../../services/use-mutations";
+
+import google from "../../assets/google.svg";
 
 const SignUp = () => {
   const [isContinue, setIsContinue] = useState<boolean>(false);
@@ -35,7 +36,7 @@ const SignUp = () => {
       email: "",
       password: "",
     },
-    validatorAdapter: zodValidator,
+    validatorAdapter: zodValidator(),
 
     onSubmit: async ({ value }) => {
       if (!value.password && !isContinue) {
@@ -73,6 +74,7 @@ const SignUp = () => {
                 </Link>
               </section>
               <form
+                className="space-y-6"
                 onSubmit={(e) => {
                   e.preventDefault();
                   handleSubmit();
@@ -192,31 +194,34 @@ const SignUp = () => {
                     state.isTouched,
                   ]}
                   children={() => (
-                    <>
+                    <div className="space-y-4">
                       <Button
                         variant="contained"
                         type="submit"
                         fullWidth
                         sx={{
-                          mt: 4,
                           borderRadius: "20px",
+                          backgroundColor: "#002684",
+                          fontSize: "13px",
+                          letterSpacing: "2px",
+                          ":hover": {
+                            backgroundColor: "#002c9b",
+                          },
                         }}
                       >
                         {isContinue ? "Sign Up" : "Continue"}
                       </Button>
-                      <GoogleButton
-                        style={{
-                          marginTop: "1rem",
-                          width: "100%",
-                          borderRadius: "5px",
-                        }}
+                      <div className="text-center text-sm font-medium">OR</div>
+                      <button
+                        className="hover:bg-signup-google flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc]"
                         onClick={onSignUpWithGoogle}
-                        type="light"
-                        label="Sign up with Google"
-                        aria-label="Sign up with Google"
-                        className="mt-4"
-                      />
-                    </>
+                      >
+                        <img src={google} className="size-4" />
+                        <span className="text-sm font-medium">
+                          Sign up with Google
+                        </span>
+                      </button>
+                    </div>
                   )}
                 />
               </form>

@@ -33,6 +33,9 @@ export default {
           "login-link-hover": "#ff8142",
           "login-link-active": "#e65710",
         },
+        signup: {
+          google: "rgba(66, 133, 244, 0.04)",
+        },
       },
     },
   },
