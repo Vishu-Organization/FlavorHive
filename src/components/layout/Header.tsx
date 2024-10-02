@@ -30,11 +30,6 @@ const Header = () => {
       (_, session) => setSession(session),
     );
 
-    // Remove the hash (#) from the URL after sign-in
-    if (window.location.href.slice(-1).includes("#")) {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-
     // Cleanup the subscription when the component unmounts
     return () => {
       authListener?.subscription.unsubscribe();
