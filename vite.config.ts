@@ -1,14 +1,27 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
-import { coverageConfigDefaults } from "vitest/config";
 import react from "@vitejs/plugin-react-swc";
+import svgr from "vite-plugin-svgr";
 import { TanStackRouterVite } from "@tanstack/router-vite-plugin";
-
 
 const isTest = process.env.NODE_ENV === "test";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), !isTest && TanStackRouterVite()],
+  plugins: [
+    react(),
+    !isTest && TanStackRouterVite(),
+    svgr({
+      // include: "**/*.svg?react",
+      // svgr options: https://react-svgr.com/docs/options/
+      svgrOptions: {
+        exportType: "default",
+        ref: true,
+        svgo: false,
+        titleProp: true,
+      },
+      include: "**/*.svg",
+    }),
+  ],
   // test: {
   // globals: true,
   // environment: "jsdom",

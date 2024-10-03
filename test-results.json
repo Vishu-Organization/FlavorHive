@@ -83,12 +83,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4217,
+                  "duration": 3708,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-02T10:06:30.044Z",
+                  "startTime": "2024-10-02T10:12:40.428Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -111,8 +111,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-02T10:06:28.951Z",
-    "duration": 6881.26,
+    "startTime": "2024-10-02T10:12:39.508Z",
+    "duration": 5787.981,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
