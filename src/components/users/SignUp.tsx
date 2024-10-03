@@ -10,7 +10,7 @@ import {
   useSignUpWithPassword,
 } from "../../services/use-mutations";
 
-import google from "../../assets/google.svg";
+import GoogleIcon from "../../assets/google.svg";
 
 const SignUp = () => {
   const [isContinue, setIsContinue] = useState<boolean>(false);
@@ -213,10 +213,10 @@ const SignUp = () => {
                       </Button>
                       <div className="text-center text-sm font-medium">OR</div>
                       <button
-                        className="hover:bg-signup-google flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc]"
+                        className="flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc] hover:bg-signup-google"
                         onClick={onSignUpWithGoogle}
                       >
-                        <img src={google} className="size-4" />
+                        <GoogleIcon />
                         <span className="text-sm font-medium">
                           Sign up with Google
                         </span>

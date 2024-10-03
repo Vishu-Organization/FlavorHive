@@ -1,7 +1,5 @@
-import { Link, createLazyRoute, useLoaderData } from "@tanstack/react-router";
-import sustainableSeaFoodImg from "../../assets/fish-food-5.jpg";
-import pig from "../../assets/pig-1.jpg";
-import sprout from "../../assets/sprout.jpg";
+import { createLazyRoute, useLoaderData } from "@tanstack/react-router";
+import OurVisionImages from "./OurVisionImages";
 
 const OurVision = () => {
   const ourVision = useLoaderData({ from: "/pages/vision" });
@@ -29,32 +27,7 @@ const OurVision = () => {
       <div className="mx-auto w-5/6 text-base text-primary-black lg:text-lg">
         {ourVision && ourVision[1].description}
       </div>
-      <div className="grid w-full grid-cols-3 justify-items-center gap-10">
-        <img
-          src={sustainableSeaFoodImg}
-          className="h-48 w-48 rounded-full"
-          alt="sustainable sea-food"
-        />
-        <img src={pig} className="h-48 w-48 rounded-full" alt="boy with pig" />
-        <img
-          src={sprout}
-          className="h-48 w-48 rounded-full"
-          alt="sprouting plant"
-        />
-      </div>
-      <div className="my-4 grid w-full grid-cols-3 justify-items-center gap-10 text-sm">
-        <div className="w-1/2 font-bold">
-          Sustainable seafood recommended by Seafood Watch®
-        </div>
-        <div className="w-1/2 font-bold">
-          Not fed antibiotics or hormones*
-          <Link className="block text-xs underline">Learn More</Link>
-        </div>
-        <div className="w-1/2 font-bold">
-          Our quality standards are responsibly sourced.
-          <Link className="block text-xs underline">Learn More</Link>
-        </div>
-      </div>
+      <OurVisionImages />
     </div>
   );
 };
