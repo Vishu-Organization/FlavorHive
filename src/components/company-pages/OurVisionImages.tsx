@@ -7,9 +7,9 @@ const OurVisionImages = () => {
   return (
     <section className="mx-auto space-y-5">
       <div className="grid grid-cols-3 justify-items-center gap-10">
-        <FishIcon />
-        <PigIcon />
-        <SproutIcon />
+        <FishIcon data-testid="fish" />
+        <PigIcon data-testid="pig" />
+        <SproutIcon data-testid="sprout" />
       </div>
       <div className="grid grid-cols-3 justify-items-center gap-10 text-sm">
         <div className="w-1/2 font-bold">
