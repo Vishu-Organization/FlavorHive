@@ -1,10 +1,11 @@
+import test from "@playwright/test";
 import { signupTest } from "./fixtures/signup";
 
 let user;
 
 signupTest("Sign up with email password", async ({ signupPage, rootPage }) => {
   await rootPage.gotoRootRoute();
-  await signupPage.verifyPageTitile();
+  await rootPage.verifyPageTitile();
   await signupPage.navigateToSignUpScreen();
   await signupPage.verifyPageUrl();
   await signupPage.fillSignUpFormAndSubmit();

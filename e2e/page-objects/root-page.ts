@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 
 export class RootPage {
   rootRoute: string;
@@ -14,5 +14,9 @@ export class RootPage {
 
   async gotoRootRoute() {
     await this.page.goto(this.rootRoute);
+  }
+
+  async verifyPageTitile() {
+    await expect(this.page).toHaveTitle(/Flavor Hive/);
   }
 }

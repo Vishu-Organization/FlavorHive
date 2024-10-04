@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -63,6 +63,52 @@
   },
   "suites": [
     {
+      "title": "our-vision.spec.ts",
+      "file": "our-vision.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Should navigate to our-vision screen and check the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 5846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-04T10:48:24.837Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-7078c-creen-and-check-the-details-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdcf065a190de5405a3-05b6704d625e4c9854e3",
+          "file": "our-vision.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "signup.spec.ts",
       "file": "signup.spec.ts",
       "column": 0,
@@ -81,14 +127,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 3708,
+                  "duration": 5437,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-02T10:12:40.428Z",
+                  "startTime": "2024-10-04T10:48:24.801Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -103,7 +149,7 @@
           ],
           "id": "e5334e3b62ca8fd4a4b6-8262bd974accc0c77fc9",
           "file": "signup.spec.ts",
-          "line": 5,
+          "line": 6,
           "column": 1
         }
       ]
@@ -111,9 +157,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-02T10:12:39.508Z",
-    "duration": 5787.981,
-    "expected": 1,
+    "startTime": "2024-10-04T10:48:23.771Z",
+    "duration": 7742.313,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

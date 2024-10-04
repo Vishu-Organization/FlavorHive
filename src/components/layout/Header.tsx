@@ -63,6 +63,7 @@ const Header = () => {
             on the menu
           </Link>
           <Link
+            data-testid="our-vision-link"
             to="/pages/vision"
             className="px-4 py-3 hover:text-primary"
             activeProps={{

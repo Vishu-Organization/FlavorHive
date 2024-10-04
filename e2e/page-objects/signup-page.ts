@@ -37,10 +37,6 @@ export class SignupPage {
     return this.page.getByText("Welcome Vishu!");
   }
 
-  async verifyPageTitile() {
-    await expect(this.page).toHaveTitle(/Flavor Hive/);
-  }
-
   async navigateToSignUpScreen() {
     await this.signupLink.click();
     await expect(this.header).toBeVisible();
