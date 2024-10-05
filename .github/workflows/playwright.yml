@@ -10,7 +10,6 @@ jobs:
     timeout-minutes: 60
     name: Run end-to-end tests on Netlify PR preview
     runs-on: ubuntu-latest
-    if: github.event.deployment_status.state == 'success'
     steps:
     - name: Echo deployment status
       run: echo ${{ github.event.deployment_status }}
