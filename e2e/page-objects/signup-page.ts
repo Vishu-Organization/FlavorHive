@@ -6,11 +6,11 @@ export class SignupPage {
   }
 
   get signupLink() {
-    return this.page.getByTestId("header-sign-up");
+    return this.page.getByRole("link", { name: "Sign up" });
   }
 
   get header() {
-    return this.page.getByRole("heading", { name: "Get Started" });
+    return this.page.getByRole("heading", { name: "Get Start" });
   }
 
   get nameInput() {

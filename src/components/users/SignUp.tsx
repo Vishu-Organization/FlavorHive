@@ -53,7 +53,7 @@ const SignUp = () => {
     <div className="mx-auto mb-10 max-w-[1440px] bg-sign-up bg-cover bg-scroll bg-[50%] bg-no-repeat px-32 py-20">
       <div className="container mx-auto max-w-[830px] space-y-4 bg-white p-10">
         <div className="flex flex-col text-center">
-          <h1 className="mb-2 text-3xl font-bold text-primary">Get Started</h1>
+          <h1 className="mb-2 text-3xl font-bold text-primary">Get Start</h1>
           <h2 className="mx-4 text-base font-medium">
             Farm-fresh ingredients and delicious recipes delivered weekly to
             your home
