@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Waiting for Netlify Preview
-        uses: josephduffy/wait-for-netlify-action@v1
+        uses: jakepartusch/wait-for-netlify-action@v1.4
         id: wait-for-netflify-preview
         with:
-          site_name: env.NETLIFY_SITE_NAME
+          site_name: "flavor-hive" 
           max_timeout: 300
   test:
     needs: tests_e2e_netlify_prepare
@@ -37,7 +37,7 @@ jobs:
       run: npx playwright test
       # Here we provide the preview domain, based on the GITHUB_PR_NUMBER combined with the NETLIFY_SITE_NAME
       env:
-        PLAYWRIGHT_TEST_BASE_URL: "https://deploy-preview-${{env.GITHUB_PR_NUMBER}}--${{env.NETLIFY_SITE_NAME}}.netlify.app"
+        PLAYWRIGHT_TEST_BASE_URL: "https://deploy-preview-${{env.GITHUB_PR_NUMBER}}--flavor-hive.netlify.app"
     - uses: actions/upload-artifact@v4
       if: always()
       with:
