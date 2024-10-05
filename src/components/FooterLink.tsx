@@ -6,10 +6,11 @@ type FooterLinkProps = {
   title: string | null;
   type?: number | null;
   to: string | null;
+  testId: string | null;
   children?: ReactNode;
 };
 
-function FooterLink({ title, type, to }: FooterLinkProps) {
+function FooterLink({ title, type, to, testId }: FooterLinkProps) {
   const navigation =
     !type || type === LinkType.Link
       ? to
@@ -20,6 +21,7 @@ function FooterLink({ title, type, to }: FooterLinkProps) {
   return (
     navigation && (
       <Link
+        data-testid={testId}
         to={navigation}
         aria-label={title ?? ""}
         className="justify-self-start capitalize leading-[2em] text-gray-500 hover:text-footer-hover md:text-footer-primary"

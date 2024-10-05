@@ -5,9 +5,20 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import DefaultLayoutPage from "./pages/DefaultLayoutPage";
 import { useGetOurVisionScreenDetails } from "./services/use-queries";
+import React, { Suspense } from "react";
+
+const TanStackRouterDevtools = import.meta.env.PROD
+  ? () => null // Render nothing in production
+  : React.lazy(() =>
+      // Lazy load in development
+      import("@tanstack/router-devtools").then((res) => ({
+        default: res.TanStackRouterDevtools,
+        // For Embedded Mode
+        // default: res.TanStackRouterDevtoolsPanel
+      })),
+    );
 
 const rootRoute = createRootRoute({
   errorComponent: () => <>There was an error</>,
@@ -15,7 +26,9 @@ const rootRoute = createRootRoute({
     <>
       <ScrollRestoration />
       <Outlet />
-      <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
+      <Suspense>
+        <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
+      </Suspense>
     </>
   ),
 });

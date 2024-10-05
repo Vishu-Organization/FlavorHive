@@ -54,6 +54,7 @@ const Header = () => {
       <section className="mx-8 grid w-full grid-cols-2 items-center justify-between font-normal uppercase tracking-widest text-header-primary">
         <div>
           <Link
+            data-testid="header-on-the-menu"
             to="/on-the-menu"
             className="px-4 py-3 hover:text-primary"
             activeProps={{
@@ -63,7 +64,7 @@ const Header = () => {
             on the menu
           </Link>
           <Link
-            data-testid="our-vision-link"
+            data-testid="header-our-vision"
             to="/pages/vision"
             className="px-4 py-3 hover:text-primary"
             activeProps={{
