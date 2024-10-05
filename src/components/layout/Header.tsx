@@ -101,6 +101,7 @@ const Header = () => {
 
           {!session ? (
             <Link
+              data-testid="header-sign-up"
               className="rounded-md border border-orange-600 bg-header-login-link px-6 py-3 font-bold text-white hover:border-orange-500 hover:bg-header-login-link-hover hover:text-white active:bg-header-login-link-active"
               to="/users/sign-up"
               activeProps={{

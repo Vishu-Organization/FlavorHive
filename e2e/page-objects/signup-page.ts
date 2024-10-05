@@ -6,7 +6,7 @@ export class SignupPage {
   }
 
   get signupLink() {
-    return this.page.getByRole("link", { name: "Sign up" });
+    return this.page.getByTestId("header-sign-up");
   }
 
   get header() {

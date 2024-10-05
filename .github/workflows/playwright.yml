@@ -17,8 +17,22 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+
+    - name: Wait for Netlify Deployment
+      id: netlify
+      run: |
+        echo "Waiting for Netlify deployment to complete..."
+        # Fetch Netlify deployment URL by querying Netlify's API, assuming you have NETLIFY_AUTH_TOKEN & NETLIFY_SITE_ID set in secrets
+        PR_NUMBER=$(echo "${{ github.event.pull_request.number }}")
+        DEPLOY_URL=$(curl -s -H "Authorization: Bearer ${{ secrets.NETLIFY_TOKEN }}" \
+                        https://api.netlify.com/api/v1/sites/${{ secrets.NETLIFY_SITE_ID }}/deploys | \
+                        jq -r ".[] | select(.title | contains(\"pull/${PR_NUMBER}\")) | .deploy_ssl_url")
+        echo "Netlify deployment URL: $DEPLOY_URL"
+        echo "::set-output name=preview_url::$DEPLOY_URL"
+
+
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --base-url=${{ steps.netlify.outputs.preview_url }}
     - uses: actions/upload-artifact@v4
       if: always()
       with:
