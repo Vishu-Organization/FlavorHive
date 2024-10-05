@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
     steps:
+    - name: Echo deployment status
+      run: echo ${{ github.event.deployment_status }}
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
