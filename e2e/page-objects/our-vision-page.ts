@@ -3,6 +3,7 @@ import { Page, expect } from "@playwright/test";
 export class OurVisionPage {
   constructor(private page: Page) {
     this.page = page;
+    console.log(this.page.url());
   }
 
   get ourVisionLink() {
