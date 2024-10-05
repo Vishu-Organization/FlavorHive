@@ -10,7 +10,7 @@ export class SignupPage {
   }
 
   get header() {
-    return this.page.getByRole("heading", { name: "Get Start" });
+    return this.page.getByRole("heading", { name: "Get Started" });
   }
 
   get nameInput() {
