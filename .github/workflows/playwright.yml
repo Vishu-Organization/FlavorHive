@@ -18,7 +18,7 @@ jobs:
         id: wait-for-netflify-preview
         with:
           site_name: env.NETLIFY_SITE_NAME
-          max_timeout: 60
+          max_timeout: 300
   test:
     needs: tests_e2e_netlify_prepare
     name: Run end-to-end tests on Netlify PR preview
