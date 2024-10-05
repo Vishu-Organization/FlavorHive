@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Waiting for Netlify Preview
         uses: kamranayub/wait-for-netlify-action@v2.1.0
-        id: wait-for-netflify-preview
+        id: waitForDeployment
         with:
           site_name: "flavor-hive"
           max_timeout: 300
@@ -36,7 +36,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --base-url=${{ steps.tests_e2e_netlify_prepare.preview_url }}
       # Here we provide the preview domain, based on the GITHUB_PR_NUMBER combined with the NETLIFY_SITE_NAME
       env:
         PLAYWRIGHT_TEST_BASE_URL: "https://deploy-preview-${{env.GITHUB_PR_NUMBER}}--flavor-hive.netlify.app"
