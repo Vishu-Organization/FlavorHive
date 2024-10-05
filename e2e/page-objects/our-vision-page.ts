@@ -1,4 +1,4 @@
-import { Browser, Page, expect } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 
 export class OurVisionPage {
   constructor(private page: Page) {
@@ -36,10 +36,6 @@ export class OurVisionPage {
       .locator('[data-testid="youtube"]')
       .contentFrame()
       .getByRole("link", { name: "Watch on YouTube" });
-  }
-
-  async navigateToOurVisionScreen() {
-    await this.ourVisionLink.click();
   }
 
   async verifyOurVisionPageContent() {
