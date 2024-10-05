@@ -1,7 +1,7 @@
 name: Playwright Tests
 env:
   ## Sets environment variables
-  NETLIFY_SITE_NAME: 'flavor-hive' # This is the "https://deploy-preview-1--${NETLIFY_SITE_NAME}.netlify.app"
+  NETLIFY_SITE_NAME: "flavor-hive" # This is the "https://deploy-preview-1--${NETLIFY_SITE_NAME}.netlify.app"
   GITHUB_PR_NUMBER: ${{github.event.pull_request.number}}
 on:
   push:
