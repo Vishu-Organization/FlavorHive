@@ -27,7 +27,7 @@ jobs:
 
             while true; do
               # Check deploy preview status
-              netlify deploy:info --site f69f6255-32c1-4b47-a0a7-87ca55553180 --deploy $deploy_url
+              netlify deploy:info -s f69f6255-32c1-4b47-a0a7-87ca55553180 -d $deploy_url
               if [[ $? -eq 0 ]]; then
                 # Deploy preview is published
                 echo "Deploy preview published successfully!"
