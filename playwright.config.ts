@@ -84,6 +84,6 @@ export default defineConfig({
   webServer: {
     command: "npm run dev",
     url: process.env.PLAYWRIGHT_TEST_BASE_URL || "http://localhost:5173/",
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
   },
 });
