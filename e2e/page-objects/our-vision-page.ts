@@ -1,12 +1,8 @@
-import { Browser, Page, expect } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 
 export class OurVisionPage {
   constructor(private page: Page) {
     this.page = page;
-  }
-
-  get ourVisionLink() {
-    return this.page.getByTestId("our-vision-link");
   }
 
   get mainVision() {
@@ -36,10 +32,6 @@ export class OurVisionPage {
       .locator('[data-testid="youtube"]')
       .contentFrame()
       .getByRole("link", { name: "Watch on YouTube" });
-  }
-
-  async navigateToOurVisionScreen() {
-    await this.ourVisionLink.click();
   }
 
   async verifyOurVisionPageContent() {

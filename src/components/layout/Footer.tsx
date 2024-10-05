@@ -50,8 +50,14 @@ const Footer = () => {
               dangerouslySetInnerHTML={{ __html: title }}
             ></span>
           )}
-          {links?.map(({ id, name, to, type }) => (
-            <FooterLink key={id} title={name} to={to} type={type}></FooterLink>
+          {links?.map(({ id, name, to, type, test_id }) => (
+            <FooterLink
+              key={id}
+              title={name}
+              to={to}
+              type={type}
+              testId={test_id}
+            ></FooterLink>
           ))}
         </section>
       ))}
