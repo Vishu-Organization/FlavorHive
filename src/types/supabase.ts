@@ -14,6 +14,7 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          test_id: string | null
           to: string | null
           type: number | null
         }
@@ -21,6 +22,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string | null
           type?: number | null
         }
@@ -28,6 +30,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string | null
           type?: number | null
         }
@@ -61,6 +64,7 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          test_id: string | null
           to: string
           type: number | null
         }
@@ -68,6 +72,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to: string
           type?: number | null
         }
@@ -75,6 +80,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string
           type?: number | null
         }
@@ -93,6 +99,7 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          test_id: string | null
           to: string | null
           type: number | null
         }
@@ -100,6 +107,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string | null
           type?: number | null
         }
@@ -107,6 +115,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string | null
           type?: number | null
         }
@@ -125,6 +134,7 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          test_id: string | null
           to: string
           type: number | null
         }
@@ -132,6 +142,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to: string
           type?: number | null
         }
@@ -139,6 +150,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string
           type?: number | null
         }
@@ -157,6 +169,7 @@ export type Database = {
           created_at: string
           id: number
           name: string | null
+          test_id: string | null
           to: string
           type: number | null
         }
@@ -164,6 +177,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to: string
           type?: number | null
         }
@@ -171,6 +185,7 @@ export type Database = {
           created_at?: string
           id?: number
           name?: string | null
+          test_id?: string | null
           to?: string
           type?: number | null
         }
