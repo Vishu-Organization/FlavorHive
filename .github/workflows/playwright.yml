@@ -1,18 +1,32 @@
 name: Playwright Tests
+env:
+  ## Sets environment variables
+  NETLIFY_SITE_NAME: "flavor-hive" # This is the "https://deploy-preview-1--${NETLIFY_SITE_NAME}.netlify.app"
+  GITHUB_PR_NUMBER: ${{github.event.pull_request.number}}
 on:
-  # push:
-  #   branches: [ main, master ]
-  # pull_request:
-  #   branches: [ main, master ]
-  deployment_status: 
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
-  test:
-    timeout-minutes: 60
-    name: Run end-to-end tests on Netlify PR preview
+  tests_e2e_netlify_prepare:
+    name: Wait for deployment on Netlify
     runs-on: ubuntu-latest
     steps:
-    - name: Echo deployment status
-      run: echo ${{ github.event.deployment_status }}
+      - name: Waiting for Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1.4
+        id: waitForDeployment
+        with:
+          site_name: "flavor-hive"
+          max_timeout: 300
+        env:
+          NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+  test:
+    needs: tests_e2e_netlify_prepare
+    name: Run end-to-end tests on Netlify PR preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
@@ -23,8 +37,9 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      # Here we provide the preview domain, based on the GITHUB_PR_NUMBER combined with the NETLIFY_SITE_NAME
       env:
-        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
+        PLAYWRIGHT_TEST_BASE_URL: "https://deploy-preview-${{env.GITHUB_PR_NUMBER}}--flavor-hive.netlify.app"
     - uses: actions/upload-artifact@v4
       if: always()
       with:
