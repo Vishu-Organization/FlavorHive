@@ -26,7 +26,7 @@ jobs:
         PR_NUMBER=$(echo "${{ github.event.pull_request.number }}")
         DEPLOY_URL=$(curl -s -H "Authorization: Bearer ${{ secrets.NETLIFY_TOKEN }}" \
                         https://api.netlify.com/api/v1/sites/${{ secrets.NETLIFY_SITE_ID }}/deploys | \
-                        jq -r ".[] | select(.title | index(\"pull/${PR_NUMBER}\")) | .deploy_ssl_url")
+                        jq -r ".[0] | select(.title | index(\"pull/${PR_NUMBER}\")) | .deploy_ssl_url")
         echo "Netlify deployment URL: $DEPLOY_URL"
         echo "::set-output name=preview_url::$DEPLOY_URL"
 
