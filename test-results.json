@@ -83,7 +83,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 6430,
+                  "duration": 5851,
                   "errors": [],
                   "stdout": [
                     {
@@ -92,7 +92,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-05T10:41:59.948Z",
+                  "startTime": "2024-10-05T10:54:57.184Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -120,7 +120,7 @@
       "specs": [
         {
           "title": "Sign up with email password",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -132,23 +132,47 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 5086,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 8437,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Get Started' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Get Started' })\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Get Started' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Get Started' })\u001b[22m\n\n    at SignupPage.navigateToSignUpScreen (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/signup-page.ts:42:31)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:9:3",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/signup-page.ts",
+                      "column": 31,
+                      "line": 42
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/signup-page.ts:42\n\n\u001b[0m \u001b[90m 40 |\u001b[39m   \u001b[36masync\u001b[39m navigateToSignUpScreen() {\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignupLink\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mheader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m   }\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m   \u001b[36masync\u001b[39m verifyPageUrl() {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/signup-page.ts",
+                        "column": 31,
+                        "line": 42
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Get Started' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Get Started' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/signup-page.ts:42\n\n\u001b[0m \u001b[90m 40 |\u001b[39m   \u001b[36masync\u001b[39m navigateToSignUpScreen() {\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignupLink\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mheader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m   }\n \u001b[90m 44 |\u001b[39m\n \u001b[90m 45 |\u001b[39m   \u001b[36masync\u001b[39m verifyPageUrl() {\u001b[0m\n\n\u001b[2m    at SignupPage.navigateToSignUpScreen (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/signup-page.ts:42:31)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:9:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-05T10:41:59.942Z",
+                  "startTime": "2024-10-05T10:54:57.173Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Sign-up-with-email-password-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Sign-up-with-email-password-chromium/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/signup-page.ts",
+                    "column": 31,
+                    "line": 42
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "e5334e3b62ca8fd4a4b6-8262bd974accc0c77fc9",
@@ -161,11 +185,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-05T10:41:58.478Z",
-    "duration": 9370.96,
-    "expected": 2,
+    "startTime": "2024-10-05T10:54:56.192Z",
+    "duration": 10530.145,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
