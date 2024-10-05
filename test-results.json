@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -63,13 +63,13 @@
   },
   "suites": [
     {
-      "title": "our-vision.spec.ts",
-      "file": "our-vision.spec.ts",
+      "title": "on-the-menu.spec.ts",
+      "file": "on-the-menu.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Should navigate to our-vision screen and check the details",
+          "title": "Navigate to 'On The Menu' screen from Header",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,17 +83,17 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 5846,
+                  "duration": 4987,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-04T10:48:24.837Z",
+                  "startTime": "2024-10-05T04:30:37.128Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-7078c-creen-and-check-the-details-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/on-the-menu-Navigate-to-On-The-Menu-screen-from-Header-chromium/test-finished-1.png"
                     }
                   ]
                 }
@@ -101,9 +101,131 @@
               "status": "expected"
             }
           ],
-          "id": "8fdcf065a190de5405a3-05b6704d625e4c9854e3",
+          "id": "0d456a467001680a9592-e5b8bbdea3b434554ad0",
+          "file": "on-the-menu.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "Navigate to 'On The Menu' screen from Footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 6673,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-05T04:30:37.141Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/on-the-menu-Navigate-to-On-The-Menu-screen-from-Footer-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0d456a467001680a9592-edb57ceb55dea82f798f",
+          "file": "on-the-menu.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "our-vision.spec.ts",
+      "file": "our-vision.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Should navigate to our-vision screen from the header and check the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 8659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-05T04:30:37.147Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-3b819-eader-and-check-the-details-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdcf065a190de5405a3-3f585d53c91ccd9a326a",
           "file": "our-vision.spec.ts",
-          "line": 3,
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "Should navigate to our-vision screen from the footer and check the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 9435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-05T04:30:37.122Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-493bb-ooter-and-check-the-details-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdcf065a190de5405a3-54027ef864d8efaef49e",
+          "file": "our-vision.spec.ts",
+          "line": 19,
           "column": 1
         }
       ]
@@ -127,14 +249,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 5437,
+                  "duration": 4572,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-04T10:48:24.801Z",
+                  "startTime": "2024-10-05T04:30:43.045Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -157,9 +279,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-04T10:48:23.771Z",
-    "duration": 7742.313,
-    "expected": 2,
+    "startTime": "2024-10-05T04:30:35.619Z",
+    "duration": 12107.081,
+    "expected": 5,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
