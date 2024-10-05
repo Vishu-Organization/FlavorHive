@@ -10,17 +10,42 @@ on:
     branches: [ main, master ]
 jobs:
   tests_e2e_netlify_prepare:
-    name: Wait for deployment on Netlify
     runs-on: ubuntu-latest
     steps:
-      - name: Waiting for Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1.4
-        id: waitForDeployment
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          site_name: "flavor-hive"
-          max_timeout: 300
-        env:
-          NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+          node-version: 16
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+      - name: Wait for Netlify Deploy Preview
+        run: |
+          function waitForNetlifyDeployPreview() {
+            local deploy_url="$NETLIFY_DEPLOY_URL"
+            local retry_count=0
+            local max_retries=5
+
+            while true; do
+              # Check deploy preview status
+              netlify deploy:info --site $NETLIFY_SITE_ID --deploy $deploy_url
+              if [[ $? -eq 0 ]]; then
+                # Deploy preview is published
+                echo "Deploy preview published successfully!"
+                break
+              elif [[ $retry_count -eq $max_retries ]]; then
+                # Maximum retries reached, fail the job
+                echo "Failed to wait for Netlify deploy preview after $max_retries attempts."
+                exit 1
+              fi
+
+              # Retry after a delay with exponential backoff
+              echo "Retrying in $(($retry_count * 2)) seconds..."
+              sleep $(($retry_count * 2))
+              retry_count=$((retry_count + 1))
+            done
+          }
+
+          waitForNetlifyDeployPreview
   test:
     needs: tests_e2e_netlify_prepare
     name: Run end-to-end tests on Netlify PR preview
