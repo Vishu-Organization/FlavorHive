@@ -86,7 +86,7 @@ const Header = () => {
         <div className="justify-self-end">
           {session?.user.user_metadata.name || session?.user.email ? (
             <span
-              data-testid="welcome-text"
+              data-testid="text-welcome"
               className="mr-2 inline-block normal-case"
             >
               Welcome {session?.user.user_metadata.name || session?.user.email}!

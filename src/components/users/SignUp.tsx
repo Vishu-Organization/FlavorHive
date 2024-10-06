@@ -55,7 +55,7 @@ const SignUp = () => {
         <div className="flex flex-col text-center">
           <h1
             className="mb-2 text-3xl font-bold text-primary"
-            data-testid="sign-up-header"
+            data-testid="text-sign-up-header"
           >
             Get Started
           </h1>
