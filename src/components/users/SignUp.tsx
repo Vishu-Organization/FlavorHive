@@ -53,7 +53,12 @@ const SignUp = () => {
     <div className="mx-auto mb-10 max-w-[1440px] bg-sign-up bg-cover bg-scroll bg-[50%] bg-no-repeat px-32 py-20">
       <div className="container mx-auto max-w-[830px] space-y-4 bg-white p-10">
         <div className="flex flex-col text-center">
-          <h1 className="mb-2 text-3xl font-bold text-primary">Get Started</h1>
+          <h1
+            className="mb-2 text-3xl font-bold text-primary"
+            data-testid="sign-up-header"
+          >
+            Get Started
+          </h1>
           <h2 className="mx-4 text-base font-medium">
             Farm-fresh ingredients and delicious recipes delivered weekly to
             your home
@@ -90,6 +95,7 @@ const SignUp = () => {
                   }}
                   children={({ state, handleChange, handleBlur }) => (
                     <TextField
+                      data-testid="input-name"
                       id="name"
                       size="small"
                       label="Name"
@@ -116,6 +122,7 @@ const SignUp = () => {
                   }}
                   children={({ state, handleChange, handleBlur }) => (
                     <TextField
+                      data-testid="input-email"
                       id="email"
                       size="small"
                       label="Email"
@@ -138,6 +145,7 @@ const SignUp = () => {
                 <h2 className="mt-2 px-4 text-center text-[12px] font-normal leading-5">
                   By continuing, you agree to our&nbsp;
                   <Link
+                    data-testid="link-terms-of-use"
                     to="/pages/terms"
                     className="text-header-primary underline hover:text-header-primary"
                   >
@@ -145,6 +153,7 @@ const SignUp = () => {
                   </Link>
                   &nbsp;and consent to our&nbsp;
                   <Link
+                    data-testid="link-privacy-policy"
                     to="/pages/privacy"
                     className="text-header-primary underline hover:text-header-primary"
                   >
@@ -163,6 +172,7 @@ const SignUp = () => {
                     }}
                     children={({ state, handleChange, handleBlur }) => (
                       <TextField
+                        data-testid="input-password"
                         id="password"
                         type="password"
                         size="small"
@@ -196,6 +206,7 @@ const SignUp = () => {
                   children={() => (
                     <div className="space-y-4">
                       <Button
+                        data-testid="btn-submit"
                         variant="contained"
                         type="submit"
                         fullWidth
@@ -213,6 +224,7 @@ const SignUp = () => {
                       </Button>
                       <div className="text-center text-sm font-medium">OR</div>
                       <button
+                        data-testid="btn-google"
                         className="flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc] hover:bg-signup-google"
                         onClick={onSignUpWithGoogle}
                       >
