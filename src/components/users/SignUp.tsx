@@ -71,6 +71,7 @@ const SignUp = () => {
               <section className="mb-8 pl-4 text-sm">
                 Already have an account?
                 <Link
+                  data-testid="link-sign-in"
                   to="/users/sign-in"
                   className="ml-2 inline-grid grid-cols-2 items-center gap-[0.1rem] font-extrabold text-primary hover:text-primary hover:underline"
                 >
@@ -95,7 +96,6 @@ const SignUp = () => {
                   }}
                   children={({ state, handleChange, handleBlur }) => (
                     <TextField
-                      data-testid="input-name"
                       id="name"
                       size="small"
                       label="Name"
@@ -122,7 +122,6 @@ const SignUp = () => {
                   }}
                   children={({ state, handleChange, handleBlur }) => (
                     <TextField
-                      data-testid="input-email"
                       id="email"
                       size="small"
                       label="Email"
@@ -130,7 +129,7 @@ const SignUp = () => {
                       defaultValue={state.value}
                       onChange={(e) => handleChange(e.target.value)}
                       onBlur={handleBlur}
-                      placeholder="Enter user name"
+                      placeholder="Enter email"
                       margin="dense"
                       fullWidth
                       error={!!state.meta.errors?.length}
@@ -172,7 +171,6 @@ const SignUp = () => {
                     }}
                     children={({ state, handleChange, handleBlur }) => (
                       <TextField
-                        data-testid="input-password"
                         id="password"
                         type="password"
                         size="small"

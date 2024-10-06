@@ -1,16 +1,18 @@
-import test from "@playwright/test";
 import { signupTest } from "./fixtures/signup";
+import { verifyRootPage } from "./helper-functions";
 
 let user;
 
-signupTest("Sign up with email password", async ({ signupPage, rootPage }) => {
-  await rootPage.gotoRootRoute();
-  await rootPage.verifyPageTitile();
-  await signupPage.navigateToSignUpScreen();
-  await signupPage.verifyPageUrl();
-  await signupPage.fillSignUpFormAndSubmit();
-  user = await signupPage.verifyPageAfterLogin();
-});
+signupTest(
+  "Should sign up with email and password",
+  async ({ signupPage, rootPage, headerPage }) => {
+    await verifyRootPage(rootPage);
+    await headerPage.goToSignUpScreen();
+    await signupPage.verifyNavigationToSignUpScreen();
+    await signupPage.fillSignUpFormAndSubmit();
+    user = await signupPage.verifyPageAfterLogin();
+  },
+);
 
 signupTest.afterAll(async () => {
   // TODO: Delete user requires edge function in Supabase. Parking this for now
