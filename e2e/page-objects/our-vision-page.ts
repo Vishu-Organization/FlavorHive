@@ -5,10 +5,6 @@ export class OurVisionPage {
     this.page = page;
   }
 
-  get ourVisionLink() {
-    return this.page.getByTestId("header-our-vision");
-  }
-
   get mainVision() {
     return this.page.getByTestId("main-vision");
   }

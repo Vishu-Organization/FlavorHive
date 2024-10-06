@@ -5,63 +5,55 @@ export class SignupPage {
     this.page = page;
   }
 
-  get signupLink() {
-    return this.page.getByRole("link", { name: "Sign up" });
-  }
-
-  get header() {
-    return this.page.getByRole("heading", { name: "Get Started" });
+  get signUpHeader() {
+    return this.page.getByTestId("text-sign-up-header");
   }
 
   get nameInput() {
-    return this.page.getByPlaceholder("Enter name");
+    return this.page.locator("#name");
+  }
+
+  get emailInput() {
+    return this.page.locator("#email");
   }
 
   get passwordInput() {
-    return this.page.getByPlaceholder("Enter password");
-  }
-
-  get userNameInput() {
-    return this.page.getByPlaceholder("Enter user name");
+    return this.page.locator("#password");
   }
 
   get termsOfUseLink() {
-    return this.page.getByRole("link", { name: "Terms of Use" });
+    return this.page.getByTestId("link-terms-of-use");
   }
 
   get privacyPolicyLink() {
-    return this.page.getByRole("link", { name: "Privacy Policy" });
+    return this.page.getByTestId("link-privacy-policy");
   }
 
-  get welcomeText() {
-    return this.page.getByText("Welcome Vishu!");
+  get submitBtn() {
+    return this.page.getByTestId("btn-submit");
   }
 
-  async navigateToSignUpScreen() {
-    await this.signupLink.click();
-    await expect(this.header).toBeVisible();
+  get googleBtn() {
+    return this.page.getByTestId("btn-google");
   }
 
-  async verifyPageUrl() {
-    await expect(this.page.url().includes("sign-up")).toBe(true);
+  async verifyNavigationToSignUpScreen() {
+    expect(this.page.url()).toContain("sign-up");
+    await expect(this.signUpHeader).toBeVisible();
+    await expect(this.signUpHeader).toBeVisible();
+    await expect(this.googleBtn).toBeVisible();
   }
 
   async fillSignUpFormAndSubmit() {
-    await this.nameInput.click();
     await this.nameInput.fill("Vishu");
-    await this.nameInput.press("Tab");
-    await this.userNameInput.fill("vishuhanuma@gmail.com");
-    await this.userNameInput.press("Enter");
-    await this.userNameInput.press("Tab");
-    await this.termsOfUseLink.press("Tab");
-    await this.privacyPolicyLink.press("Tab");
+    await this.emailInput.fill("vishuhanuma@gmail.com");
+    await this.emailInput.press("Enter");
     await this.passwordInput.fill("vishu1");
-    await this.passwordInput.press("Enter");
+    await this.submitBtn.click();
   }
 
   async verifyPageAfterLogin() {
     const response = await this.page.waitForResponse(`*/**/auth/v1/signup*`);
-    await expect(this.welcomeText).toBeVisible();
     return await response.json();
   }
 }
