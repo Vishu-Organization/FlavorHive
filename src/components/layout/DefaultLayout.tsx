@@ -10,7 +10,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <>
       <Header />
-      <div className="mt-20 flex min-h-screen w-screen flex-col">
+      <div className="mt-16 flex min-h-screen w-screen flex-col bg-slate-50">
         {children}
         <Footer />
       </div>

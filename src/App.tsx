@@ -18,7 +18,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen={false} />
+      <ReactQueryDevtools
+        initialIsOpen={false}
+        position="right"
+        buttonPosition="top-right"
+      />
     </QueryClientProvider>
   );
 }

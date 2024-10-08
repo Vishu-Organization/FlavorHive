@@ -12,14 +12,14 @@ jobs:
       # Required to put a comment into the pull-request
       pull-requests: write
 
-    # steps:
-    # - uses: actions/checkout@v4
-    # - name: 'Install Node'
-    #   uses: actions/setup-node@v4
-    #   with:
-    #     node-version: 'lts/*'
-    # - name: 'Install Deps'
-    #   run: npm ci
+    steps:
+    - uses: actions/checkout@v4
+    - name: 'Install Node'
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+    - name: 'Install Deps'
+      run: npm ci
     # - name: 'Test'
     #   run: npx vitest --coverage.enabled true
     # - name: 'Report Coverage'

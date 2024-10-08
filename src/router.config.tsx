@@ -27,7 +27,7 @@ const rootRoute = createRootRoute({
       <ScrollRestoration />
       <Outlet />
       <Suspense>
-        <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
+        <TanStackRouterDevtools initialIsOpen={false} position="top-left" />
       </Suspense>
     </>
   ),
@@ -88,8 +88,7 @@ const usersRoute = createRoute({
 const signInRoute = createRoute({
   getParentRoute: () => usersRoute,
   path: "sign-in",
-  component: () => <div>You'll login here</div>,
-});
+}).lazy(() => import("./components/users/LogIn").then((d) => d.Route));
 
 const signUpRoute = createRoute({
   getParentRoute: () => usersRoute,

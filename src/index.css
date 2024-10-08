@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 :root {
+
+  --toggle-text: #b9b9c5;
+  --black: #404040;
+  --default: #0f346c;
+  --info: #6a6d75;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
 
@@ -22,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  letter-spacing: 0.025em;
   font-family: Cera Pro, HelveticaNeue, Helvetica Neue, HelveticaNeueRoman, HelveticaNeue-Roman, Helvetica Neue Roman, TeXGyreHerosRegular, Helvetica, Tahoma, Geneva, Arial, sans-serif;
 }
 
@@ -47,6 +54,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: light) {

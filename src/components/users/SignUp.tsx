@@ -50,7 +50,7 @@ const SignUp = () => {
     },
   });
   return (
-    <div className="mx-auto mb-10 max-w-[1440px] bg-sign-up bg-cover bg-scroll bg-[50%] bg-no-repeat px-32 py-20">
+    <div className="mx-auto mb-10 mt-10 max-w-[1440px] bg-sign-up bg-cover bg-scroll bg-[50%] bg-no-repeat px-32 py-20">
       <div className="container mx-auto max-w-[830px] space-y-4 bg-white p-10">
         <div className="flex flex-col text-center">
           <h1
