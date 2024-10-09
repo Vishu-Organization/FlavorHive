@@ -17,6 +17,10 @@ export class HeaderPage {
     return this.page.getByTestId("link-header-sign-up");
   }
 
+  get loginLink() {
+    return this.page.getByTestId("link-header-login");
+  }
+
   get welcomeText() {
     return this.page.getByTestId("text-welcome");
   }
@@ -33,8 +37,12 @@ export class HeaderPage {
     await this.signupLink.click();
   }
 
-  async verifyWelcomeText() {
+  async goToLoginScreen() {
+    await this.loginLink.click();
+  }
+
+  async verifyWelcomeText(name: string) {
     await expect(this.welcomeText).toBeVisible();
-    await expect(this.welcomeText).toContainText("Welcome Vishu!");
+    await expect(this.welcomeText).toContainText(`Welcome ${name}`);
   }
 }

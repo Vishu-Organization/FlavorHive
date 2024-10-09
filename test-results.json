@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -49,6 +49,34 @@
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
         "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/apple/Desktop/Vishu/FlavorHive/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/apple/Desktop/Vishu/FlavorHive/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
       }
     ],
     "shard": null,
@@ -62,174 +90,6 @@
     }
   },
   "suites": [
-    {
-      "title": "on-the-menu.spec.ts",
-      "file": "on-the-menu.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Navigate to 'On The Menu' screen from Header",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 4099,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.556Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/on-the-menu-Navigate-to-On-The-Menu-screen-from-Header-chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0d456a467001680a9592-e5b8bbdea3b434554ad0",
-          "file": "on-the-menu.spec.ts",
-          "line": 4,
-          "column": 1
-        },
-        {
-          "title": "Navigate to 'On The Menu' screen from Footer",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 4907,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.625Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/on-the-menu-Navigate-to-On-The-Menu-screen-from-Footer-chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0d456a467001680a9592-edb57ceb55dea82f798f",
-          "file": "on-the-menu.spec.ts",
-          "line": 13,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "our-vision.spec.ts",
-      "file": "our-vision.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should navigate to our-vision screen from the header and check the details",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 7198,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.595Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-3b819-eader-and-check-the-details-chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "8fdcf065a190de5405a3-3f585d53c91ccd9a326a",
-          "file": "our-vision.spec.ts",
-          "line": 10,
-          "column": 1
-        },
-        {
-          "title": "Should navigate to our-vision screen from the footer and check the details",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 7423,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.588Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/our-vision-Should-navigate-493bb-ooter-and-check-the-details-chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "8fdcf065a190de5405a3-54027ef864d8efaef49e",
-          "file": "our-vision.spec.ts",
-          "line": 19,
-          "column": 1
-        }
-      ]
-    },
     {
       "title": "signup.spec.ts",
       "file": "signup.spec.ts",
@@ -251,12 +111,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4271,
+                  "duration": 4536,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:21.481Z",
+                  "startTime": "2024-10-09T10:41:40.029Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -271,7 +131,93 @@
           ],
           "id": "e5334e3b62ca8fd4a4b6-67091eb60ce9491cc58d",
           "file": "signup.spec.ts",
-          "line": 6,
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Should sign up with email and password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "This test only works on chrome atm"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "skipped",
+                  "duration": 3164,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-09T10:41:39.961Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-firefox/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-a7e844d7c9e9ca5c4764",
+          "file": "signup.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Should sign up with email and password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "This test only works on chrome atm"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "skipped",
+                  "duration": 2032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-09T10:41:40.077Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-webkit/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "e5334e3b62ca8fd4a4b6-e17a383c5743ee4d60f7",
+          "file": "signup.spec.ts",
+          "line": 5,
           "column": 1
         }
       ]
@@ -279,10 +225,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-06T04:53:15.504Z",
-    "duration": 10323.262,
-    "expected": 5,
-    "skipped": 0,
+    "startTime": "2024-10-09T10:41:38.757Z",
+    "duration": 9099.087,
+    "expected": 1,
+    "skipped": 2,
     "unexpected": 0,
     "flaky": 0
   }
