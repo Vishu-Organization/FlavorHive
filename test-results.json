@@ -63,6 +63,90 @@
   },
   "suites": [
     {
+      "title": "login.spec.ts",
+      "file": "login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Navigate to login screen and login with email and password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6366,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-09T09:11:13.423Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-c6facd39f4eb6ecf8574",
+          "file": "login.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Navigate to signup screen, then to login screen and login with email and password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 7032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-09T09:11:13.433Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-5f4c99d3d2313f4c2d57",
+          "file": "login.spec.ts",
+          "line": 22,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "on-the-menu.spec.ts",
       "file": "on-the-menu.spec.ts",
       "column": 0,
@@ -81,14 +165,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 4099,
+                  "duration": 5415,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.556Z",
+                  "startTime": "2024-10-09T09:11:13.416Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -119,14 +203,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 4907,
+                  "duration": 5619,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.625Z",
+                  "startTime": "2024-10-09T09:11:13.437Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -167,12 +251,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 7198,
+                  "duration": 6457,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.595Z",
+                  "startTime": "2024-10-09T09:11:20.151Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -205,12 +289,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 7423,
+                  "duration": 7236,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:16.588Z",
+                  "startTime": "2024-10-09T09:11:20.280Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -251,12 +335,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4271,
+                  "duration": 3992,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-06T04:53:21.481Z",
+                  "startTime": "2024-10-09T09:11:20.964Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -271,7 +355,7 @@
           ],
           "id": "e5334e3b62ca8fd4a4b6-67091eb60ce9491cc58d",
           "file": "signup.spec.ts",
-          "line": 6,
+          "line": 4,
           "column": 1
         }
       ]
@@ -279,9 +363,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-06T04:53:15.504Z",
-    "duration": 10323.262,
-    "expected": 5,
+    "startTime": "2024-10-09T09:11:12.274Z",
+    "duration": 15360.496,
+    "expected": 7,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

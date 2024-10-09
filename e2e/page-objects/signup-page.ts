@@ -29,6 +29,10 @@ export class SignupPage {
     return this.page.getByTestId("link-privacy-policy");
   }
 
+  get loginLink() {
+    return this.page.getByTestId("link-sign-in");
+  }
+
   get submitBtn() {
     return this.page.getByTestId("btn-submit");
   }
@@ -37,9 +41,12 @@ export class SignupPage {
     return this.page.getByTestId("btn-google");
   }
 
+  async goToLoginScreen() {
+    await this.loginLink.click();
+  }
+
   async verifyNavigationToSignUpScreen() {
     expect(this.page.url()).toContain("sign-up");
-    await expect(this.signUpHeader).toBeVisible();
     await expect(this.signUpHeader).toBeVisible();
     await expect(this.googleBtn).toBeVisible();
   }
