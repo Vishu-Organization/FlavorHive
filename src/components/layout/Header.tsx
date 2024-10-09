@@ -93,6 +93,7 @@ const Header = () => {
             </span>
           ) : (
             <Link
+              data-testid="link-header-login"
               to="/users/sign-in"
               className="px-4 py-3 hover:text-primary"
               activeProps={{

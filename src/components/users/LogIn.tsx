@@ -41,7 +41,10 @@ const LogIn = () => {
   return (
     <div className="container p-8">
       <div className="mx-auto w-[75%] space-y-4 bg-white p-5 shadow-md md:w-[50%] lg:w-[40%] xl:w-[25%]">
-        <h1 className="text-center text-3xl font-semibold text-primary">
+        <h1
+          className="text-center text-3xl font-semibold text-primary"
+          data-testid="text-login-header"
+        >
           Login
         </h1>
         <form
@@ -114,7 +117,7 @@ const LogIn = () => {
             <Field
               name="rememberMe"
               children={({ state, handleChange }) => (
-                <div className="text-primary-toggle-text lets flex items-center space-x-2">
+                <div className="lets flex items-center space-x-2 text-primary-toggle-text">
                   <input
                     className="size-4"
                     type="checkbox"
