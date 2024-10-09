@@ -13,7 +13,7 @@ type FooterLinkProps = {
 function FooterLink({ title, type, to, testId }: FooterLinkProps) {
   const navigation =
     !type || type === LinkType.Link
-      ? to
+      ? `/${to}`
       : type === LinkType.Email
         ? `mailto:${title}`
         : `tel:${title}`;

@@ -20,8 +20,10 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#0f346c",
-          black: "#404040",
+          DEFAULT: "var(--default)",
+          black: "var(--black)",
+          "toggle-text": "var(--toggle-text)",
+          info: "var(--info)",
         },
         footer: {
           primary: "#a1bce6",

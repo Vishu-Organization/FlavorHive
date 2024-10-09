@@ -1,5 +1,5 @@
 import supabase from "../supabaseClient";
-import { SignUpUser } from "../types/types";
+import { User } from "../types/types";
 
 export const getAllCustomerSupportLinks = async () => {
   const { data: customerSupportLinks } = await supabase
@@ -55,7 +55,7 @@ export const getOurVisionScreenDetails = async () => {
   return ourVisionData;
 };
 
-export const signUpWithPassword = async (user: SignUpUser) => {
+export const signUpWithPassword = async (user: User) => {
   const { email, password, name } = user;
   const { data, error: signUpError } = await supabase.auth.signUp({
     email,
@@ -85,5 +85,18 @@ export const signOut = async () => {
   if (error) {
     throw error;
   }
+};
+
+export const signInWithPassword = async (user: User) => {
+  const { password, email } = user;
+  const { data, error: signInError } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (signInError) {
+    throw signInError;
+  }
+  return data;
 };
 
