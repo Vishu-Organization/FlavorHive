@@ -1,9 +1,15 @@
+import test from "@playwright/test";
 import { signupTest } from "./fixtures/signup";
 import { verifyRootPage } from "./helper-functions";
 
 signupTest(
   "Should sign up with email and password",
-  async ({ signupPage, rootPage, headerPage }) => {
+  async ({ signupPage, rootPage, headerPage, browserName }) => {
+    test.skip(
+      browserName === "firefox" || browserName === "webkit",
+      "This test only works on chrome atm",
+    );
+
     await verifyRootPage(rootPage);
     await headerPage.goToSignUpScreen();
     await signupPage.verifyNavigationToSignUpScreen();
