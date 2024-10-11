@@ -27,7 +27,7 @@ const rootRoute = createRootRoute({
       <ScrollRestoration />
       <Outlet />
       <Suspense>
-        <TanStackRouterDevtools initialIsOpen={false} position="top-left" />
+        <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
       </Suspense>
     </>
   ),

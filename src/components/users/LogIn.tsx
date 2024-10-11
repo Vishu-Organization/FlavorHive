@@ -40,9 +40,9 @@ const LogIn = () => {
 
   return (
     <div className="container p-8">
-      <div className="mx-auto w-[75%] space-y-4 bg-white p-5 shadow-md md:w-[50%] lg:w-[40%] xl:w-[25%]">
+      <div className="mx-auto w-[65%] space-y-4 bg-white p-5 shadow-md md:w-[50%] lg:w-[40%] xl:w-[25%]">
         <h1
-          className="text-center text-3xl font-semibold text-primary"
+          className="mb-2 text-center text-xl font-bold text-primary md:text-2xl lg:text-3xl"
           data-testid="text-login-header"
         >
           Login
@@ -147,7 +147,7 @@ const LogIn = () => {
               state.isTouched,
             ]}
             children={() => (
-              <div className="space-y-4">
+              <div className="space-y-2 lg:space-y-4">
                 <Button
                   data-testid="btn-login"
                   variant="contained"

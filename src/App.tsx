@@ -21,7 +21,7 @@ function App() {
       <ReactQueryDevtools
         initialIsOpen={false}
         position="right"
-        buttonPosition="top-right"
+        buttonPosition="bottom-right"
       />
     </QueryClientProvider>
   );
