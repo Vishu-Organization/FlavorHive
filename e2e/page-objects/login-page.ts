@@ -43,10 +43,12 @@ export class LoginPage {
     await expect(this.googleBtn).toBeVisible();
   }
 
-  async fillSignUpFormAndSubmit() {
-    await this.emailInput.click();
+  async fillSignUpFormAndSubmit(
+    browserName: "firefox" | "chromium" | "webkit",
+  ) {
+    browserName === "firefox" && (await this.emailInput.click());
     await this.emailInput.fill("vishu2@gmail.com");
-    await this.emailInput.press("Tab");
+    browserName === "firefox" && (await this.emailInput.press("Tab"));
     await this.passwordInput.fill("vishu1");
     await this.loginBtn.click();
   }
