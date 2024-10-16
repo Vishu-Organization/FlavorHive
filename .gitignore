@@ -28,6 +28,7 @@ html
 /blob-report/
 /playwright/.cache/
 /e2e/report/
+/playwright-report
 
 # Local Netlify folder
 .netlify

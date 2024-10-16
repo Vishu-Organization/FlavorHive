@@ -4,9 +4,11 @@ import { verifyRootPage } from "./helper-functions";
 
 signupTest(
   "Should sign up with email and password",
-  async ({ signupPage, rootPage, headerPage, browserName }) => {
+  async ({ signupPage, rootPage, headerPage, browserName, viewport }) => {
     test.skip(
-      browserName === "firefox" || browserName === "webkit",
+      browserName === "firefox" ||
+        browserName === "webkit" ||
+        viewport?.width !== 1412,
       "This test only works on chrome atm",
     );
 

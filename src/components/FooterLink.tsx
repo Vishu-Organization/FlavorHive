@@ -24,7 +24,7 @@ function FooterLink({ title, type, to, testId }: FooterLinkProps) {
         data-testid={testId}
         to={navigation}
         aria-label={title ?? ""}
-        className="justify-self-start capitalize leading-[2em] text-gray-500 hover:text-footer-hover md:text-footer-primary"
+        className={`block w-fit justify-self-start ${type === LinkType.Email ? "break-all normal-case" : "break-words"} capitalize underline-offset-2 hover:text-footer-hover`}
         activeProps={{
           className: "text-footer-hover underline md:text-footer-hover",
         }}

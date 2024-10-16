@@ -38,15 +38,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mr-0 mt-auto grid grid-cols-5 justify-items-start px-[2%] text-xs leading-[2em] text-gray-50 md:grid md:bg-primary md:py-[3%] lg:px-[5%] lg:py-[4%] xl:px-[6%] xl:py-[4%] xl:text-sm 2xl:px-[12%] 2xl:py-[5%]">
+    <footer className="mt-auto grid grid-cols-[100px_120px_120px_1fr_1fr] bg-primary p-[2%] text-xs text-footer-primary md:grid-cols-5 md:p-[3%] lg:p-[4%] xl:text-sm">
       {productLinks.map(({ links, title }, id) => (
-        <section
-          key={id}
-          className="grid grid-flow-col auto-rows-min md:grid-flow-row"
-        >
+        <section key={id} className="space-y-2">
           {title && (
             <span
-              className="mt-4 leading-[2em] text-slate-400 md:mt-0 md:text-gray-50"
+              className="md:text-gray-50"
               dangerouslySetInnerHTML={{ __html: title }}
             ></span>
           )}
