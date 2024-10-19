@@ -49,6 +49,14 @@ const aboutRoute = createRoute({
   },
 });
 
+const homeRoute = createRoute({
+  getParentRoute: () => indexRoute,
+  path: "/home",
+  component: function Home() {
+    return <div className="p-2">Hello from home!</div>;
+  },
+});
+
 const pagesRoute = createRoute({
   getParentRoute: () => indexRoute,
   path: "/pages",
@@ -112,6 +120,7 @@ const helpCenterRoute = createRoute({
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
+  homeRoute,
   helpCenterRoute,
   menuRoute,
   pagesRoute.addChildren([visionRoute, blogRoute, termsRoute, privacyRoute]),
