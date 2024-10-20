@@ -1,5 +1,5 @@
 import img from "../../assets/favicon_package_v0.16/android-chrome-192x192.png";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import supabase from "../../supabaseClient";
 import { useEffect, useState } from "react";
 import { Session } from "@supabase/supabase-js";
@@ -9,9 +9,8 @@ import Button from "../Button";
 
 const Header = () => {
   const [session, setSession] = useState<Session | null>(null);
-
+  const navigate = useNavigate();
   const { mutate: signOutMutate } = useSignOut();
-
   const onSignout = () => {
     signOutMutate();
   };
@@ -27,7 +26,12 @@ const Header = () => {
     getSession();
     // Subscribe to auth state changes
     const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_, session) => setSession(session),
+      (event, session) => {
+        if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+          navigate({ to: "/home" });
+        }
+        setSession(session);
+      },
     );
 
     // Cleanup the subscription when the component unmounts
@@ -116,7 +120,13 @@ const Header = () => {
               Sign up
             </Link>
           ) : (
-            <Button type="button" size="icon" onClick={onSignout}>
+            <Button
+              data-testid="btn-logout"
+              type="button"
+              display="inline-block"
+              variant="icon"
+              onClick={onSignout}
+            >
               <Logout />
             </Button>
           )}

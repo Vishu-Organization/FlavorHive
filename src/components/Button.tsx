@@ -9,6 +9,7 @@ export const buttonStyles = cva(
       display: {
         default: ["block"],
         flex: ["flex", "items-center", "justify-center"],
+        "inline-block": ["inline-block"],
       },
       variant: {
         default: [
@@ -28,25 +29,20 @@ export const buttonStyles = cva(
           "gap-3",
           "bg-white",
         ],
-        ghost: ["hover:bg-gray-100"],
-        dark: [
-          "bg-secondary-dark",
-          "hover:bg-secondary-dark-hover",
-          "text-secondary",
-        ],
-      },
-      size: {
-        full: ["w-full"],
-        default: ["rounded", "p-2"],
         icon: [
           "rounded-full",
           "w-10",
           "h-10",
-          "flex",
-          "items-center",
-          "justify-center",
           "p-2.5",
+          "text-gray20",
+          "bg-transparent",
+          "hover:border-transparent",
+          "hover:bg-gray-200",
         ],
+      },
+      size: {
+        full: ["w-full"],
+        default: ["p-2"],
       },
     },
     defaultVariants: {

@@ -23,7 +23,7 @@ const LogIn = () => {
   };
 
   if (isSignInWithPasswordSuccess) {
-    navigate({ to: "/" });
+    navigate({ to: "/home" });
   }
 
   const { Field, handleSubmit, Subscribe } = useForm({

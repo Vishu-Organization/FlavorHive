@@ -23,6 +23,7 @@ export default {
         blue20: "var(--blue20)",
         blue50: "var(--blue50)",
         gray10: "var(--gray10)",
+        gray20: "var(--gray20)",
 
         primary: {
           DEFAULT: "var(--default)",
