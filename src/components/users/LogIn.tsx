@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useForm } from "@tanstack/react-form";
 import { Link, createLazyRoute, useNavigate } from "@tanstack/react-router";
 import { zodValidator } from "@tanstack/zod-form-adapter";
@@ -8,6 +8,7 @@ import {
   useSignInWithGoogle,
   useSignInWithPassword,
 } from "../../services/use-mutations";
+import Button from "../Button";
 
 const LogIn = () => {
   const { mutate: signInWithGoogleMutate } = useSignInWithGoogle();
@@ -22,7 +23,7 @@ const LogIn = () => {
   };
 
   if (isSignInWithPasswordSuccess) {
-    navigate({ to: "/" });
+    navigate({ to: "/home" });
   }
 
   const { Field, handleSubmit, Subscribe } = useForm({
@@ -150,32 +151,27 @@ const LogIn = () => {
               <div className="space-y-2 lg:space-y-4">
                 <Button
                   data-testid="btn-login"
-                  variant="contained"
+                  variant="default"
                   type="submit"
-                  fullWidth
-                  sx={{
-                    borderRadius: "2px",
-                    backgroundColor: "#002684",
-                    fontSize: "13px",
-                    letterSpacing: "2px",
-                    ":hover": {
-                      backgroundColor: "#002c9b",
-                    },
-                  }}
+                  size="full"
+                  className="rounded-md"
                 >
                   Log In
                 </Button>
                 <div className="text-center text-sm font-medium">OR</div>
-                <button
+                <Button
                   data-testid="btn-google"
-                  className="flex w-full items-center justify-center gap-3 rounded-sm border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc] hover:bg-signup-google"
+                  size="full"
+                  display="flex"
+                  variant="google"
+                  className="rounded-md"
                   onClick={onSignInWithGoogle}
                 >
                   <GoogleIcon />
                   <span className="text-sm font-medium">
                     Sign in with Google
                   </span>
-                </button>
+                </Button>
               </div>
             )}
           />

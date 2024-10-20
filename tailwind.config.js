@@ -19,11 +19,18 @@ export default {
           "url('https://media.blueapron.com/assets/signup/landing/background-landing-signup.jpg?quality=80&width=1440')",
       },
       colors: {
+        blue10: "var(--blue10)",
+        blue20: "var(--blue20)",
+        blue50: "var(--blue50)",
+        gray10: "var(--gray10)",
+        gray20: "var(--gray20)",
+
         primary: {
           DEFAULT: "var(--default)",
           black: "var(--black)",
           "toggle-text": "var(--toggle-text)",
           info: "var(--info)",
+          hover: "var(--blue20)",
         },
         footer: {
           primary: "#a1bce6",
@@ -34,9 +41,6 @@ export default {
           "login-link": "#f26c29",
           "login-link-hover": "#ff8142",
           "login-link-active": "#e65710",
-        },
-        signup: {
-          google: "rgba(66, 133, 244, 0.04)",
         },
       },
     },

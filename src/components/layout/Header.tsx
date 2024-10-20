@@ -1,17 +1,16 @@
 import img from "../../assets/favicon_package_v0.16/android-chrome-192x192.png";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import supabase from "../../supabaseClient";
 import { useEffect, useState } from "react";
 import { Session } from "@supabase/supabase-js";
-import { Button } from "@mui/material";
 import { Logout } from "@mui/icons-material";
 import { useSignOut } from "../../services/use-mutations";
+import Button from "../Button";
 
 const Header = () => {
   const [session, setSession] = useState<Session | null>(null);
-
+  const navigate = useNavigate();
   const { mutate: signOutMutate } = useSignOut();
-
   const onSignout = () => {
     signOutMutate();
   };
@@ -27,7 +26,12 @@ const Header = () => {
     getSession();
     // Subscribe to auth state changes
     const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_, session) => setSession(session),
+      (event, session) => {
+        if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+          navigate({ to: "/home" });
+        }
+        setSession(session);
+      },
     );
 
     // Cleanup the subscription when the component unmounts
@@ -41,7 +45,7 @@ const Header = () => {
       id="header"
       className="fixed left-0 right-0 z-10 flex max-h-20 w-full bg-slate-100 p-2 text-[10px] md:text-xs lg:p-4 lg:text-sm"
     >
-      <div className="flex">
+      <Link to="/home" data-testid="header-home">
         <img
           src={img}
           height="40"
@@ -50,7 +54,7 @@ const Header = () => {
           alt="FlavourHive icon"
           className="rounded-full"
         />
-      </div>
+      </Link>
       <section className="mx-8 grid w-full auto-cols-auto grid-cols-3 items-center font-normal uppercase tracking-widest text-header-primary md:grid-cols-2">
         <div className="col-span-2 md:col-auto">
           <Link
@@ -117,9 +121,10 @@ const Header = () => {
             </Link>
           ) : (
             <Button
-              variant="text"
+              data-testid="btn-logout"
               type="button"
-              sx={{ color: "orangered" }}
+              display="inline-block"
+              variant="icon"
               onClick={onSignout}
             >
               <Logout />

@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useForm } from "@tanstack/react-form";
 import { Link, createLazyRoute, useNavigate } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
@@ -11,6 +11,7 @@ import {
 } from "../../services/use-mutations";
 
 import GoogleIcon from "../../assets/google.svg";
+import Button from "../Button";
 
 const SignUp = () => {
   const [isContinue, setIsContinue] = useState<boolean>(false);
@@ -27,7 +28,7 @@ const SignUp = () => {
   };
 
   if (isSignUpWithPasswordSuccess) {
-    navigate({ to: "/" });
+    navigate({ to: "/home" });
   }
 
   const { Field, handleSubmit, Subscribe } = useForm({
@@ -201,35 +202,28 @@ const SignUp = () => {
                 children={() => (
                   <div className="space-y-2 lg:space-y-4">
                     <Button
-                      data-testid="btn-submit"
-                      variant="contained"
                       type="submit"
-                      fullWidth
-                      sx={{
-                        borderRadius: "20px",
-                        backgroundColor: "#002684",
-                        fontSize: "13px",
-                        letterSpacing: "2px",
-                        ":hover": {
-                          backgroundColor: "#002c9b",
-                        },
-                      }}
+                      data-testid="btn-submit"
+                      size="full"
+                      variant="default"
                     >
                       {isContinue ? "Sign Up" : "Continue"}
                     </Button>
                     <div className="text-center text-sm font-medium text-primary-info">
                       OR
                     </div>
-                    <button
+                    <Button
                       data-testid="btn-google"
-                      className="flex w-full items-center justify-center gap-3 rounded-3xl border-[#dadce0] bg-white py-[0.5em] transition-colors duration-200 ease-in hover:border-[#d2e3fc] hover:bg-signup-google"
+                      size="full"
+                      display="flex"
+                      variant="google"
                       onClick={onSignUpWithGoogle}
                     >
                       <GoogleIcon />
                       <span className="text-sm font-medium">
                         Sign up with Google
                       </span>
-                    </button>
+                    </Button>
                   </div>
                 )}
               />
