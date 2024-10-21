@@ -27,10 +27,10 @@ supabase.auth.onAuthStateChange((event, session) => {
     window.localStorage.removeItem("oauth_refresh_token");
   }
 
-  // //  Remove the hash (#) from the URL after sign-in
-  // if (window.location.href.slice(-1).includes("#")) {
-  //   window.history.replaceState(null, "", window.location.pathname);
-  // }
+  //  Remove the hash (#) from the URL after sign-in
+  if (window.location.href.slice(-1).includes("#")) {
+    window.history.replaceState(null, "", window.location.pathname);
+  }
 });
 
 
