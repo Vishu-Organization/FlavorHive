@@ -1,82 +1,52 @@
 import {
-  Outlet,
-  ScrollRestoration,
   createRootRoute,
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-import DefaultLayoutPage from "./pages/DefaultLayoutPage";
 import { useGetOurVisionScreenDetails } from "./services/use-queries";
-import React, { Suspense } from "react";
-
-const TanStackRouterDevtools = import.meta.env.PROD
-  ? () => null // Render nothing in production
-  : React.lazy(() =>
-      // Lazy load in development
-      import("@tanstack/router-devtools").then((res) => ({
-        default: res.TanStackRouterDevtools,
-        // For Embedded Mode
-        // default: res.TanStackRouterDevtoolsPanel
-      })),
-    );
+import DefaultLayout from "./components/layout/DefaultLayout";
 
 const rootRoute = createRootRoute({
   errorComponent: () => <>There was an error</>,
-  component: () => (
-    <>
-      <ScrollRestoration />
-      <Outlet />
-      <Suspense>
-        <TanStackRouterDevtools initialIsOpen={false} position="bottom-left" />
-      </Suspense>
-    </>
-  ),
+  component: DefaultLayout,
 });
 
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: function Index() {
-    return <DefaultLayoutPage />;
-  },
-});
-
-const aboutRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/about",
-  component: function About() {
-    return <div className="p-2">Hello from About!</div>;
-  },
-});
-
-const homeRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/home",
   component: function Home() {
     return <div className="p-2">Hello from home!</div>;
   },
 });
 
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "about",
+  component: function About() {
+    return <div className="p-2">Hello from About!</div>;
+  },
+});
+
 const pagesRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/pages",
+  getParentRoute: () => rootRoute,
+  path: "pages",
 });
 
 const termsRoute = createRoute({
   getParentRoute: () => pagesRoute,
-  path: "/terms",
+  path: "terms",
   component: () => <div>Your terms come up here</div>,
 });
 
 const privacyRoute = createRoute({
   getParentRoute: () => pagesRoute,
-  path: "/privacy",
+  path: "privacy",
   component: () => <div>Your privacy conditions load here</div>,
 });
 
 const visionRoute = createRoute({
   getParentRoute: () => pagesRoute,
-  path: "/vision",
+  path: "vision",
   loader: useGetOurVisionScreenDetails,
 }).lazy(() =>
   import("./components/company-pages/OurVision").then((d) => d.Route),
@@ -84,13 +54,14 @@ const visionRoute = createRoute({
 
 const blogRoute = createRoute({
   getParentRoute: () => pagesRoute,
-  path: "/blog",
+  path: "blog",
   component: () => <p>Blogs are being written!!</p>,
 });
 
 const usersRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/users",
+  getParentRoute: () => rootRoute,
+  path: "users",
+  component: () => <p>Dummy users</p>,
 }).lazy(() => import("./pages/UsersPage").then((d) => d.Route));
 
 const signInRoute = createRoute({
@@ -100,18 +71,18 @@ const signInRoute = createRoute({
 
 const signUpRoute = createRoute({
   getParentRoute: () => usersRoute,
-  path: "/sign-up",
+  path: "sign-up",
 }).lazy(() => import("./components/users/SignUp").then((d) => d.Route));
 
 const menuRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/on-the-menu",
+  getParentRoute: () => rootRoute,
+  path: "on-the-menu",
   component: () => <p>We are building the menu</p>,
 });
 
 const helpCenterRoute = createRoute({
-  getParentRoute: () => indexRoute,
-  path: "/help-center",
+  getParentRoute: () => rootRoute,
+  path: "help-center",
   component: function About() {
     return <div className="p-2">Help Center coming up here</div>;
   },
@@ -120,7 +91,6 @@ const helpCenterRoute = createRoute({
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
-  homeRoute,
   helpCenterRoute,
   menuRoute,
   pagesRoute.addChildren([visionRoute, blogRoute, termsRoute, privacyRoute]),
