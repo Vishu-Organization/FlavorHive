@@ -10,7 +10,7 @@ export default {
         center: true,
       },
       fontFamily: {
-        "our-vision": ["Chronicle Deck", "Times", "serif"],
+        chronicle: ["Chronicle Deck", "Times", "serif"],
       },
       backgroundImage: {
         "our-vision":

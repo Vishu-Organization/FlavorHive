@@ -35,7 +35,7 @@ const Header = () => {
   }, []);
 
   return (
-    <section
+    <nav
       id="header"
       className="fixed left-0 right-0 z-10 flex max-h-20 w-full bg-slate-100 p-2 text-[10px] md:text-xs lg:p-4 lg:text-sm"
     >
@@ -126,7 +126,7 @@ const Header = () => {
           )}
         </div>
       </section>
-    </section>
+    </nav>
   );
 };
 

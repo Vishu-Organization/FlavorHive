@@ -32,7 +32,7 @@ const OurVision = () => {
       ></iframe>
       <p
         data-testid="main-vision"
-        className="text-balance font-our-vision text-base leading-8 text-primary lg:text-[20px]"
+        className="font-chronicle text-balance text-base leading-8 text-primary lg:text-[20px]"
       >
         {ourVision && ourVision[0].description}
       </p>
