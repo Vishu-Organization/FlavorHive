@@ -3,7 +3,16 @@ import { VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 export const buttonStyles = cva(
-  ["transition-colors", "duration-200", "ease-in", "rounded-3xl"],
+  [
+    "transition-colors",
+    "duration-200",
+    "ease-in",
+    "rounded-3xl",
+    "text-sm",
+    "font-semibold",
+    "tracking-widest",
+    "uppercase",
+  ],
   {
     variants: {
       display: {
@@ -16,11 +25,13 @@ export const buttonStyles = cva(
           "bg-primary",
           "hover:bg-primary-hover",
           "text-white",
-          "text-sm",
-          "font-semibold",
           "hover:border-blue20",
-          "tracking-widest",
-          "uppercase",
+        ],
+        white: [
+          "bg-white",
+          "text-primary",
+          "hover:bg-gray30",
+          "hover:border-transparent",
         ],
         google: [
           "border-gray10",
@@ -42,7 +53,7 @@ export const buttonStyles = cva(
       },
       size: {
         full: ["w-full"],
-        default: ["p-2"],
+        default: [],
       },
     },
     defaultVariants: {

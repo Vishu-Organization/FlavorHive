@@ -1,12 +1,13 @@
 import { createLazyRoute } from "@tanstack/react-router";
 import HomeHero from "./HomeHero";
+import HomeBanner from "./HomeBanner";
 
 const Home = () => {
   return (
     <>
       <section id="home" className="space-y-10">
         <HomeHero />
-        <p>This is text</p>
+        <HomeBanner />
       </section>
     </>
   );
