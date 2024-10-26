@@ -10,12 +10,14 @@ const HomeBanner = () => {
         <img
           data-testid="img-home-banner-sm"
           loading="lazy"
+          alt="A box containing prepared and ready meals"
           className="align-middle md:hidden"
           src="https://media.blueapron.com/assets/registration/homepage/marble-variety-prepared-mobile.webp?width=800&quality=90"
         />
         <img
           data-testid="img-home-banner"
           loading="lazy"
+          alt="A box containing prepared and ready meals"
           className="hidden h-full w-full md:block"
           src="https://media.blueapron.com/assets/registration/homepage/marble-variety-prepared.webp?height=500&quality=90"
         />
