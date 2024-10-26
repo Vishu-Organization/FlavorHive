@@ -53,7 +53,7 @@ export const buttonStyles = cva(
       },
       size: {
         full: ["w-full"],
-        default: [],
+        default: ["w-fit"],
       },
     },
     defaultVariants: {
