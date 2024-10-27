@@ -5,6 +5,9 @@ export class HeaderPage {
     this.page = page;
   }
 
+  get homeLink() {
+    return this.page.getByTestId("header-home");
+  }
   get ourVisionLink() {
     return this.page.getByTestId("header-our-vision");
   }
@@ -39,6 +42,10 @@ export class HeaderPage {
 
   async goToLoginScreen() {
     await this.loginLink.click();
+  }
+
+  async goToHomeScreen() {
+    await this.homeLink.click();
   }
 
   async verifyWelcomeText(name: string) {
