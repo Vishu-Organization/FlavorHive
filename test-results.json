@@ -147,6 +147,546 @@
   },
   "suites": [
     {
+      "title": "home.spec.ts",
+      "file": "home.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 5794,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:00.993Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-0161fcf79ea88ac850c1",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 9826,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:00.976Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-13d9665a5f818f46755b",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium1",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 7713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:24.037Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium1/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-76cef138328dfede27ca",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium1",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 9640,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:24.694Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium1/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-1435665ee8e0e79653cc",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium2",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "status": "passed",
+                  "duration": 4817,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:44.331Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium2/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-8e6c52f3fa8eedd311ef",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium2",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "status": "passed",
+                  "duration": 7033,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:43:44.517Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium2/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-02d6f299462f397fcd0f",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium3",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "status": "passed",
+                  "duration": 5715,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:09.962Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium3/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-86d50f6df911313b8237",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium3",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "status": "passed",
+                  "duration": 8403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:09.998Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium3/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-d71f7504c3584a83bb9b",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium4",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "status": "passed",
+                  "duration": 7629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:37.327Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium4/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-9e9f9b469f28d79fe5bf",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium4",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "status": "passed",
+                  "duration": 9678,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:37.502Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium4/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-3e1115fecf3d347b43ba",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "status": "passed",
+                  "duration": 14337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:59.379Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-firefox/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-c8b24ec6ea68f95e9ca1",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "status": "passed",
+                  "duration": 19283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:44:59.116Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-firefox/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-917d14f5f68cb5b7cecc",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "status": "passed",
+                  "duration": 8604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:45:37.320Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-webkit/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-480ad4f4a8c3283f0759",
+          "file": "home.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 25,
+                  "status": "passed",
+                  "duration": 14401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-27T07:45:39.037Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-webkit/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-686d6fa2d5989c5fb0b4",
+          "file": "home.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "login.spec.ts",
       "file": "login.spec.ts",
       "column": 0,
@@ -165,14 +705,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 9291,
+                  "duration": 7498,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:25.771Z",
+                  "startTime": "2024-10-27T07:43:01.004Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -203,14 +743,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 11004,
+                  "duration": 8287,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:25.703Z",
+                  "startTime": "2024-10-27T07:43:01.022Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -243,12 +783,12 @@
                 {
                   "workerIndex": 4,
                   "status": "passed",
-                  "duration": 10695,
+                  "duration": 9028,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:50.078Z",
+                  "startTime": "2024-10-27T07:43:24.115Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -279,14 +819,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 7,
                   "status": "passed",
-                  "duration": 11698,
+                  "duration": 9199,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:50.111Z",
+                  "startTime": "2024-10-27T07:43:24.597Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -317,14 +857,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 10,
                   "status": "passed",
-                  "duration": 6217,
+                  "duration": 6488,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:08.599Z",
+                  "startTime": "2024-10-27T07:44:01.478Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -355,14 +895,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 13,
                   "status": "passed",
-                  "duration": 7664,
+                  "duration": 8014,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:07.000Z",
+                  "startTime": "2024-10-27T07:44:09.869Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -393,14 +933,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 17,
                   "status": "passed",
-                  "duration": 6385,
+                  "duration": 9136,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:22.818Z",
+                  "startTime": "2024-10-27T07:44:37.113Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -431,14 +971,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 12,
                   "status": "passed",
-                  "duration": 6566,
+                  "duration": 6582,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:23.675Z",
+                  "startTime": "2024-10-27T07:44:16.277Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -469,14 +1009,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 16,
+                  "workerIndex": 15,
                   "status": "passed",
-                  "duration": 5957,
+                  "duration": 9084,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:37.066Z",
+                  "startTime": "2024-10-27T07:44:37.230Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -507,14 +1047,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 16,
                   "status": "passed",
-                  "duration": 5969,
+                  "duration": 7062,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:39.693Z",
+                  "startTime": "2024-10-27T07:44:45.846Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -545,14 +1085,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 22,
                   "status": "passed",
-                  "duration": 12446,
+                  "duration": 19535,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:50.615Z",
+                  "startTime": "2024-10-27T07:45:04.979Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -583,14 +1123,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 21,
+                  "workerIndex": 23,
                   "status": "passed",
-                  "duration": 12939,
+                  "duration": 18144,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:50.596Z",
+                  "startTime": "2024-10-27T07:45:07.403Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -621,14 +1161,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 24,
+                  "workerIndex": 26,
                   "status": "passed",
-                  "duration": 12962,
+                  "duration": 14079,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:10.860Z",
+                  "startTime": "2024-10-27T07:45:56.874Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -659,14 +1199,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 25,
+                  "workerIndex": 24,
                   "status": "passed",
-                  "duration": 14204,
+                  "duration": 11745,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:11.257Z",
+                  "startTime": "2024-10-27T07:45:46.676Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -705,14 +1245,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 7959,
+                  "duration": 4733,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:25.510Z",
+                  "startTime": "2024-10-27T07:43:07.884Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -743,14 +1283,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 8549,
+                  "duration": 5554,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:25.777Z",
+                  "startTime": "2024-10-27T07:43:09.571Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -781,14 +1321,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 5,
                   "status": "passed",
-                  "duration": 8611,
+                  "duration": 5189,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:50.177Z",
+                  "startTime": "2024-10-27T07:43:32.660Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -819,14 +1359,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 4,
                   "status": "passed",
-                  "duration": 9716,
+                  "duration": 5346,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:50.115Z",
+                  "startTime": "2024-10-27T07:43:33.869Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -857,14 +1397,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 9,
                   "status": "passed",
-                  "duration": 4537,
+                  "duration": 4650,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:15.218Z",
+                  "startTime": "2024-10-27T07:43:49.728Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -895,14 +1435,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 8,
                   "status": "passed",
-                  "duration": 4776,
+                  "duration": 4873,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:15.792Z",
+                  "startTime": "2024-10-27T07:43:52.254Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -935,12 +1475,12 @@
                 {
                   "workerIndex": 14,
                   "status": "passed",
-                  "duration": 4620,
+                  "duration": 5901,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:26.828Z",
+                  "startTime": "2024-10-27T07:44:25.693Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -971,14 +1511,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 15,
+                  "workerIndex": 11,
                   "status": "passed",
-                  "duration": 4486,
+                  "duration": 4479,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:30.473Z",
+                  "startTime": "2024-10-27T07:44:19.029Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1009,14 +1549,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 18,
+                  "workerIndex": 20,
                   "status": "passed",
-                  "duration": 4707,
+                  "duration": 4321,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:42.732Z",
+                  "startTime": "2024-10-27T07:44:59.011Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1047,14 +1587,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 19,
+                  "workerIndex": 15,
                   "status": "passed",
-                  "duration": 5439,
+                  "duration": 4985,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:42.832Z",
+                  "startTime": "2024-10-27T07:44:47.093Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1085,14 +1625,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 22,
+                  "workerIndex": 19,
                   "status": "passed",
-                  "duration": 10076,
+                  "duration": 8038,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:53.457Z",
+                  "startTime": "2024-10-27T07:45:18.202Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1123,14 +1663,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 23,
+                  "workerIndex": 21,
                   "status": "passed",
-                  "duration": 9626,
+                  "duration": 8163,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:54.918Z",
+                  "startTime": "2024-10-27T07:45:23.069Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1161,14 +1701,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 26,
+                  "workerIndex": 27,
                   "status": "passed",
-                  "duration": 9461,
+                  "duration": 9511,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:21.009Z",
+                  "startTime": "2024-10-27T07:46:01.015Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1199,14 +1739,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 27,
+                  "workerIndex": 25,
                   "status": "passed",
-                  "duration": 9719,
+                  "duration": 8609,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:21.477Z",
+                  "startTime": "2024-10-27T07:45:54.406Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1245,14 +1785,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 11260,
+                  "duration": 8774,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:35.499Z",
+                  "startTime": "2024-10-27T07:43:10.387Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1283,14 +1823,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 11141,
+                  "duration": 9058,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:36.011Z",
+                  "startTime": "2024-10-27T07:43:11.902Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1321,14 +1861,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 7,
                   "status": "passed",
-                  "duration": 10244,
+                  "duration": 7728,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:59.910Z",
+                  "startTime": "2024-10-27T07:43:35.066Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1359,14 +1899,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 6,
                   "status": "passed",
-                  "duration": 10305,
+                  "duration": 8388,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:00.985Z",
+                  "startTime": "2024-10-27T07:43:35.492Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1397,14 +1937,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 9,
                   "status": "passed",
-                  "duration": 7547,
+                  "duration": 7807,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:15.362Z",
+                  "startTime": "2024-10-27T07:43:54.416Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1435,14 +1975,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 8,
                   "status": "passed",
-                  "duration": 8774,
+                  "duration": 8980,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:16.029Z",
+                  "startTime": "2024-10-27T07:43:57.165Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1475,12 +2015,12 @@
                 {
                   "workerIndex": 12,
                   "status": "passed",
-                  "duration": 7452,
+                  "duration": 8079,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:29.936Z",
+                  "startTime": "2024-10-27T07:44:22.951Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1511,14 +2051,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 11,
                   "status": "passed",
-                  "duration": 8244,
+                  "duration": 9072,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:31.165Z",
+                  "startTime": "2024-10-27T07:44:23.599Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1549,14 +2089,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 16,
+                  "workerIndex": 18,
                   "status": "passed",
-                  "duration": 7421,
+                  "duration": 7276,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:43.623Z",
+                  "startTime": "2024-10-27T07:44:48.365Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1587,14 +2127,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 15,
                   "status": "passed",
-                  "duration": 6640,
+                  "duration": 8033,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:46.233Z",
+                  "startTime": "2024-10-27T07:44:52.101Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1625,14 +2165,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 22,
+                  "workerIndex": 19,
                   "status": "passed",
-                  "duration": 9685,
+                  "duration": 18480,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:06.087Z",
+                  "startTime": "2024-10-27T07:45:26.264Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1663,14 +2203,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 23,
+                  "workerIndex": 22,
                   "status": "passed",
-                  "duration": 10173,
+                  "duration": 21261,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:06.920Z",
+                  "startTime": "2024-10-27T07:45:28.641Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1703,12 +2243,12 @@
                 {
                   "workerIndex": 24,
                   "status": "passed",
-                  "duration": 14051,
+                  "duration": 15927,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:25.823Z",
+                  "startTime": "2024-10-27T07:45:58.454Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1741,12 +2281,12 @@
                 {
                   "workerIndex": 25,
                   "status": "passed",
-                  "duration": 12936,
+                  "duration": 14989,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:27.047Z",
+                  "startTime": "2024-10-27T07:46:03.047Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1787,12 +2327,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 8054,
+                  "duration": 7145,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:37:36.775Z",
+                  "startTime": "2024-10-27T07:43:12.650Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1828,14 +2368,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "status": "skipped",
-                  "duration": 495,
+                  "duration": 472,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:01.732Z",
+                  "startTime": "2024-10-27T07:43:37.920Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1871,14 +2411,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 9,
                   "status": "skipped",
-                  "duration": 476,
+                  "duration": 821,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:20.392Z",
+                  "startTime": "2024-10-27T07:44:02.275Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1914,14 +2454,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 14,
+                  "workerIndex": 12,
                   "status": "skipped",
-                  "duration": 383,
+                  "duration": 689,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:32.002Z",
+                  "startTime": "2024-10-27T07:44:31.068Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1957,14 +2497,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 18,
+                  "workerIndex": 16,
                   "status": "skipped",
-                  "duration": 298,
+                  "duration": 538,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:38:48.183Z",
+                  "startTime": "2024-10-27T07:44:52.949Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -2000,14 +2540,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 23,
                   "status": "skipped",
-                  "duration": 1013,
+                  "duration": 2130,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:07.262Z",
+                  "startTime": "2024-10-27T07:45:29.904Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -2043,14 +2583,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 26,
+                  "workerIndex": 27,
                   "status": "skipped",
-                  "duration": 980,
+                  "duration": 1498,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-26T09:39:31.109Z",
+                  "startTime": "2024-10-27T07:46:11.375Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -2073,9 +2613,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-26T09:37:22.033Z",
-    "duration": 138215.08299999998,
-    "expected": 43,
+    "startTime": "2024-10-27T07:42:59.827Z",
+    "duration": 198317.33299999998,
+    "expected": 57,
     "skipped": 6,
     "unexpected": 0,
     "flaky": 0
