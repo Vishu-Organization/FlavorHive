@@ -154,7 +154,7 @@ const LogIn = () => {
                   variant="default"
                   type="submit"
                   size="full"
-                  className="rounded-md"
+                  className="bg-blue60 rounded-md"
                 >
                   Log In
                 </Button>
@@ -168,7 +168,7 @@ const LogIn = () => {
                   onClick={onSignInWithGoogle}
                 >
                   <GoogleIcon />
-                  <span className="text-sm font-medium">
+                  <span className="text-sm font-medium normal-case">
                     Sign in with Google
                   </span>
                 </Button>

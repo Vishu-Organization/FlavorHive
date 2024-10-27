@@ -220,7 +220,7 @@ const SignUp = () => {
                       onClick={onSignUpWithGoogle}
                     >
                       <GoogleIcon />
-                      <span className="text-sm font-medium">
+                      <span className="text-sm font-medium normal-case">
                         Sign up with Google
                       </span>
                     </Button>
