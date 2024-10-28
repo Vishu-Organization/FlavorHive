@@ -1,6 +1,7 @@
 import { createLazyRoute } from "@tanstack/react-router";
 import HomeHero from "./HomeHero";
 import HomeBanner from "./HomeBanner";
+import WhatsCooking from "../Discover/WhatsCooking";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <HomeHero />
         <HomeBanner />
       </section>
+      <WhatsCooking />
     </>
   );
 };
