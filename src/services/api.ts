@@ -100,3 +100,24 @@ export const signInWithPassword = async (user: User) => {
   return data;
 };
 
+export const insertNewsLetterSubscriber = async (email: string) => {
+  const { data, error: newsLetterSubscribeError } = await supabase
+    .schema("news_letter")
+    .from("subscribers")
+    .insert({
+      email,
+    });
+
+  if (newsLetterSubscribeError) {
+    if (newsLetterSubscribeError?.message.includes("duplicate")) {
+      throw new Error(
+        "This email is already in our subscription list. Please enter a different email",
+      );
+    } else {
+      throw newsLetterSubscribeError;
+    }
+  }
+
+  return data;
+};
+

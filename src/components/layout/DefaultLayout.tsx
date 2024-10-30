@@ -4,6 +4,7 @@ import Header from "./Header";
 import { Outlet, ScrollRestoration } from "@tanstack/react-router";
 import { Bounce, ToastContainer } from "react-toastify";
 import React from "react";
+import "react-toastify/dist/ReactToastify.css";
 
 const DefaultLayout = () => {
   const TanStackRouterDevtools = import.meta.env.PROD

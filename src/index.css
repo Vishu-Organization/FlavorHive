@@ -6,6 +6,7 @@
 
   --toggle-text: #b9b9c5;
   --black: #404040;
+  --black10: #303235;
   --default: #002684;
   --info: #6a6d75;
   --gray10: #dadce0;
@@ -19,7 +20,7 @@
   --blue50: rgba(66, 133, 244, 0.04);
   --blue60: #0f346c;
 
-  --social-svg: rgb(177, 181, 189)
+  --input-error: #d64148;
   
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
