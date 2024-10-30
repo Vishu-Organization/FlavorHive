@@ -28,6 +28,10 @@ export default {
         gray20: "var(--gray20)",
         gray30: "var(--gray30)",
 
+        black10: "var(--black10)",
+
+        "input-error": "var(--input-error)",
+
         primary: {
           DEFAULT: "var(--default)",
           black: "var(--black)",
