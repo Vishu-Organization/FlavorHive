@@ -1,5 +1,5 @@
 import { ourVisionTest } from "./fixtures/our-vision";
-import { verifyRootPage } from "./helper-functions";
+import { verifyRootPage, verifyWhatsCookingPage } from "./helper-functions";
 import { OurVisionPage } from "./page-objects/our-vision-page";
 
 const verifyOurVisionPage = async (ourVisionPage: OurVisionPage) => {
@@ -9,10 +9,22 @@ const verifyOurVisionPage = async (ourVisionPage: OurVisionPage) => {
 
 ourVisionTest(
   "Should navigate to our-vision screen from the header and check the details",
-  async ({ ourVisionPage, rootPage, headerPage }) => {
+  async ({
+    ourVisionPage,
+    rootPage,
+    headerPage,
+    whatsCookingPage,
+    viewport,
+    browserName,
+  }) => {
     await verifyRootPage(rootPage);
     await headerPage.navigateToOurVisionScreen();
     await verifyOurVisionPage(ourVisionPage);
+    await verifyWhatsCookingPage(
+      whatsCookingPage,
+      viewport?.width!,
+      browserName,
+    );
   },
 );
 
