@@ -1,5 +1,5 @@
 import { homeTest } from "./fixtures/home";
-import { verifyRootPage } from "./helper-functions";
+import { verifyRootPage, verifyWhatsCookingPage } from "./helper-functions";
 import { HomeBannerPage } from "./page-objects/Home/home-banner-page";
 import { HomeHeroPage } from "./page-objects/Home/home-hero-page";
 
@@ -16,9 +16,21 @@ const verifyHomePage = async (
 
 homeTest(
   "Verify details on Home Screen",
-  async ({ rootPage, homeHeroPage, homeBannerPage, viewport }) => {
+  async ({
+    rootPage,
+    homeHeroPage,
+    homeBannerPage,
+    whatsCookingPage,
+    viewport,
+    browserName,
+  }) => {
     await verifyRootPage(rootPage);
     await verifyHomePage(homeHeroPage, homeBannerPage, viewport?.width!);
+    await verifyWhatsCookingPage(
+      whatsCookingPage,
+      viewport?.width!,
+      browserName,
+    );
   },
 );
 
@@ -31,7 +43,9 @@ homeTest(
     ourVisionPage,
     homeHeroPage,
     homeBannerPage,
+    whatsCookingPage,
     viewport,
+    browserName,
   }) => {
     await verifyRootPage(rootPage);
     await headerPage.goToLoginScreen();
@@ -40,5 +54,11 @@ homeTest(
     await ourVisionPage.verifyOurVisionPageContent();
     await headerPage.goToHomeScreen();
     await verifyHomePage(homeHeroPage, homeBannerPage, viewport?.width!);
+    await verifyWhatsCookingPage(
+      whatsCookingPage,
+      viewport?.width!,
+      browserName,
+    );
   },
 );
+    

@@ -67,7 +67,7 @@ const WhatsCooking = () => {
       <div id="follow-us" className="p-5 lg:border-r-2 lg:border-gray-200">
         <h3
           data-testid="text-follow-us"
-          className="text-black10 hidden text-center text-sm font-medium uppercase tracking-widest md:block"
+          className="hidden text-center text-sm font-medium uppercase tracking-widest text-black10 md:block"
         >
           Follow Us
         </h3>
@@ -78,6 +78,7 @@ const WhatsCooking = () => {
               className="mx-4 my-3 rounded-lg py-2 transition-all duration-200 ease-in md:p-1 md:hover:bg-gray-200"
             >
               <a
+                aria-label={name}
                 data-testid={`link-external-${name}`}
                 href={to}
                 target="_blank"
@@ -95,7 +96,7 @@ const WhatsCooking = () => {
       >
         <h3
           data-testid="text-discover-whats-cookin"
-          className="text-black10 hidden text-center text-sm font-medium uppercase tracking-widest md:block"
+          className="hidden text-center text-sm font-medium uppercase tracking-widest text-black10 md:block"
         >
           Discover what's cookin'
         </h3>
@@ -147,7 +148,7 @@ const WhatsCooking = () => {
         </form>
         <aside
           data-testid="info-offers"
-          className="align-baseline text-sm font-normal leading-relaxed text-header-primary"
+          className="mt-4 align-baseline text-sm font-normal leading-relaxed text-header-primary md:mt-0"
         >
           Sign up for offers, recipes, news, & more (subscribers to the Blue
           Apron recipe newsletter agree to our Privacy Policy)
@@ -159,7 +160,7 @@ const WhatsCooking = () => {
       >
         <h3
           data-testid="text-from-the-blog"
-          className="text-black10 hidden text-center text-sm font-medium uppercase tracking-widest md:block"
+          className="hidden text-center text-sm font-medium uppercase tracking-widest text-black10 md:block"
         >
           From the blog
         </h3>
