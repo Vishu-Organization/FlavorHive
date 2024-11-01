@@ -8,6 +8,8 @@ const GettingStarted = () => {
         src="https://media.blueapron.com/assets/registration/homepage/gnocchi-ingredients.webp?height=400&quality=90"
         alt="ba chef"
         loading="lazy"
+        width="1208"
+        height="343"
         className="relative left-1/2 h-full min-w-[900px] -translate-x-1/2"
       />
       <div className="absolute left-1/2 top-1/2 flex h-44 w-80 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center space-y-4 rounded-md bg-white py-6 md:h-48 md:w-[400px] lg:h-56 lg:w-[550px] lg:py-10">
