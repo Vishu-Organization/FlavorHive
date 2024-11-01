@@ -24,6 +24,8 @@ export default {
         blue40: "var(--blue40)",
         blue50: "var(--blue50)",
         blue60: "var(--blue60)",
+        blue70: "var(--blue70)",
+        "blue-info": "var(--blue-info)",
         gray10: "var(--gray10)",
         gray20: "var(--gray20)",
         gray30: "var(--gray30)",

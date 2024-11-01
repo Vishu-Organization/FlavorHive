@@ -28,6 +28,11 @@ app:
       - 'src/App.css'
       - 'src/index.css'
 
+home:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'src/components/Home'
+
 main:
 - changed-files:
   - any-glob-to-any-file: 

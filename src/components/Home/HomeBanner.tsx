@@ -6,20 +6,24 @@ const HomeBanner = () => {
       id="banner"
       className="mx-4 grid max-w-[1120px] grid-rows-2 md:grid-cols-[40%,1fr] md:grid-rows-1 lg:mx-auto"
     >
-      <div className="max-h-52 overflow-hidden md:relative md:order-last md:max-h-none">
+      <div className="max-h-52 overflow-hidden border md:relative md:order-last md:max-h-none">
         <img
           data-testid="img-home-banner-sm"
           loading="lazy"
           alt="A box containing prepared and ready meals"
           className="align-middle md:hidden"
-          src="https://media.blueapron.com/assets/registration/homepage/marble-variety-prepared-mobile.webp?width=800&quality=90"
+          width="1369"
+          height="500"
+          src="https://media.blueapron.com/assets/registration/homepage/CMO_Website_Banner_GIF.gif?width=800&quality=90"
         />
         <img
           data-testid="img-home-banner"
           loading="lazy"
           alt="A box containing prepared and ready meals"
           className="hidden h-full w-full md:block"
-          src="https://media.blueapron.com/assets/registration/homepage/marble-variety-prepared.webp?height=500&quality=90"
+          width="1369"
+          height="500"
+          src="https://media.blueapron.com/assets/registration/homepage/CMO_Website_Banner_GIF.gif?width=800&quality=90"
         />
       </div>
       <div className="flex flex-col justify-center space-y-3 bg-primary p-4 text-white">
