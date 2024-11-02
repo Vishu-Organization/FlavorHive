@@ -12,8 +12,6 @@ const HomeBanner = () => {
           loading="lazy"
           alt="A box containing prepared and ready meals"
           className="align-middle md:hidden"
-          width="800"
-          height="200"
           src="https://media.blueapron.com/assets/registration/homepage/CMO_Website_Banner_GIF.gif?width=800&quality=90"
         />
         <img
@@ -21,8 +19,6 @@ const HomeBanner = () => {
           loading="lazy"
           alt="A box containing prepared and ready meals"
           className="hidden h-full w-full md:block"
-          width="800"
-          height="200"
           src="https://media.blueapron.com/assets/registration/homepage/CMO_Website_Banner_GIF.gif?width=800&quality=90"
         />
       </div>
