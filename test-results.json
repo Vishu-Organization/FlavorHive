@@ -167,12 +167,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 5793,
+                  "duration": 5882,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:28.210Z",
+                  "startTime": "2024-11-02T14:31:39.144Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -187,7 +187,7 @@
           ],
           "id": "d318381359a9b96acb1e-0161fcf79ea88ac850c1",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -205,12 +205,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 7007,
+                  "duration": 6308,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:28.244Z",
+                  "startTime": "2024-11-02T14:31:39.222Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -225,7 +225,7 @@
           ],
           "id": "d318381359a9b96acb1e-13d9665a5f818f46755b",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -243,12 +243,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 5734,
+                  "duration": 5964,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:28.132Z",
+                  "startTime": "2024-11-02T14:31:39.157Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -263,7 +263,7 @@
           ],
           "id": "d318381359a9b96acb1e-76cef138328dfede27ca",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -281,12 +281,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 6940,
+                  "duration": 6221,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:28.147Z",
+                  "startTime": "2024-11-02T14:31:39.127Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -301,7 +301,7 @@
           ],
           "id": "d318381359a9b96acb1e-1435665ee8e0e79653cc",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -319,12 +319,12 @@
                 {
                   "workerIndex": 4,
                   "status": "passed",
-                  "duration": 4623,
+                  "duration": 5645,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:35.932Z",
+                  "startTime": "2024-11-02T14:31:47.151Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -339,7 +339,7 @@
           ],
           "id": "d318381359a9b96acb1e-8e6c52f3fa8eedd311ef",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -357,12 +357,12 @@
                 {
                   "workerIndex": 5,
                   "status": "passed",
-                  "duration": 6302,
+                  "duration": 6332,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:35.931Z",
+                  "startTime": "2024-11-02T14:31:47.227Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -377,7 +377,7 @@
           ],
           "id": "d318381359a9b96acb1e-02d6f299462f397fcd0f",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -395,12 +395,12 @@
                 {
                   "workerIndex": 6,
                   "status": "passed",
-                  "duration": 4619,
+                  "duration": 5645,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:37.765Z",
+                  "startTime": "2024-11-02T14:31:47.363Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -415,7 +415,7 @@
           ],
           "id": "d318381359a9b96acb1e-86d50f6df911313b8237",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -433,12 +433,12 @@
                 {
                   "workerIndex": 7,
                   "status": "passed",
-                  "duration": 5383,
+                  "duration": 5898,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:38.064Z",
+                  "startTime": "2024-11-02T14:31:47.449Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -453,7 +453,7 @@
           ],
           "id": "d318381359a9b96acb1e-d71f7504c3584a83bb9b",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -471,12 +471,12 @@
                 {
                   "workerIndex": 8,
                   "status": "passed",
-                  "duration": 3257,
+                  "duration": 4676,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:42.259Z",
+                  "startTime": "2024-11-02T14:31:54.237Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -491,7 +491,7 @@
           ],
           "id": "d318381359a9b96acb1e-9e9f9b469f28d79fe5bf",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -509,12 +509,12 @@
                 {
                   "workerIndex": 9,
                   "status": "passed",
-                  "duration": 5020,
+                  "duration": 5548,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:44.199Z",
+                  "startTime": "2024-11-02T14:31:54.458Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -529,7 +529,7 @@
           ],
           "id": "d318381359a9b96acb1e-3e1115fecf3d347b43ba",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -547,12 +547,12 @@
                 {
                   "workerIndex": 10,
                   "status": "passed",
-                  "duration": 11699,
+                  "duration": 13020,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:44.219Z",
+                  "startTime": "2024-11-02T14:31:55.600Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -567,7 +567,7 @@
           ],
           "id": "d318381359a9b96acb1e-c8b24ec6ea68f95e9ca1",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -585,12 +585,12 @@
                 {
                   "workerIndex": 11,
                   "status": "passed",
-                  "duration": 13659,
+                  "duration": 15310,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:45.807Z",
+                  "startTime": "2024-11-02T14:31:55.838Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -605,7 +605,7 @@
           ],
           "id": "d318381359a9b96acb1e-917d14f5f68cb5b7cecc",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         },
         {
@@ -623,12 +623,12 @@
                 {
                   "workerIndex": 12,
                   "status": "passed",
-                  "duration": 8005,
+                  "duration": 7973,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:47.441Z",
+                  "startTime": "2024-11-02T14:32:00.593Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -643,7 +643,7 @@
           ],
           "id": "d318381359a9b96acb1e-480ad4f4a8c3283f0759",
           "file": "home.spec.ts",
-          "line": 20,
+          "line": 23,
           "column": 1
         },
         {
@@ -661,12 +661,12 @@
                 {
                   "workerIndex": 13,
                   "status": "passed",
-                  "duration": 8087,
+                  "duration": 10960,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-02T04:29:51.332Z",
+                  "startTime": "2024-11-02T14:32:02.910Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -681,7 +681,7 @@
           ],
           "id": "d318381359a9b96acb1e-686d6fa2d5989c5fb0b4",
           "file": "home.spec.ts",
-          "line": 46,
+          "line": 51,
           "column": 1
         }
       ]
@@ -689,8 +689,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-02T04:29:26.694Z",
-    "duration": 35388.234000000004,
+    "startTime": "2024-11-02T14:31:37.965Z",
+    "duration": 36419.862,
     "expected": 14,
     "skipped": 0,
     "unexpected": 0,
