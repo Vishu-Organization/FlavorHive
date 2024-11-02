@@ -3,7 +3,10 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-import { useGetOurVisionScreenDetails } from "./services/use-queries";
+import {
+  useGetOurVisionScreenDetails,
+  useGetTestimonials,
+} from "./services/use-queries";
 import DefaultLayout from "./components/layout/DefaultLayout";
 
 const rootRoute = createRootRoute({
@@ -14,6 +17,7 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
+  loader: useGetTestimonials,
 }).lazy(() => import("./components/Home/Home").then((d) => d.Route));
 
 const aboutRoute = createRoute({
