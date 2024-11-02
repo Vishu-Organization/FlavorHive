@@ -1,17 +1,20 @@
 import { homeTest } from "./fixtures/home";
 import { verifyRootPage, verifyWhatsCookingPage } from "./helper-functions";
+import { HomeGettingStartedPage } from "./page-objects/Home/getting-started-page";
 import { HomeBannerPage } from "./page-objects/Home/home-banner-page";
 import { HomeHeroPage } from "./page-objects/Home/home-hero-page";
 
 const verifyHomePage = async (
   homeHeroPage: HomeHeroPage,
   homeBannerPage: HomeBannerPage,
+  homeGettingStartedPage: HomeGettingStartedPage,
   width: number,
 ) => {
   await homeHeroPage.verifyHeroImg(width);
   await homeHeroPage.verifyHeroDetails();
   await homeBannerPage.verifyBannerImg(width);
   await homeBannerPage.verifyBannerDetails();
+  await homeGettingStartedPage.verifyGettingStartedDetails();
 };
 
 homeTest(
@@ -20,12 +23,18 @@ homeTest(
     rootPage,
     homeHeroPage,
     homeBannerPage,
+    homeGettingStartedPage,
     whatsCookingPage,
     viewport,
     browserName,
   }) => {
     await verifyRootPage(rootPage);
-    await verifyHomePage(homeHeroPage, homeBannerPage, viewport?.width!);
+    await verifyHomePage(
+      homeHeroPage,
+      homeBannerPage,
+      homeGettingStartedPage,
+      viewport?.width!,
+    );
     await verifyWhatsCookingPage(
       whatsCookingPage,
       viewport?.width!,
@@ -43,6 +52,7 @@ homeTest(
     ourVisionPage,
     homeHeroPage,
     homeBannerPage,
+    homeGettingStartedPage,
     whatsCookingPage,
     viewport,
     browserName,
@@ -53,7 +63,12 @@ homeTest(
     await headerPage.navigateToOurVisionScreen();
     await ourVisionPage.verifyOurVisionPageContent();
     await headerPage.goToHomeScreen();
-    await verifyHomePage(homeHeroPage, homeBannerPage, viewport?.width!);
+    await verifyHomePage(
+      homeHeroPage,
+      homeBannerPage,
+      homeGettingStartedPage,
+      viewport?.width!,
+    );
     await verifyWhatsCookingPage(
       whatsCookingPage,
       viewport?.width!,
