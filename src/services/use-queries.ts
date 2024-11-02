@@ -6,6 +6,7 @@ import {
   getOurVisionScreenDetails,
   getProductsLinks,
   getTeamLinks,
+  getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
 
@@ -56,6 +57,14 @@ export const useGetOurVisionScreenDetails = async () => {
   return await queryClient.ensureQueryData({
     queryKey: ["our vision"],
     queryFn: getOurVisionScreenDetails,
+    revalidateIfStale: true,
+  });
+};
+
+export const useGetTestimonials = async () => {
+  return await queryClient.ensureQueryData({
+    queryKey: ["testimonials"],
+    queryFn: getTestimonials,
     revalidateIfStale: true,
   });
 };

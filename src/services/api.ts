@@ -55,6 +55,14 @@ export const getOurVisionScreenDetails = async () => {
   return ourVisionData;
 };
 
+export const getTestimonials = async () => {
+  const { data: testimonials } = await supabase
+    .schema("home")
+    .from("testimonials")
+    .select("id, name, description");
+  return testimonials;
+};
+
 export const signUpWithPassword = async (user: User) => {
   const { email, password, name } = user;
   const { data, error: signUpError } = await supabase.auth.signUp({
