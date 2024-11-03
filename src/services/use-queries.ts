@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import {
   getAllCustomerSupportLinks,
   getAllDiscountedPeopleLinks,
+  getHowItWorks,
   getLegalLinks,
   getOurVisionScreenDetails,
   getProductsLinks,
@@ -65,6 +66,14 @@ export const useGetTestimonials = async () => {
   return await queryClient.ensureQueryData({
     queryKey: ["testimonials"],
     queryFn: getTestimonials,
+    revalidateIfStale: true,
+  });
+};
+
+export const useGetHowItWorks = async () => {
+  return await queryClient.ensureQueryData({
+    queryKey: ["how it works"],
+    queryFn: getHowItWorks,
     revalidateIfStale: true,
   });
 };

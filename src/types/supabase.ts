@@ -319,6 +319,43 @@ export type Database = {
       [_ in never]: never
     }
   }
+  sign_up: {
+    Tables: {
+      how_it_works: {
+        Row: {
+          created_at: string
+          description: string
+          id: number
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: number
+          name: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: number
+          name?: string
+        }
+        Relationships: []
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
 }
 
 type PublicSchema = Database[Extract<keyof Database, "public">]
