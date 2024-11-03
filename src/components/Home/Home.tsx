@@ -4,6 +4,7 @@ import HomeBanner from "./HomeBanner";
 import WhatsCooking from "../Discover/WhatsCooking";
 import GettingStarted from "./GettingStarted";
 import Testimonials from "./Testimonials";
+import Ratings from "./Ratings";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <section id="home" className="space-y-10">
         <HomeHero />
         <HomeBanner />
+        <Ratings />
         <Testimonials />
         <GettingStarted />
       </section>

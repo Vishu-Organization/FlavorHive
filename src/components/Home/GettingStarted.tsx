@@ -28,7 +28,7 @@ const GettingStarted = () => {
           </p>
         </div>
         <Button
-          data-testid="btn-home-getting-started-see=plans"
+          data-testid="btn-home-getting-started-see-plans"
           className="h-12 w-60 text-base tracking-[2.5px]"
         >
           See Plans

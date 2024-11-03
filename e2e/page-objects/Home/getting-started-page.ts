@@ -14,7 +14,7 @@ export class HomeGettingStartedPage {
   }
 
   get seePlansBtn() {
-    return this.page.getByTestId("btn-home-getting-started-see=plans");
+    return this.page.getByTestId("btn-home-getting-started-see-plans");
   }
 
   async verifyGettingStartedDetails() {
