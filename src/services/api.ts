@@ -63,6 +63,14 @@ export const getTestimonials = async () => {
   return testimonials;
 };
 
+export const getHowItWorks = async () => {
+  const { data: howItWorks } = await supabase
+    .schema("sign_up")
+    .from("how_it_works")
+    .select("id, name, description");
+  return howItWorks;
+};
+
 export const signUpWithPassword = async (user: User) => {
   const { email, password, name } = user;
   const { data, error: signUpError } = await supabase.auth.signUp({

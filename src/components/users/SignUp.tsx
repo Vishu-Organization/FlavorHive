@@ -12,6 +12,7 @@ import {
 
 import GoogleIcon from "../../assets/google.svg";
 import Button from "../Button";
+import HowItWorks from "./HowItWorks";
 
 const SignUp = () => {
   const [isContinue, setIsContinue] = useState<boolean>(false);
@@ -51,21 +52,23 @@ const SignUp = () => {
     },
   });
   return (
-    <div className="container mx-auto mb-10 mt-10 max-w-[1440px] bg-sign-up bg-cover bg-scroll bg-[50%] bg-no-repeat px-32 py-20">
-      <div className="mx-auto max-w-[830px] space-y-4 bg-white px-2 py-10 lg:px-10">
+    <div className="container mx-auto max-w-[1440px] bg-cover bg-scroll bg-[50%] bg-no-repeat md:mb-10 md:bg-sign-up md:px-32 md:py-20 lg:mt-10">
+      <div className="mx-auto space-y-4 bg-white px-2 py-10 md:max-w-[900px] lg:px-10">
         <div className="flex flex-col text-center">
           <h1
-            className="mb-2 text-xl font-bold text-primary md:text-2xl lg:text-3xl"
+            className="mb-2 text-3xl font-bold text-primary"
             data-testid="text-sign-up-header"
           >
             Let's get cooking
           </h1>
-          <h2 className="text-xs font-medium md:mx-4 md:text-sm lg:text-base">
+          <h2 className="text-sm font-medium md:mx-4 lg:text-base">
             Enjoy delicious recipes and pre-made meals with quality ingredients.
           </h2>
         </div>
         <section className="grid grid-rows-2 gap-8 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="order-last lg:order-none">How it works</div>
+          <div className="order-last -mt-44 lg:order-none lg:mt-0">
+            <HowItWorks />
+          </div>
           <div className="space-y-2 px-8 md:px-0">
             <section className="text-center text-sm">
               Already have an account?

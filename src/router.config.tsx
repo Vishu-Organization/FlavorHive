@@ -4,6 +4,7 @@ import {
   createRouter,
 } from "@tanstack/react-router";
 import {
+  useGetHowItWorks,
   useGetOurVisionScreenDetails,
   useGetTestimonials,
 } from "./services/use-queries";
@@ -73,6 +74,7 @@ const signInRoute = createRoute({
 const signUpRoute = createRoute({
   getParentRoute: () => usersRoute,
   path: "sign-up",
+  loader: useGetHowItWorks,
 }).lazy(() => import("./components/users/SignUp").then((d) => d.Route));
 
 const menuRoute = createRoute({
