@@ -1,13 +1,15 @@
 import { homeTest } from "./fixtures/home";
 import { verifyRootPage, verifyWhatsCookingPage } from "./helper-functions";
-import { HomeGettingStartedPage } from "./page-objects/Home/getting-started-page";
+import { HomeGettingStartedPage } from "./page-objects/Home/home-getting-started-page";
 import { HomeBannerPage } from "./page-objects/Home/home-banner-page";
 import { HomeHeroPage } from "./page-objects/Home/home-hero-page";
-import { HomeTestimonialsPage } from "./page-objects/Home/testimonials-page";
+import { HomeTestimonialsPage } from "./page-objects/Home/home-testimonials-page";
+import { HomeRatingsPage } from "./page-objects/Home/home-ratings-page";
 
 const verifyHomePage = async (
   homeHeroPage: HomeHeroPage,
   homeBannerPage: HomeBannerPage,
+  homeRatingsPage: HomeRatingsPage,
   homeTestimonialsPage: HomeTestimonialsPage,
   homeGettingStartedPage: HomeGettingStartedPage,
   width: number,
@@ -16,6 +18,7 @@ const verifyHomePage = async (
   await homeHeroPage.verifyHeroDetails();
   await homeBannerPage.verifyBannerImg(width);
   await homeBannerPage.verifyBannerDetails();
+  await homeRatingsPage.verifyHomeRatingsDetails(width);
   await homeTestimonialsPage.verifyTestimonialsDetails();
   await homeGettingStartedPage.verifyGettingStartedDetails();
 };
@@ -28,6 +31,7 @@ homeTest(
     homeBannerPage,
     homeGettingStartedPage,
     homeTestimonialsPage,
+    homeRatingsPage,
     whatsCookingPage,
     viewport,
     browserName,
@@ -36,6 +40,7 @@ homeTest(
     await verifyHomePage(
       homeHeroPage,
       homeBannerPage,
+      homeRatingsPage,
       homeTestimonialsPage,
       homeGettingStartedPage,
       viewport?.width!,
@@ -57,6 +62,7 @@ homeTest(
     ourVisionPage,
     homeHeroPage,
     homeBannerPage,
+    homeRatingsPage,
     homeTestimonialsPage,
     homeGettingStartedPage,
     whatsCookingPage,
@@ -72,6 +78,7 @@ homeTest(
     await verifyHomePage(
       homeHeroPage,
       homeBannerPage,
+      homeRatingsPage,
       homeTestimonialsPage,
       homeGettingStartedPage,
       viewport?.width!,
