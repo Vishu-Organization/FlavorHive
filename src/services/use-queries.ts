@@ -6,6 +6,7 @@ import {
   getLegalLinks,
   getOurVisionScreenDetails,
   getProductsLinks,
+  getSignupAdditionalInfo,
   getTeamLinks,
   getTestimonials,
 } from "./api";
@@ -70,10 +71,23 @@ export const useGetTestimonials = async () => {
   });
 };
 
-export const useGetHowItWorks = async () => {
+const useGetHowItWorks = async () => {
   return await queryClient.ensureQueryData({
     queryKey: ["how it works"],
     queryFn: getHowItWorks,
     revalidateIfStale: true,
   });
 };
+
+const useGetSignupAdditionalInfo = async () => {
+  return await queryClient.ensureQueryData({
+    queryKey: ["signup additional info"],
+    queryFn: getSignupAdditionalInfo,
+    revalidateIfStale: true,
+  });
+};
+
+export const getSignupData = async () => ({
+  howItWorks: await useGetHowItWorks(),
+  additionalInfo: await useGetSignupAdditionalInfo(),
+});

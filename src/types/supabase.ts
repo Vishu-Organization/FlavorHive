@@ -321,6 +321,30 @@ export type Database = {
   }
   sign_up: {
     Tables: {
+      additional_info: {
+        Row: {
+          created_at: string
+          description: string
+          id: number
+          name: string
+          width: string | null
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: number
+          name: string
+          width?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: number
+          name?: string
+          width?: string | null
+        }
+        Relationships: []
+      }
       how_it_works: {
         Row: {
           created_at: string
