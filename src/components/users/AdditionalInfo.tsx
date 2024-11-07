@@ -23,9 +23,14 @@ const AdditionalInfo = () => {
             return (
               <li
                 key={index}
-                className="mx-6 flex min-h-32 max-w-72 flex-col items-center justify-evenly gap-2 text-center md:mx-0"
+                className="mx-6 flex min-h-32 max-w-72 flex-col items-center gap-3 text-center md:mx-0"
               >
-                <div className={`w-[${width}]`}>{icons[index]}</div>
+                <div
+                  className={` ${index === 1 ? "w-10 pt-5 md:pt-0 lg:pt-5" : "w-[34px]"} `}
+                >
+                  {icons[index]}
+                </div>
+
                 <h3
                   data-testid={`text-additional-info-sub-header-${index}`}
                   className="text-sm font-semibold"
