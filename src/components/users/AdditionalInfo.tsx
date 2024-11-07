@@ -19,7 +19,7 @@ const AdditionalInfo = () => {
     >
       <ul className="flex list-none flex-col items-center gap-8 md:mx-2 md:flex-row md:items-center md:justify-center">
         {additionalInfo &&
-          additionalInfo.map(({ name, description, width }, index) => {
+          additionalInfo.map(({ name, description }, index) => {
             return (
               <li
                 key={index}

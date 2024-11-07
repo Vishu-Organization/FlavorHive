@@ -76,7 +76,7 @@ export const getSignupAdditionalInfo = async () => {
   const { data: additionalInfo } = await supabase
     .schema("sign_up")
     .from("additional_info")
-    .select("id, name, description, width")
+    .select("id, name, description")
     .order("id");
   return additionalInfo;
 };
