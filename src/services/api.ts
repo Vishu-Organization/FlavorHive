@@ -67,8 +67,18 @@ export const getHowItWorks = async () => {
   const { data: howItWorks } = await supabase
     .schema("sign_up")
     .from("how_it_works")
-    .select("id, name, description");
+    .select("id, name, description")
+    .order("id");
   return howItWorks;
+};
+
+export const getSignupAdditionalInfo = async () => {
+  const { data: additionalInfo } = await supabase
+    .schema("sign_up")
+    .from("additional_info")
+    .select("id, name, description")
+    .order("id");
+  return additionalInfo;
 };
 
 export const signUpWithPassword = async (user: User) => {
