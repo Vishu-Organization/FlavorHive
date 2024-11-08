@@ -33,6 +33,10 @@ export class LoginPage {
     return this.page.getByTestId("btn-google");
   }
 
+  get appleBtn() {
+    return this.page.getByTestId("btn-apple");
+  }
+
   get signupLink() {
     return this.page.getByTestId("link-signup");
   }
@@ -41,6 +45,7 @@ export class LoginPage {
     expect(this.page.url()).toContain("sign-in");
     expect(this.loginHeaderText).toContainText("Login");
     await expect(this.googleBtn).toBeVisible();
+    await expect(this.appleBtn).toBeVisible();
   }
 
   async fillSignUpFormAndSubmit() {
