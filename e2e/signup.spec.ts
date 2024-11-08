@@ -36,10 +36,17 @@ signupTest(
 );
 
 signupTest(
-  `Should verify 'how it works' section in the signup screen`,
-  async ({ rootPage, headerPage, signupPage, howItWorksPage }) => {
+  `Should verify 'how it works' and 'additional info' sections in the signup screen`,
+  async ({
+    rootPage,
+    headerPage,
+    signupPage,
+    howItWorksPage,
+    additionalInfoPage,
+  }) => {
     await verifynavigationToSignUpScreen({ signupPage, rootPage, headerPage });
     await howItWorksPage.verifyHowItWorksPage();
+    await additionalInfoPage.verifyAdditionalIngoPage();
   },
 );
 

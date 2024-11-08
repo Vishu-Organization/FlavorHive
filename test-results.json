@@ -153,8 +153,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Should sign up with email and password",
-          "ok": true,
+          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -166,357 +166,243 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 6958,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 12535,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\n    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                      "column": 51,
+                      "line": 57
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                        "column": 51,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m\n\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\u001b[22m\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-04T09:32:41.909Z",
+                  "startTime": "2024-11-08T04:05:51.293Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                    "column": 51,
+                    "line": 57
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-67091eb60ce9491cc58d",
+          "id": "e5334e3b62ca8fd4a4b6-136f62f3d743fada785f",
           "file": "signup.spec.ts",
-          "line": 22,
+          "line": 38,
           "column": 1
         },
         {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
+          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "ok": false,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium",
+              "projectId": "chromium1",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 6139,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 12308,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\n    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                      "column": 51,
+                      "line": 57
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                        "column": 51,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m\n\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\u001b[22m\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-04T09:32:41.890Z",
+                  "startTime": "2024-11-08T04:05:51.322Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium1/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                    "column": 51,
+                    "line": 57
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-24dff503d97d8ae6af43",
+          "id": "e5334e3b62ca8fd4a4b6-80320008b64279f12b63",
           "file": "signup.spec.ts",
           "line": 38,
           "column": 1
         },
         {
-          "title": "Should sign up with email and password",
-          "ok": true,
+          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "ok": false,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium1",
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium2",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 2,
-                  "status": "skipped",
-                  "duration": 1001,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 12097,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\n    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                      "column": 51,
+                      "line": 57
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                        "column": 51,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m\n\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\u001b[22m\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-04T09:32:41.890Z",
+                  "startTime": "2024-11-08T04:05:51.139Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium1/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium2/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                    "column": 51,
+                    "line": 57
+                  }
                 }
               ],
-              "status": "skipped"
+              "status": "unexpected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-57ee19d200eb7a5c6763",
+          "id": "e5334e3b62ca8fd4a4b6-a622bae13ea0749f6bc1",
           "file": "signup.spec.ts",
-          "line": 22,
+          "line": 38,
           "column": 1
         },
         {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
+          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "ok": false,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium1",
+              "projectId": "chromium3",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 5553,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 11939,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\n    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                      "column": 51,
+                      "line": 57
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                        "column": 51,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m\n\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\u001b[22m\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-04T09:32:41.896Z",
+                  "startTime": "2024-11-08T04:05:51.287Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-chromium1/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium3/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                    "column": 51,
+                    "line": 57
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-a0545268998f810412c9",
+          "id": "e5334e3b62ca8fd4a4b6-390b6e151b45ce206890",
           "file": "signup.spec.ts",
           "line": 38,
           "column": 1
         },
         {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium2",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "skipped",
-                  "duration": 444,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:45.493Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium2/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-f41b069f131e90f1020f",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium2",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 4367,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:46.527Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-chromium2/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-efaff42c876cbdc97c70",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "status": "skipped",
-                  "duration": 381,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:50.957Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-9bfa24ed5f188fbd08ca",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 3814,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:50.510Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-a3d8f693089fd17fd911",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium4",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "status": "skipped",
-                  "duration": 393,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:52.001Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium4/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-438528393a2c81c1f255",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
+          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -527,189 +413,51 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 4886,
-                  "errors": [],
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 7019,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\n    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5",
+                    "location": {
+                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                      "column": 51,
+                      "line": 57
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                        "column": 51,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('text-additional-info-description-2')\nExpected string: \u001b[32m\"Ingredients are carefully packaged in a refrigerated box\u001b[7mxxxx\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"Ingredients are carefully packaged in a refrigerated box\u001b[7m so food stays fresh even if you're not home when we deliver.\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('text-additional-info-description-2')\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\u001b[2m  -   locator resolved to <p class=\"text-sm text-header-primary\" data-testid=\"text-additional-info-description-2\">Ingredients are carefully packaged in a refrigera…</p>\u001b[22m\n\u001b[2m  -   unexpected value \"Ingredients are carefully packaged in a refrigerated box so food stays fresh even if you're not home when we deliver.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpage-objects/Signup/additional-info-page.ts:57\n\n\u001b[0m \u001b[90m 55 |\u001b[39m       \u001b[32m`Tell us your dietary preferences and we'll personalize`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 56 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhowItWorksDescriptionText2)\u001b[33m.\u001b[39mtoContainText(\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[32m`Ingredients are carefully packaged in a refrigerated boxxxxx`\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 59 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m   }\u001b[0m\n\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalInfoDescriptions (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:57:51)\u001b[22m\n\u001b[2m    at AdditionalInfoPage.verifyAdditionalIngoPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts:47:5)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:49:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-04T09:32:55.567Z",
+                  "startTime": "2024-11-08T04:06:04.719Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-chromium4/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium4/test-failed-1.png"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/Signup/additional-info-page.ts",
+                    "column": 51,
+                    "line": 57
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-c56787cf5daadda7b7a0",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 8,
-                  "status": "skipped",
-                  "duration": 6566,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:53.804Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-a7e844d7c9e9ca5c4764",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "status": "passed",
-                  "duration": 11083,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:55.555Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-e222186eb7e0f7e52edf",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "status": "skipped",
-                  "duration": 2142,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:32:56.932Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-webkit/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-e17a383c5743ee4d60f7",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' section in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 11,
-                  "status": "passed",
-                  "duration": 6253,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-04T09:33:00.333Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-9366c-ection-in-the-signup-screen-webkit/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-ac317aa5609851d8dba7",
+          "id": "e5334e3b62ca8fd4a4b6-f3c09242bbe42c5fd60b",
           "file": "signup.spec.ts",
           "line": 38,
           "column": 1
@@ -719,11 +467,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-04T09:32:41.060Z",
-    "duration": 29862.539,
-    "expected": 8,
-    "skipped": 6,
-    "unexpected": 0,
+    "startTime": "2024-11-08T04:05:49.846Z",
+    "duration": 22258.118,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 5,
     "flaky": 0
   }
 }
