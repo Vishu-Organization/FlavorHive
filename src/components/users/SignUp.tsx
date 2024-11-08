@@ -6,6 +6,7 @@ import { zodValidator } from "@tanstack/zod-form-adapter";
 import { z } from "zod";
 import { useState } from "react";
 import {
+  useSignInWithApple,
   useSignInWithGoogle,
   useSignUpWithPassword,
 } from "../../services/use-mutations";
@@ -21,6 +22,7 @@ const SignUp = () => {
     mutate: signUpWithPasswordMutate,
     isSuccess: isSignUpWithPasswordSuccess,
   } = useSignUpWithPassword();
+  const { mutate: signInWithAppleMutate } = useSignInWithApple();
   const { mutate: signInWithGoogleMutate } = useSignInWithGoogle();
   const navigate = useNavigate();
 
@@ -28,7 +30,10 @@ const SignUp = () => {
     e.preventDefault();
     signInWithGoogleMutate();
   };
-
+  const onSignInWithApple = async (e: any) => {
+    e.preventDefault();
+    signInWithAppleMutate();
+  };
   if (isSignUpWithPasswordSuccess) {
     navigate({ to: "/" });
   }
@@ -216,9 +221,19 @@ const SignUp = () => {
                       >
                         {isContinue ? "Sign Up" : "Continue"}
                       </Button>
-                      <div className="text-center text-sm font-medium text-primary-info">
+                      <div className="text-center text-[12px] font-bold tracking-wider text-black10">
                         OR
                       </div>
+                      <Button
+                        data-testid="btn-apple"
+                        size="full"
+                        display="flex"
+                        variant="apple"
+                        className="text-sm normal-case"
+                        onClick={onSignInWithApple}
+                      >
+                         Sign in with Apple
+                      </Button>
                       <Button
                         data-testid="btn-google"
                         size="full"

@@ -106,6 +106,17 @@ export const signInWithGoogle = async () => {
   return data;
 };
 
+export const signInWithApple = async () => {
+  const { data, error: signInError } = await supabase.auth.signInWithOAuth({
+    provider: "apple",
+  });
+
+  if (signInError) {
+    throw signInError;
+  }
+  return data;
+};
+
 export const signOut = async () => {
   const { error } = await supabase.auth.signOut();
   if (error) {

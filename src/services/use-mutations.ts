@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import {
   insertNewsLetterSubscriber,
+  signInWithApple,
   signInWithGoogle,
   signInWithPassword,
   signOut,
@@ -22,6 +23,14 @@ export const useSignInWithGoogle = () => {
   return useMutation({
     mutationKey: ["signIn", "Google"],
     mutationFn: () => signInWithGoogle(),
+    onError: (error) => toast.error(error.message),
+  });
+};
+
+export const useSignInWithApple = () => {
+  return useMutation({
+    mutationKey: ["signIn", "Apple"],
+    mutationFn: () => signInWithApple(),
     onError: (error) => toast.error(error.message),
   });
 };
