@@ -63,6 +63,15 @@ export const getTestimonials = async () => {
   return testimonials;
 };
 
+export const getMealsShippedData = async () => {
+  const { data: mealsShippedData } = await supabase
+    .schema("home")
+    .from("meals_shipped")
+    .select("id, image, name, description_primary, description_secondary, alt")
+    .order("id");
+  return mealsShippedData;
+};
+
 export const getHowItWorks = async () => {
   const { data: howItWorks } = await supabase
     .schema("sign_up")
