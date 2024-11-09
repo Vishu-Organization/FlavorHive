@@ -4,6 +4,7 @@ import {
   getAllDiscountedPeopleLinks,
   getHowItWorks,
   getLegalLinks,
+  getMealsShippedData,
   getOurVisionScreenDetails,
   getProductsLinks,
   getSignupAdditionalInfo,
@@ -63,10 +64,18 @@ export const useGetOurVisionScreenDetails = async () => {
   });
 };
 
-export const useGetTestimonials = async () => {
+const useGetTestimonials = async () => {
   return await queryClient.ensureQueryData({
     queryKey: ["testimonials"],
     queryFn: getTestimonials,
+    revalidateIfStale: true,
+  });
+};
+
+const useGetMealsShipped = async () => {
+  return await queryClient.ensureQueryData({
+    queryKey: ["meals shipped"],
+    queryFn: getMealsShippedData,
     revalidateIfStale: true,
   });
 };
@@ -86,6 +95,11 @@ const useGetSignupAdditionalInfo = async () => {
     revalidateIfStale: true,
   });
 };
+
+export const getHomeData = async () => ({
+  testimonials: await useGetTestimonials(),
+  mealsShipped: await useGetMealsShipped(),
+});
 
 export const getSignupData = async () => ({
   howItWorks: await useGetHowItWorks(),

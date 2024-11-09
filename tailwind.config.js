@@ -31,6 +31,7 @@ export default {
         gray30: "var(--gray30)",
 
         black10: "var(--black10)",
+        black20: "var(--black20)",
 
         "input-error": "var(--input-error)",
 
