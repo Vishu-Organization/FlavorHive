@@ -147,13 +147,13 @@
   },
   "suites": [
     {
-      "title": "login.spec.ts",
-      "file": "login.spec.ts",
+      "title": "home.spec.ts",
+      "file": "home.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Navigate to login screen and login with email and password",
+          "title": "Verify details on Home Screen",
           "ok": true,
           "tags": [],
           "tests": [
@@ -167,17 +167,17 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 9155,
+                  "duration": 6573,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:16:47.971Z",
+                  "startTime": "2024-11-09T06:56:40.549Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium/test-finished-1.png"
                     }
                   ]
                 }
@@ -185,13 +185,13 @@
               "status": "expected"
             }
           ],
-          "id": "41d3fd2474a19feb00a1-c6facd39f4eb6ecf8574",
-          "file": "login.spec.ts",
-          "line": 13,
+          "id": "d318381359a9b96acb1e-0161fcf79ea88ac850c1",
+          "file": "home.spec.ts",
+          "line": 29,
           "column": 1
         },
         {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
           "ok": true,
           "tags": [],
           "tests": [
@@ -205,17 +205,17 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 8345,
+                  "duration": 7517,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:16:47.865Z",
+                  "startTime": "2024-11-09T06:56:40.558Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium/test-finished-1.png"
                     }
                   ]
                 }
@@ -223,13 +223,13 @@
               "status": "expected"
             }
           ],
-          "id": "41d3fd2474a19feb00a1-5f4c99d3d2313f4c2d57",
-          "file": "login.spec.ts",
-          "line": 34,
+          "id": "d318381359a9b96acb1e-13d9665a5f818f46755b",
+          "file": "home.spec.ts",
+          "line": 61,
           "column": 1
         },
         {
-          "title": "Navigate to login screen and login with email and password",
+          "title": "Verify details on Home Screen",
           "ok": true,
           "tags": [],
           "tests": [
@@ -238,524 +238,36 @@
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium1",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 8681,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:16:59.636Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium1/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-7ebef4a6328c47521ff9",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium1",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 8276,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:16:59.782Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium1/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-55dbbe79630aff8d8865",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        },
-        {
-          "title": "Navigate to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium2",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "status": "passed",
-                  "duration": 8691,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:12.774Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium2/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-8fbfe12ea18ae4a8761d",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium2",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 7925,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:12.629Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium2/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-2539e3669d7cd0a250d6",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        },
-        {
-          "title": "Navigate to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 13,
-                  "status": "passed",
-                  "duration": 9496,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:24.942Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-2a1f9d4cbbe9779c986b",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 12,
-                  "status": "passed",
-                  "duration": 7900,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:24.519Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-2fa314c39d2514eac970",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        },
-        {
-          "title": "Navigate to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium4",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 15,
-                  "status": "passed",
-                  "duration": 8053,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:36.082Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-chromium4/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-e00bb3a27029e1892d77",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium4",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 17,
-                  "status": "passed",
-                  "duration": 7646,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:36.249Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-chromium4/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-8dc9940b87b59bafc952",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        },
-        {
-          "title": "Navigate to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 19,
-                  "status": "passed",
-                  "duration": 27756,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:46.675Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-8e623cf7268e422194dd",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 20,
-                  "status": "passed",
-                  "duration": 25270,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:48.323Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-632546490b72c81b7386",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        },
-        {
-          "title": "Navigate to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 23,
-                  "status": "passed",
-                  "duration": 11426,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:18:04.528Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-login-sc-5696c-gin-with-email-and-password-webkit/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-1e6dfe7fb805b0be93d9",
-          "file": "login.spec.ts",
-          "line": 13,
-          "column": 1
-        },
-        {
-          "title": "Navigate to signup screen, then to login screen and login with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 24,
-                  "status": "passed",
-                  "duration": 9063,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:18:20.298Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/login-Navigate-to-signup-s-1a88e-gin-with-email-and-password-webkit/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "41d3fd2474a19feb00a1-8fcf95b5d4fd0ca5f2a0",
-          "file": "login.spec.ts",
-          "line": 34,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "signup.spec.ts",
-      "file": "signup.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Should sign up with email and password",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 2,
-                  "status": "failed",
-                  "duration": 8070,
-                  "error": {
-                    "message": "TypeError: Cannot read properties of undefined (reading 'user_metadata')",
-                    "stack": "TypeError: Cannot read properties of undefined (reading 'user_metadata')\n    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:34:58",
-                    "location": {
-                      "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts",
-                      "column": 58,
-                      "line": 34
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m signupPage\u001b[33m.\u001b[39mfillSignUpFormAndSubmit()\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36mconst\u001b[39m userResponse \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m signupPage\u001b[33m.\u001b[39mverifyPageAfterLogin()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m headerPage\u001b[33m.\u001b[39mverifyWelcomeText(userResponse\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39muser_metadata\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 36 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts",
-                        "column": 58,
-                        "line": 34
-                      },
-                      "message": "TypeError: Cannot read properties of undefined (reading 'user_metadata')\n\n\u001b[0m \u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m signupPage\u001b[33m.\u001b[39mfillSignUpFormAndSubmit()\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36mconst\u001b[39m userResponse \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m signupPage\u001b[33m.\u001b[39mverifyPageAfterLogin()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m headerPage\u001b[33m.\u001b[39mverifyWelcomeText(userResponse\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39muser_metadata\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m   }\u001b[33m,\u001b[39m\n \u001b[90m 36 |\u001b[39m )\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts:34:58\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 6694,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:16:47.759Z",
+                  "startTime": "2024-11-09T06:56:40.509Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium/test-failed-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium1/test-finished-1.png"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/signup.spec.ts",
-                    "column": 58,
-                    "line": 34
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-67091eb60ce9491cc58d",
-          "file": "signup.spec.ts",
-          "line": 22,
+          "id": "d318381359a9b96acb1e-76cef138328dfede27ca",
+          "file": "home.spec.ts",
+          "line": 29,
           "column": 1
         },
         {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
           "ok": true,
           "tags": [],
           "tests": [
@@ -763,23 +275,23 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium",
+              "projectId": "chromium1",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 7774,
+                  "duration": 6730,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:16:47.824Z",
+                  "startTime": "2024-11-09T06:56:40.620Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium1/test-finished-1.png"
                     }
                   ]
                 }
@@ -787,56 +299,13 @@
               "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-136f62f3d743fada785f",
-          "file": "signup.spec.ts",
-          "line": 38,
+          "id": "d318381359a9b96acb1e-1435665ee8e0e79653cc",
+          "file": "home.spec.ts",
+          "line": 61,
           "column": 1
         },
         {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium1",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "status": "skipped",
-                  "duration": 1364,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:02.301Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium1/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-57ee19d200eb7a5c6763",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "title": "Verify details on Home Screen",
           "ok": true,
           "tags": [],
           "tests": [
@@ -844,23 +313,137 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium1",
+              "projectId": "chromium2",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 5623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:56:49.197Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium2/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-8e6c52f3fa8eedd311ef",
+          "file": "home.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium2",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 6285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:56:49.226Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium2/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-02d6f299462f397fcd0f",
+          "file": "home.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium3",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 5752,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:56:49.238Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium3/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-86d50f6df911313b8237",
+          "file": "home.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium3",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 7,
                   "status": "passed",
-                  "duration": 7024,
+                  "duration": 5574,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:17:01.486Z",
+                  "startTime": "2024-11-09T06:56:50.416Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium1/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium3/test-finished-1.png"
                     }
                   ]
                 }
@@ -868,56 +451,51 @@
               "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-80320008b64279f12b63",
-          "file": "signup.spec.ts",
-          "line": 38,
+          "id": "d318381359a9b96acb1e-d71f7504c3584a83bb9b",
+          "file": "home.spec.ts",
+          "line": 61,
           "column": 1
         },
         {
-          "title": "Should sign up with email and password",
+          "title": "Verify details on Home Screen",
           "ok": true,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium2",
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium4",
               "projectName": "chromium",
               "results": [
                 {
                   "workerIndex": 8,
-                  "status": "skipped",
-                  "duration": 1050,
+                  "status": "passed",
+                  "duration": 4937,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:17:12.419Z",
+                  "startTime": "2024-11-09T06:56:56.379Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium2/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium4/test-finished-1.png"
                     }
                   ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-f41b069f131e90f1020f",
-          "file": "signup.spec.ts",
-          "line": 22,
+          "id": "d318381359a9b96acb1e-9e9f9b469f28d79fe5bf",
+          "file": "home.spec.ts",
+          "line": 29,
           "column": 1
         },
         {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
           "ok": true,
           "tags": [],
           "tests": [
@@ -925,23 +503,99 @@
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium2",
+              "projectId": "chromium4",
               "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "status": "passed",
+                  "duration": 5644,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:56:56.542Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-chromium4/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-3e1115fecf3d347b43ba",
+          "file": "home.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Verify details on Home Screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "status": "passed",
+                  "duration": 14110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:56:57.573Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-firefox/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-c8b24ec6ea68f95e9ca1",
+          "file": "home.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
               "results": [
                 {
                   "workerIndex": 11,
                   "status": "passed",
-                  "duration": 6408,
+                  "duration": 16054,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:17:16.490Z",
+                  "startTime": "2024-11-09T06:56:57.969Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium2/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-firefox/test-finished-1.png"
                     }
                   ]
                 }
@@ -949,299 +603,13 @@
               "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-a622bae13ea0749f6bc1",
-          "file": "signup.spec.ts",
-          "line": 38,
+          "id": "d318381359a9b96acb1e-917d14f5f68cb5b7cecc",
+          "file": "home.spec.ts",
+          "line": 61,
           "column": 1
         },
         {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 14,
-                  "status": "skipped",
-                  "duration": 1237,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:25.596Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-9bfa24ed5f188fbd08ca",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium3",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 16,
-                  "status": "passed",
-                  "duration": 6973,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:36.134Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium3/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-390b6e151b45ce206890",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium4",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 18,
-                  "status": "skipped",
-                  "duration": 532,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:39.074Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-chromium4/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-438528393a2c81c1f255",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium4",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 18,
-                  "status": "passed",
-                  "duration": 6410,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:40.041Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-chromium4/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-f3c09242bbe42c5fd60b",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 21,
-                  "status": "skipped",
-                  "duration": 4765,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:48.172Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-a7e844d7c9e9ca5c4764",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 22,
-                  "status": "passed",
-                  "duration": 23116,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:17:50.327Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-5ccddd83e6bbe06798de",
-          "file": "signup.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "Should sign up with email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "This test only works on chrome atm"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 25,
-                  "status": "skipped",
-                  "duration": 1275,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-08T06:18:20.551Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-sign-up-with-email-and-password-webkit/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "e5334e3b62ca8fd4a4b6-e17a383c5743ee4d60f7",
-          "file": "signup.spec.ts",
-          "line": 22,
-          "column": 1
-        },
-        {
-          "title": "Should verify 'how it works' and 'additional info' sections in the signup screen",
+          "title": "Verify details on Home Screen",
           "ok": true,
           "tags": [],
           "tests": [
@@ -1253,19 +621,19 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 26,
+                  "workerIndex": 12,
                   "status": "passed",
-                  "duration": 6846,
+                  "duration": 8333,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-08T06:18:23.316Z",
+                  "startTime": "2024-11-09T06:57:02.809Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/signup-Should-verify-how-i-d9eb2-ctions-in-the-signup-screen-webkit/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-webkit/test-finished-1.png"
                     }
                   ]
                 }
@@ -1273,9 +641,47 @@
               "status": "expected"
             }
           ],
-          "id": "e5334e3b62ca8fd4a4b6-c54c1b1e4126c6700838",
-          "file": "signup.spec.ts",
-          "line": 38,
+          "id": "d318381359a9b96acb1e-480ad4f4a8c3283f0759",
+          "file": "home.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "Navigate to Login Screen and then back to home screen and verify the details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "status": "passed",
+                  "duration": 10018,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T06:57:04.656Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Navigate-to-Login-Scr-2de9d-reen-and-verify-the-details-webkit/test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d318381359a9b96acb1e-686d6fa2d5989c5fb0b4",
+          "file": "home.spec.ts",
+          "line": 61,
           "column": 1
         }
       ]
@@ -1283,11 +689,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-08T06:16:45.514Z",
-    "duration": 105347.644,
-    "expected": 21,
-    "skipped": 6,
-    "unexpected": 1,
+    "startTime": "2024-11-09T06:56:39.381Z",
+    "duration": 39079.204000000005,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
     "flaky": 0
   }
 }

@@ -5,6 +5,7 @@ import { HomeBannerPage } from "./page-objects/Home/home-banner-page";
 import { HomeHeroPage } from "./page-objects/Home/home-hero-page";
 import { HomeTestimonialsPage } from "./page-objects/Home/home-testimonials-page";
 import { HomeRatingsPage } from "./page-objects/Home/home-ratings-page";
+import { HomeMealsShippedPage } from "./page-objects/Home/home-meals-shipped-page";
 
 const verifyHomePage = async (
   homeHeroPage: HomeHeroPage,
@@ -12,6 +13,7 @@ const verifyHomePage = async (
   homeRatingsPage: HomeRatingsPage,
   homeTestimonialsPage: HomeTestimonialsPage,
   homeGettingStartedPage: HomeGettingStartedPage,
+  homeMealsShippedPage: HomeMealsShippedPage,
   width: number,
 ) => {
   await homeHeroPage.verifyHeroImg(width);
@@ -21,6 +23,7 @@ const verifyHomePage = async (
   await homeRatingsPage.verifyHomeRatingsDetails(width);
   await homeTestimonialsPage.verifyTestimonialsDetails();
   await homeGettingStartedPage.verifyGettingStartedDetails();
+  await homeMealsShippedPage.verifyMealsShippedPage();
 };
 
 homeTest(
@@ -31,6 +34,7 @@ homeTest(
     homeBannerPage,
     homeGettingStartedPage,
     homeTestimonialsPage,
+    homeMealsShippedPage,
     homeRatingsPage,
     whatsCookingPage,
     viewport,
@@ -43,6 +47,7 @@ homeTest(
       homeRatingsPage,
       homeTestimonialsPage,
       homeGettingStartedPage,
+      homeMealsShippedPage,
       viewport?.width!,
     );
     await verifyWhatsCookingPage(
@@ -63,6 +68,7 @@ homeTest(
     homeHeroPage,
     homeBannerPage,
     homeRatingsPage,
+    homeMealsShippedPage,
     homeTestimonialsPage,
     homeGettingStartedPage,
     whatsCookingPage,
@@ -81,6 +87,7 @@ homeTest(
       homeRatingsPage,
       homeTestimonialsPage,
       homeGettingStartedPage,
+      homeMealsShippedPage,
       viewport?.width!,
     );
     await verifyWhatsCookingPage(

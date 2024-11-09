@@ -43,7 +43,7 @@ export class LoginPage {
 
   async verifyNavigationToLoginScreen() {
     expect(this.page.url()).toContain("sign-in");
-    expect(this.loginHeaderText).toContainText("Login");
+    await expect(this.loginHeaderText).toContainText("Login");
     await expect(this.googleBtn).toBeVisible();
     await expect(this.appleBtn).toBeVisible();
   }

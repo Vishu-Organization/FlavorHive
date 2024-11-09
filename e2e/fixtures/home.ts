@@ -9,6 +9,7 @@ import { WhatsCookingPage } from "../page-objects/WhatsCooking/whats-cooking-pag
 import { HomeGettingStartedPage } from "../page-objects/Home/home-getting-started-page";
 import { HomeTestimonialsPage } from "../page-objects/Home/home-testimonials-page";
 import { HomeRatingsPage } from "../page-objects/Home/home-ratings-page";
+import { HomeMealsShippedPage } from "../page-objects/Home/home-meals-shipped-page";
 
 export const homeTest = base.extend<{
   rootPage: RootPage;
@@ -21,6 +22,7 @@ export const homeTest = base.extend<{
   homeRatingsPage: HomeRatingsPage;
   homeGettingStartedPage: HomeGettingStartedPage;
   homeTestimonialsPage: HomeTestimonialsPage;
+  homeMealsShippedPage: HomeMealsShippedPage;
 }>({
   rootPage: async ({ page }, use) => await use(new RootPage(page)),
   ourVisionPage: async ({ page }, use) => await use(new OurVisionPage(page)),
@@ -34,6 +36,8 @@ export const homeTest = base.extend<{
   homeGettingStartedPage: async ({ page }, use) =>
     await use(new HomeGettingStartedPage(page)),
   homeBannerPage: async ({ page }, use) => await use(new HomeBannerPage(page)),
+  homeMealsShippedPage: async ({ page }, use) =>
+    await use(new HomeMealsShippedPage(page)),
   whatsCookingPage: async ({ page }, use) =>
     await use(new WhatsCookingPage(page)),
 });
