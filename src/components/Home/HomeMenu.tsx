@@ -36,7 +36,7 @@ const HomeMenu = () => {
 
                 <div className="space-y-2">
                   <p
-                    data-testid={`text-home-menu-menu-title-${menuTitle}`}
+                    data-testid={`text-home-menu-title-${menuTitle}`}
                     className="text-[13px] font-bold uppercase tracking-[1.3px] text-blue70 lg:text-sm"
                   >
                     {menuTitle}
