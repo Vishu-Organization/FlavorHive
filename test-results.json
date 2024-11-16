@@ -154,7 +154,7 @@
       "specs": [
         {
           "title": "Verify details on Home Screen",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -166,28 +166,44 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 6573,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 30325,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/WhatsCooking/whats-cooking-page.ts",
+                        "column": 28,
+                        "line": 92
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for response \"*/**/rest/v1/subscribers*\"\n============================================================\n\n\u001b[90m   at \u001b[39mpage-objects/WhatsCooking/whats-cooking-page.ts:92\n\n\u001b[0m \u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mnewsLetterSignupInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgoBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(\u001b[32m`*/**/rest/v1/subscribers*`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m   }\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m   \u001b[36masync\u001b[39m verifyNewsletterSignupSuccess(email\u001b[33m:\u001b[39m string) {\u001b[0m\n\n\u001b[2m    at WhatsCookingPage.fillNewsletterSignupFormAndSubmit (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/WhatsCooking/whats-cooking-page.ts:92:28)\u001b[22m\n\u001b[2m    at WhatsCookingPage.verifyNewsletterSignupSuccess (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/WhatsCooking/whats-cooking-page.ts:97:22)\u001b[22m\n\u001b[2m    at WhatsCookingPage.verifyNewsletterSignupFailure (/Users/apple/Desktop/Vishu/FlavorHive/e2e/page-objects/WhatsCooking/whats-cooking-page.ts:103:5)\u001b[22m\n\u001b[2m    at verifyWhatsCookingPage (/Users/apple/Desktop/Vishu/FlavorHive/e2e/helper-functions.ts:33:3)\u001b[22m\n\u001b[2m    at /Users/apple/Desktop/Vishu/FlavorHive/e2e/home.spec.ts:58:5\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:40.549Z",
+                  "startTime": "2024-11-16T10:04:37.118Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium/test-finished-1.png"
+                      "path": "/Users/apple/Desktop/Vishu/FlavorHive/e2e/report/test-results/home-Verify-details-on-Home-Screen-chromium/test-failed-1.png"
                     }
                   ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "d318381359a9b96acb1e-0161fcf79ea88ac850c1",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -205,12 +221,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 7517,
+                  "duration": 17468,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:40.558Z",
+                  "startTime": "2024-11-16T10:04:37.100Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -225,7 +241,7 @@
           ],
           "id": "d318381359a9b96acb1e-13d9665a5f818f46755b",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -243,12 +259,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 6694,
+                  "duration": 16618,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:40.509Z",
+                  "startTime": "2024-11-16T10:04:37.077Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -263,7 +279,7 @@
           ],
           "id": "d318381359a9b96acb1e-76cef138328dfede27ca",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -281,12 +297,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 6730,
+                  "duration": 17174,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:40.620Z",
+                  "startTime": "2024-11-16T10:04:37.104Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -301,7 +317,7 @@
           ],
           "id": "d318381359a9b96acb1e-1435665ee8e0e79653cc",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -319,12 +335,12 @@
                 {
                   "workerIndex": 4,
                   "status": "passed",
-                  "duration": 5623,
+                  "duration": 11650,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:49.197Z",
+                  "startTime": "2024-11-16T10:04:57.591Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -339,7 +355,7 @@
           ],
           "id": "d318381359a9b96acb1e-8e6c52f3fa8eedd311ef",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -355,14 +371,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
                   "status": "passed",
-                  "duration": 6285,
+                  "duration": 12046,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:49.226Z",
+                  "startTime": "2024-11-16T10:04:57.859Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -377,7 +393,7 @@
           ],
           "id": "d318381359a9b96acb1e-02d6f299462f397fcd0f",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -393,14 +409,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 5,
                   "status": "passed",
-                  "duration": 5752,
+                  "duration": 9150,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:49.238Z",
+                  "startTime": "2024-11-16T10:04:57.753Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -415,7 +431,7 @@
           ],
           "id": "d318381359a9b96acb1e-86d50f6df911313b8237",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -431,14 +447,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 5,
                   "status": "passed",
-                  "duration": 5574,
+                  "duration": 8804,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:50.416Z",
+                  "startTime": "2024-11-16T10:05:07.485Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -453,7 +469,7 @@
           ],
           "id": "d318381359a9b96acb1e-d71f7504c3584a83bb9b",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -471,12 +487,12 @@
                 {
                   "workerIndex": 8,
                   "status": "passed",
-                  "duration": 4937,
+                  "duration": 7006,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:56.379Z",
+                  "startTime": "2024-11-16T10:05:12.294Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -491,7 +507,7 @@
           ],
           "id": "d318381359a9b96acb1e-9e9f9b469f28d79fe5bf",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -507,14 +523,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 7,
                   "status": "passed",
-                  "duration": 5644,
+                  "duration": 7801,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:56.542Z",
+                  "startTime": "2024-11-16T10:05:11.666Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -529,7 +545,7 @@
           ],
           "id": "d318381359a9b96acb1e-3e1115fecf3d347b43ba",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -545,14 +561,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 9,
                   "status": "passed",
-                  "duration": 14110,
+                  "duration": 16424,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:57.573Z",
+                  "startTime": "2024-11-16T10:05:12.348Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -567,7 +583,7 @@
           ],
           "id": "d318381359a9b96acb1e-c8b24ec6ea68f95e9ca1",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -583,14 +599,14 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 10,
                   "status": "passed",
-                  "duration": 16054,
+                  "duration": 13894,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:56:57.969Z",
+                  "startTime": "2024-11-16T10:05:16.972Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -605,7 +621,7 @@
           ],
           "id": "d318381359a9b96acb1e-917d14f5f68cb5b7cecc",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         },
         {
@@ -621,14 +637,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 11,
                   "status": "passed",
-                  "duration": 8333,
+                  "duration": 13185,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:57:02.809Z",
+                  "startTime": "2024-11-16T10:05:20.886Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -643,7 +659,7 @@
           ],
           "id": "d318381359a9b96acb1e-480ad4f4a8c3283f0759",
           "file": "home.spec.ts",
-          "line": 29,
+          "line": 32,
           "column": 1
         },
         {
@@ -659,14 +675,14 @@
               "projectName": "webkit",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 12,
                   "status": "passed",
-                  "duration": 10018,
+                  "duration": 14374,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-09T06:57:04.656Z",
+                  "startTime": "2024-11-16T10:05:20.926Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -681,7 +697,7 @@
           ],
           "id": "d318381359a9b96acb1e-686d6fa2d5989c5fb0b4",
           "file": "home.spec.ts",
-          "line": 61,
+          "line": 66,
           "column": 1
         }
       ]
@@ -689,11 +705,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-09T06:56:39.381Z",
-    "duration": 39079.204000000005,
-    "expected": 14,
+    "startTime": "2024-11-16T10:04:35.907Z",
+    "duration": 72324.612,
+    "expected": 13,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
