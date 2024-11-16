@@ -15,8 +15,8 @@ const verifyHomePage = async (
   homeTestimonialsPage: HomeTestimonialsPage,
   homeGettingStartedPage: HomeGettingStartedPage,
   homeMealsShippedPage: HomeMealsShippedPage,
-  homeMenuPage: HomeMenuPage,
   width: number,
+  homeMenuPage?: HomeMenuPage,
 ) => {
   await homeHeroPage.verifyHeroImg(width);
   await homeHeroPage.verifyHeroDetails();
@@ -26,7 +26,7 @@ const verifyHomePage = async (
   await homeTestimonialsPage.verifyTestimonialsDetails();
   await homeGettingStartedPage.verifyGettingStartedDetails();
   await homeMealsShippedPage.verifyMealsShippedPage();
-  await homeMenuPage.verifyHomeMenuScreenDetails();
+  await homeMenuPage?.verifyHomeMenuScreenDetails();
 };
 
 homeTest(
@@ -52,8 +52,8 @@ homeTest(
       homeTestimonialsPage,
       homeGettingStartedPage,
       homeMealsShippedPage,
-      homeMenuPage,
       viewport?.width!,
+      homeMenuPage,
     );
     await verifyWhatsCookingPage(
       whatsCookingPage,
@@ -76,7 +76,6 @@ homeTest(
     homeMealsShippedPage,
     homeTestimonialsPage,
     homeGettingStartedPage,
-    homeMenuPage,
     whatsCookingPage,
     viewport,
     browserName,
@@ -94,7 +93,6 @@ homeTest(
       homeTestimonialsPage,
       homeGettingStartedPage,
       homeMealsShippedPage,
-      homeMenuPage,
       viewport?.width!,
     );
     await verifyWhatsCookingPage(
