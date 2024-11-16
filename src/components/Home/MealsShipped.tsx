@@ -25,7 +25,10 @@ const MealsShipped = () => {
             description_secondary,
           }) => {
             return (
-              <div className="text-black20 mx-6 grid gap-4 text-center text-[15px] leading-snug">
+              <div
+                key={alt}
+                className="mx-6 grid gap-4 text-center text-[15px] leading-snug text-black20"
+              >
                 <img
                   data-testid={`img-home-meals-shipped-${alt}`}
                   src={image}

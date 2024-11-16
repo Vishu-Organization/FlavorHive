@@ -12,6 +12,9 @@ import {
   getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
+import { getHomeMenu } from "./edamam-api";
+
+const homeScreenStaleTime = 300000; // 5 minutes. Data wouldn't change that quickly
 
 export const useGetAllCustomerSupportLinks = () => {
   return useQuery({
@@ -69,6 +72,7 @@ const useGetTestimonials = async () => {
     queryKey: ["testimonials"],
     queryFn: getTestimonials,
     revalidateIfStale: true,
+    staleTime: homeScreenStaleTime,
   });
 };
 
@@ -77,6 +81,7 @@ const useGetMealsShipped = async () => {
     queryKey: ["meals shipped"],
     queryFn: getMealsShippedData,
     revalidateIfStale: true,
+    staleTime: homeScreenStaleTime,
   });
 };
 
@@ -93,6 +98,16 @@ const useGetSignupAdditionalInfo = async () => {
     queryKey: ["signup additional info"],
     queryFn: getSignupAdditionalInfo,
     revalidateIfStale: true,
+  });
+};
+
+export const useGetHomeMenu = () => {
+  return useQuery({
+    queryKey: ["home menu"],
+    queryFn: getHomeMenu,
+    refetchOnWindowFocus: true,
+    staleTime: homeScreenStaleTime,
+    retry: false,
   });
 };
 
