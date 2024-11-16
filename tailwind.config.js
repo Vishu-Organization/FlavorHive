@@ -6,6 +6,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      gridTemplateColumns: {
+        "custom-10": "repeat(10,198px)",
+      },
       container: {
         center: true,
       },

@@ -47,6 +47,7 @@ export const useSignInWithPassword = () => {
   return useMutation({
     mutationKey: ["signIn", "passoword"],
     mutationFn: (user: User) => signInWithPassword(user),
+    onSuccess: () => toast.success("Login successful"),
     onError: (error) => toast.error(error.message),
   });
 };
