@@ -20,34 +20,42 @@ const HomeMenu = () => {
     } else {
       return (
         <div className="grid max-w-full grid-cols-custom-10 gap-x-4 gap-y-10 overflow-x-auto px-4 py-8 lg:grid-cols-5 lg:gap-x-6 xl:gap-x-8 xl:px-10">
-          {Object.values(homeMenu).map(({ label, image, images }, index) => {
-            const menuTitle = Object.keys(homeMenu)[index];
-            return (
-              <div key={index} className="flex shrink-0 flex-col gap-4">
-                <Link data-testid={`link-home-menu-${menuTitle}`}>
-                  <img
-                    data-testid={`img-home-menu-${menuTitle}`}
-                    src={image}
-                    srcSet={`${images.SMALL.url} 640w, ${images.REGULAR.url} 1024w, ${images.LARGE?.url ?? images.REGULAR.url} 1280w`}
-                    alt={label}
-                    className="h-48 w-full rounded-md xl:h-auto"
-                  />
-                </Link>
-
-                <div className="space-y-2">
-                  <p
-                    data-testid={`text-home-menu-title-${menuTitle}`}
-                    className="text-[13px] font-bold uppercase tracking-[1.3px] text-blue70 lg:text-sm"
+          {Object.values(homeMenu).map(
+            ({ recipe: { label, image, images }, selector }, index) => {
+              const menuTitle = Object.keys(homeMenu)[index];
+              return (
+                <div key={index} className="flex shrink-0 flex-col gap-4">
+                  <Link
+                    data-testid={`link-home-menu-${menuTitle}`}
+                    to="/on-the-menu"
+                    search={{
+                      [selector]: menuTitle,
+                    }}
                   >
-                    {menuTitle}
-                  </p>
-                  <p className="text-sm font-medium leading-tight text-primary-info lg:text-base">
-                    {label}
-                  </p>
+                    <img
+                      data-testid={`img-home-menu-${menuTitle}`}
+                      src={image}
+                      srcSet={`${images.SMALL.url} 640w, ${images.REGULAR.url} 1024w, ${images.LARGE?.url ?? images.REGULAR.url} 1280w`}
+                      alt={label}
+                      className="h-48 w-full rounded-md xl:h-auto"
+                    />
+                  </Link>
+
+                  <div className="space-y-2">
+                    <p
+                      data-testid={`text-home-menu-title-${menuTitle}`}
+                      className="text-[13px] font-bold uppercase tracking-[1.3px] text-blue70 lg:text-sm"
+                    >
+                      {menuTitle}
+                    </p>
+                    <p className="text-sm font-medium leading-tight text-primary-info lg:text-base">
+                      {label}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            },
+          )}
         </div>
       );
     }
