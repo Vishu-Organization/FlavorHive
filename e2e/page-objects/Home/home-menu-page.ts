@@ -42,9 +42,6 @@ export class HomeMenuPage {
   }
 
   async verifyHomeMenuScreenDetails() {
-    await this.page.waitForResponse(
-      `*/**/*field=label&field=image&field=images&dishType=Soup*`,
-    );
     await this.verifyTexts();
     await this.verifyImages();
     await expect(this.browseMenuLink).toBeVisible();
