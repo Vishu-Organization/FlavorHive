@@ -1,4 +1,5 @@
 import axios from "axios";
+import { HomeMenu, HomeMenuSelector, Recipe } from "../types/home";
 
 type SelectorMap = {
   fields: string[];
@@ -54,36 +55,66 @@ const getRecipe = async (url: string): Promise<Recipe> => {
 export const getHomeMenu = async (): Promise<HomeMenu> => {
   try {
     return {
-      mediterranean: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, cuisineType: "Mediterranean" }),
-      ),
-      breakFast: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, mealType: "Breakfast" }),
-      ),
-      vegetarian: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, health: "vegetarian" }),
-      ),
-      french: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, cuisineType: "French" }),
-      ),
-      indian: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, cuisineType: "Indian" }),
-      ),
-      starter: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, dishType: "Starter" }),
-      ),
-      snack: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, mealType: "Snack" }),
-      ),
-      mexican: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, cuisineType: "Mexican" }),
-      ),
-      pancake: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, dishType: "Pancake" }),
-      ),
-      soup: await getRecipe(
-        buildUrl({ fields: homeRecipeFields, dishType: "Soup" }),
-      ),
+      mediterranean: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, cuisineType: "mediterranean" }),
+        ),
+        selector: HomeMenuSelector.cuisineType,
+      },
+      breakFast: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, mealType: "breakfast" }),
+        ),
+        selector: HomeMenuSelector.mealType,
+      },
+      vegetarian: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, health: "vegetarian" }),
+        ),
+        selector: HomeMenuSelector.health,
+      },
+      french: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, cuisineType: "french" }),
+        ),
+        selector: HomeMenuSelector.cuisineType,
+      },
+      indian: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, cuisineType: "indian" }),
+        ),
+        selector: HomeMenuSelector.cuisineType,
+      },
+      starter: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, dishType: "starter" }),
+        ),
+        selector: HomeMenuSelector.dishType,
+      },
+      snack: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, mealType: "snack" }),
+        ),
+        selector: HomeMenuSelector.mealType,
+      },
+      mexican: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, cuisineType: "mexican" }),
+        ),
+        selector: HomeMenuSelector.cuisineType,
+      },
+      pancake: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, dishType: "pancake" }),
+        ),
+        selector: HomeMenuSelector.dishType,
+      },
+      soup: {
+        recipe: await getRecipe(
+          buildUrl({ fields: homeRecipeFields, dishType: "Soup" }),
+        ),
+        selector: HomeMenuSelector.dishType,
+      },
     };
   } catch (error) {
     throw error;
