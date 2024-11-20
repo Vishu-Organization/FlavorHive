@@ -20,9 +20,16 @@ export class HomeMenuPage {
   private get mediterraneanImg() {
     return this.page.getByTestId("img-home-menu-mediterranean");
   }
+  private get mediterraneanLink() {
+    return this.page.getByTestId("link-home-menu-mediterranean");
+  }
 
   private get starterImg() {
     return this.page.getByTestId("img-home-menu-starter");
+  }
+
+  private get starterLink() {
+    return this.page.getByTestId("link-home-menu-starter");
   }
 
   private get pancakeImg() {
@@ -44,6 +51,7 @@ export class HomeMenuPage {
   async verifyHomeMenuScreenDetails() {
     await this.verifyTexts();
     await this.verifyImages();
+    await this.verifyNavigation();
     await expect(this.browseMenuLink).toBeVisible();
   }
 
@@ -59,5 +67,16 @@ export class HomeMenuPage {
     await expect(this.pancakeImg).toBeVisible();
     await expect(this.mediterraneanImg).toBeVisible();
     await expect(this.starterImg).toBeVisible();
+  }
+
+  async verifyNavigation() {
+    await expect(this.mediterraneanLink).toBeVisible();
+    await this.mediterraneanLink.click();
+    expect(this.page.url()).toContain(`on-the-menu?cuisineType=mediterranean`);
+    await this.page.goBack();
+    await expect(this.starterLink).toBeVisible();
+    await this.starterLink.click();
+    expect(this.page.url()).toContain(`on-the-menu?cuisineType=starter`);
+    await this.page.goBack();
   }
 }

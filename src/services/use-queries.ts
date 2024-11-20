@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import {
   getAllCustomerSupportLinks,
   getAllDiscountedPeopleLinks,
@@ -108,6 +108,7 @@ export const useGetHomeMenu = () => {
     refetchOnWindowFocus: true,
     staleTime: homeScreenStaleTime,
     retry: false,
+    placeholderData: keepPreviousData,
   });
 };
 
