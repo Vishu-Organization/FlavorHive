@@ -19,12 +19,12 @@ const HomeMenu = () => {
       );
     } else {
       return (
-        <div className="grid max-w-full grid-cols-custom-10 gap-x-4 gap-y-10 overflow-x-auto px-4 py-8 lg:grid-cols-5 lg:gap-x-6 xl:gap-x-8 xl:px-10">
+        <ul className="grid max-w-full grid-cols-custom-10 gap-x-4 gap-y-10 overflow-x-auto px-4 py-8 lg:grid-cols-5 lg:gap-x-6 xl:gap-x-8 xl:px-10">
           {Object.values(homeMenu).map(
             ({ recipe: { label, image, images }, selector }, index) => {
               const menuTitle = Object.keys(homeMenu)[index];
               return (
-                <div key={index} className="flex shrink-0 flex-col gap-4">
+                <li key={index} className="flex shrink-0 flex-col gap-4">
                   <Link
                     data-testid={`link-home-menu-${menuTitle}`}
                     to="/on-the-menu"
@@ -52,11 +52,11 @@ const HomeMenu = () => {
                       {label}
                     </p>
                   </div>
-                </div>
+                </li>
               );
             },
           )}
-        </div>
+        </ul>
       );
     }
   };

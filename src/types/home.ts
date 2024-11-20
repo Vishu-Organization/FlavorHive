@@ -43,5 +43,5 @@ export type HomeMenu = {
   snack: HomeMenuItem;
   mexican: HomeMenuItem;
   pancake: HomeMenuItem;
-  soup: HomeMenuItem;
+  salad: HomeMenuItem;
 };
