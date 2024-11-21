@@ -76,55 +76,59 @@ const getHomeRecipes = async (url: string): Promise<Recipe[]> => {
  */
 
 export const getHomeMenuCI = async (): Promise<HomeMenu> => {
-  try {
-    const recipe = await getHomeRecipes(
-      buildUrl({ fields: homeRecipeFields, cuisineType: "mediterranean" }),
-    );
-    return {
-      mediterranean: {
-        recipe: recipe[0],
-        selector: HomeMenuSelector.cuisineType,
-      },
-      breakFast: {
-        recipe: recipe[1],
-        selector: HomeMenuSelector.mealType,
-      },
-      vegetarian: {
-        recipe: recipe[2],
-        selector: HomeMenuSelector.health,
-      },
-      french: {
-        recipe: recipe[3],
-        selector: HomeMenuSelector.cuisineType,
-      },
-      indian: {
-        recipe: recipe[4],
-        selector: HomeMenuSelector.cuisineType,
-      },
-      starter: {
-        recipe: recipe[5],
-        selector: HomeMenuSelector.dishType,
-      },
-      snack: {
-        recipe: recipe[6],
-        selector: HomeMenuSelector.mealType,
-      },
-      mexican: {
-        recipe: recipe[7],
-        selector: HomeMenuSelector.cuisineType,
-      },
-      pancake: {
-        recipe: recipe[8],
-        selector: HomeMenuSelector.dishType,
-      },
-      salad: {
-        recipe: recipe[9],
-        selector: HomeMenuSelector.dishType,
-      },
-    };
-  } catch (error) {
-    throw error;
+
+  if (typeof process !== "undefined" && !!process?.env?.CI) {
+    console.log("CI", process.env.CI);
   }
+    try {
+      const recipe = await getHomeRecipes(
+        buildUrl({ fields: homeRecipeFields, cuisineType: "mediterranean" }),
+      );
+      return {
+        mediterranean: {
+          recipe: recipe[0],
+          selector: HomeMenuSelector.cuisineType,
+        },
+        breakFast: {
+          recipe: recipe[1],
+          selector: HomeMenuSelector.mealType,
+        },
+        vegetarian: {
+          recipe: recipe[2],
+          selector: HomeMenuSelector.health,
+        },
+        french: {
+          recipe: recipe[3],
+          selector: HomeMenuSelector.cuisineType,
+        },
+        indian: {
+          recipe: recipe[4],
+          selector: HomeMenuSelector.cuisineType,
+        },
+        starter: {
+          recipe: recipe[5],
+          selector: HomeMenuSelector.dishType,
+        },
+        snack: {
+          recipe: recipe[6],
+          selector: HomeMenuSelector.mealType,
+        },
+        mexican: {
+          recipe: recipe[7],
+          selector: HomeMenuSelector.cuisineType,
+        },
+        pancake: {
+          recipe: recipe[8],
+          selector: HomeMenuSelector.dishType,
+        },
+        salad: {
+          recipe: recipe[9],
+          selector: HomeMenuSelector.dishType,
+        },
+      };
+    } catch (error) {
+      throw error;
+    }
 };
 
 /**
