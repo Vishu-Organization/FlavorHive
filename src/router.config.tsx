@@ -80,8 +80,9 @@ const signUpRoute = createRoute({
 const menuRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "on-the-menu",
-  component: () => <p>We are building the menu</p>,
-});
+}).lazy(() =>
+  import("./components/On-The-Menu/OnTheMenu").then((d) => d.Route),
+);
 
 const helpCenterRoute = createRoute({
   getParentRoute: () => rootRoute,
