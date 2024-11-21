@@ -12,7 +12,7 @@ import {
   getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
-import { getHomeMenu } from "./edamam-api";
+import { getHomeMenu, getHomeMenuCI } from "./edamam-api";
 
 const homeScreenStaleTime = 300000; // 5 minutes. Data wouldn't change that quickly
 
@@ -104,7 +104,10 @@ const useGetSignupAdditionalInfo = async () => {
 export const useGetHomeMenu = () => {
   return useQuery({
     queryKey: ["home menu"],
-    queryFn: getHomeMenu,
+    queryFn:
+      typeof process !== "undefined" && !!process?.env?.CI
+        ? getHomeMenuCI
+        : getHomeMenu,
     refetchOnWindowFocus: true,
     staleTime: homeScreenStaleTime,
     retry: false,
