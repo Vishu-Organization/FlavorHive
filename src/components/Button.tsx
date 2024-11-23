@@ -56,6 +56,8 @@ export const buttonStyles = cva(
           "bg-transparent",
           "hover:border-transparent",
           "hover:bg-gray-200",
+          "flex",
+          "items-center",
         ],
       },
       size: {

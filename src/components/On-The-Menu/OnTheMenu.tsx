@@ -1,9 +1,16 @@
 import { createLazyRoute } from "@tanstack/react-router";
+import OnTheMenuHeader from "./OnTheMenuHeader";
 
 const OnTheMenu = () => {
-  console.log(import.meta.env);
-  console.log(import.meta.env);
-  return <section className="mt-10">On the Menu</section>;
+  return (
+    <section id="on-the-menu">
+      {/* <div className="hidden lg:block"> */}
+      <OnTheMenuHeader />
+      {/* </div> */}
+
+      <div className="h-80"></div>
+    </section>
+  );
 };
 
 export default OnTheMenu;
