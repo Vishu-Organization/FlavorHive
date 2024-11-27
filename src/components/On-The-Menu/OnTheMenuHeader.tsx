@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import OnTheMenuFilter from "./OnTheMenuFilter";
 
+
 const OnTheMenuHeader = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,30 +42,28 @@ const OnTheMenuHeader = () => {
           </span>
           —the more you order, the more you save.
         </p>
-        <div className="ml-5 self-start text-sm text-header-primary">
-          <h3 className="mb-2 text-xl font-semibold text-black20">Meal Kits</h3>
-          Easy-to-follow recipes perfectly portioned for two.
-        </div>
       </article>
 
       {!isInView && (
-        <div id="search-filters" className="sticky top-14 z-10">
+        <div id="search-filters" className="sticky top-12 z-10">
           <div
             className="relative flex h-10 justify-center bg-slate-50 py-2"
             onMouseEnter={() => setIsModalOpen(true)}
-            onMouseLeave={() => setIsModalOpen(false)}
+            onMouseLeave={() => setIsModalOpen(true)}
           >
             <p rel="search-filters">
               <span className="text-[10px] uppercase text-primary-info">
                 Refine search by
               </span>
             </p>
-            <div
-              role="dialog"
-              className={`${isModalOpen ? "flex" : "hidden"} absolute left-1/2 top-8 z-10 min-h-[200px] max-w-40 -translate-x-1/2 transform overflow-scroll bg-gray-100 p-10`}
-            >
-              <OnTheMenuFilter />
-            </div>
+            {isModalOpen && (
+              <div
+                role="dialog"
+                className={`absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform overflow-scroll bg-white shadow-lg`}
+              >
+                <OnTheMenuFilter />
+              </div>
+            )}
           </div>
         </div>
       )}
