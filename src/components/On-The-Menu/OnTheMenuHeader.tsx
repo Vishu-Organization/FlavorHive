@@ -33,7 +33,10 @@ const OnTheMenuHeader = () => {
         ref={targetRef}
         className="flex flex-col items-center gap-2 pt-10"
       >
-        <h2 className="font-chronicle text-3xl font-bold tracking-[0.32px] text-primary">
+        <h2
+          data-testid="text-explore-menu"
+          className="font-chronicle text-3xl font-bold tracking-[0.32px] text-primary"
+        >
           Explore our meal delivery menu
         </h2>
         <p className="text-center text-lg tracking-[0.18px] text-black10">
@@ -49,7 +52,7 @@ const OnTheMenuHeader = () => {
           <div
             className="relative flex h-10 justify-center bg-slate-50 py-2"
             onMouseEnter={() => setIsModalOpen(true)}
-            onMouseLeave={() => setIsModalOpen(true)}
+            onMouseLeave={() => setIsModalOpen(false)}
           >
             <p rel="search-filters">
               <span className="text-[10px] uppercase text-primary-info">
@@ -59,7 +62,7 @@ const OnTheMenuHeader = () => {
             {isModalOpen && (
               <div
                 role="dialog"
-                className={`absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform overflow-scroll bg-white shadow-lg`}
+                className={`absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform bg-white shadow-lg`}
               >
                 <OnTheMenuFilter />
               </div>
