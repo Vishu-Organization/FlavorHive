@@ -69,69 +69,6 @@ const getHomeRecipes = async (url: string): Promise<Recipe[]> => {
 };
 
 /**
- * This function runs on the CI to use a single API call for 10 types of dishes.
- * The CI has multiple test cases for testing the home screen and the API hits max limit.
- * To overcome this problem, using a single api to simulate all types of recipes
- * @returns Promise<HomeMenu>
- */
-
-export const getHomeMenuCI = async (): Promise<HomeMenu> => {
-
-  if (typeof process !== "undefined" && !!process?.env?.CI) {
-    console.log("CI", process.env.CI);
-  }
-    try {
-      const recipe = await getHomeRecipes(
-        buildUrl({ fields: homeRecipeFields, cuisineType: "mediterranean" }),
-      );
-      return {
-        mediterranean: {
-          recipe: recipe[0],
-          selector: HomeMenuSelector.cuisineType,
-        },
-        breakFast: {
-          recipe: recipe[1],
-          selector: HomeMenuSelector.mealType,
-        },
-        vegetarian: {
-          recipe: recipe[2],
-          selector: HomeMenuSelector.health,
-        },
-        french: {
-          recipe: recipe[3],
-          selector: HomeMenuSelector.cuisineType,
-        },
-        indian: {
-          recipe: recipe[4],
-          selector: HomeMenuSelector.cuisineType,
-        },
-        starter: {
-          recipe: recipe[5],
-          selector: HomeMenuSelector.dishType,
-        },
-        snack: {
-          recipe: recipe[6],
-          selector: HomeMenuSelector.mealType,
-        },
-        mexican: {
-          recipe: recipe[7],
-          selector: HomeMenuSelector.cuisineType,
-        },
-        pancake: {
-          recipe: recipe[8],
-          selector: HomeMenuSelector.dishType,
-        },
-        salad: {
-          recipe: recipe[9],
-          selector: HomeMenuSelector.dishType,
-        },
-      };
-    } catch (error) {
-      throw error;
-    }
-};
-
-/**
  * This function is used to get the Menus to be displayed on the Home Screen.
  * Selector is used to filter the recipes on the 'on the menu' screen.
  * @returns Promise<HomeMenu>

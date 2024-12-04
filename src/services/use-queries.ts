@@ -12,7 +12,7 @@ import {
   getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
-import { getHomeMenu, getHomeMenuCI } from "./edamam-api";
+import { getHomeMenu } from "./edamam-api";
 
 const homeScreenStaleTime = 300000; // 5 minutes. Data wouldn't change that quickly
 
