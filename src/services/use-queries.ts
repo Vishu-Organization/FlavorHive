@@ -101,15 +101,10 @@ const useGetSignupAdditionalInfo = async () => {
   });
 };
 
-export const useGetHomeMenu = () => {
-  console.log(import.meta.env.VITE_PLAYWRIGHT_TEST);
+export const useGetHomeMenu = (isRunningInPlaywright: boolean) => {
   return useQuery({
     queryKey: ["home menu"],
-    queryFn:
-      import.meta.env.VITE_PLAYWRIGHT_TEST === "true" ||
-      process.env?.VITE_PLAYWRIGHT_TEST === "true"
-        ? getHomeMenuCI
-        : getHomeMenu,
+    queryFn: isRunningInPlaywright ? getHomeMenuCI : getHomeMenu,
     refetchOnWindowFocus: true,
     staleTime: homeScreenStaleTime,
     retry: false,
