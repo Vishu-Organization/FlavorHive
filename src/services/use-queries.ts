@@ -102,10 +102,12 @@ const useGetSignupAdditionalInfo = async () => {
 };
 
 export const useGetHomeMenu = () => {
+  console.log(import.meta.env.VITE_PLAYWRIGHT_TEST);
   return useQuery({
     queryKey: ["home menu"],
     queryFn:
-      import.meta.env.VITE_PLAYWRIGHT_TEST === "true"
+      import.meta.env.VITE_PLAYWRIGHT_TEST === "true" ||
+      process.env?.VITE_PLAYWRIGHT_TEST === "true"
         ? getHomeMenuCI
         : getHomeMenu,
     refetchOnWindowFocus: true,
