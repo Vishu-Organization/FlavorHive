@@ -2,23 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { useGetHomeMenu } from "../../services/use-queries";
 import Loader from "../layout/Loader";
 import { toast } from "react-toastify";
-import { useMemo } from "react";
 
 const HomeMenu = () => {
-  const isRunningInPlaywright = useMemo(() => {
-    // Check if the 'process' object is available (it won't be in the browser)
-    if (typeof process !== "undefined") {
-      // Check for a specific environment variable set by Playwright
-      return true;
-    }
-    return false;
-  }, []);
-
-  const {
-    data: homeMenu,
-    isPending,
-    isError,
-  } = useGetHomeMenu(isRunningInPlaywright);
+  const { data: homeMenu, isPending, isError } = useGetHomeMenu();
 
   const loadRecipes = () => {
     if (isPending) {

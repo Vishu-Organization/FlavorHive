@@ -101,10 +101,10 @@ const useGetSignupAdditionalInfo = async () => {
   });
 };
 
-export const useGetHomeMenu = (isRunningInPlaywright: boolean) => {
+export const useGetHomeMenu = () => {
   return useQuery({
     queryKey: ["home menu"],
-    queryFn: isRunningInPlaywright ? getHomeMenuCI : getHomeMenu,
+    queryFn: getHomeMenu,
     refetchOnWindowFocus: true,
     staleTime: homeScreenStaleTime,
     retry: false,
