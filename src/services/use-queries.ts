@@ -105,7 +105,7 @@ export const useGetHomeMenu = () => {
   return useQuery({
     queryKey: ["home menu"],
     queryFn:
-      typeof process !== "undefined" && !!process?.env?.CI
+      import.meta.env.VITE_PLAYWRIGHT_TEST === "true"
         ? getHomeMenuCI
         : getHomeMenu,
     refetchOnWindowFocus: true,
