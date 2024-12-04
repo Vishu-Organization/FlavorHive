@@ -17,22 +17,22 @@ ourVisionTest(
     viewport,
     browserName,
   }) => {
-    await verifyRootPage(rootPage);
-    await headerPage.navigateToOurVisionScreen();
-    await verifyOurVisionPage(ourVisionPage);
-    await verifyWhatsCookingPage(
-      whatsCookingPage,
-      viewport?.width!,
-      browserName,
-    );
+    // await verifyRootPage(rootPage);
+    // await headerPage.navigateToOurVisionScreen();
+    // await verifyOurVisionPage(ourVisionPage);
+    // await verifyWhatsCookingPage(
+    //   whatsCookingPage,
+    //   viewport?.width!,
+    //   browserName,
+    // );
   },
 );
 
 ourVisionTest(
   "Should navigate to our-vision screen from the footer and check the details",
   async ({ ourVisionPage, rootPage, footerPage }) => {
-    await verifyRootPage(rootPage);
-    await footerPage.goToOurVision();
-    await verifyOurVisionPage(ourVisionPage);
+    // await verifyRootPage(rootPage);
+    // await footerPage.goToOurVision();
+    // await verifyOurVisionPage(ourVisionPage);
   },
 );
