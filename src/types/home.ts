@@ -19,7 +19,7 @@ export const HomeMenuSelector = {
   cuisineType: "cuisineType" as HomeMenuSelector,
   mealType: "mealType" as HomeMenuSelector,
   health: "health" as HomeMenuSelector,
-  dishType: "cuisineType" as HomeMenuSelector,
+  dishType: "dishType" as HomeMenuSelector,
 };
 
 type HomeMenuItem = {
