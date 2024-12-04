@@ -19,38 +19,38 @@ const verifynavigationToSignUpScreen = async ({
   await signupPage.verifyNavigationToSignUpScreen();
 };
 
-signupTest(
-  "Should sign up with email and password",
-  async ({ signupPage, rootPage, headerPage, browserName, viewport }) => {
-    test.skip(
-      browserName === "firefox" ||
-        browserName === "webkit" ||
-        viewport?.width !== 1412,
-      "This test only works on chrome atm",
-    );
-    // await verifynavigationToSignUpScreen({ signupPage, rootPage, headerPage });
-    // await signupPage.fillSignUpFormAndSubmit();
-    // const userResponse = await signupPage.verifyPageAfterLogin();
-    // await headerPage.verifyWelcomeText(userResponse.user.user_metadata.name);
-  },
-);
+// signupTest(
+//   "Should sign up with email and password",
+//   async ({ signupPage, rootPage, headerPage, browserName, viewport }) => {
+//     test.skip(
+//       browserName === "firefox" ||
+//         browserName === "webkit" ||
+//         viewport?.width !== 1412,
+//       "This test only works on chrome atm",
+//     );
+//     // await verifynavigationToSignUpScreen({ signupPage, rootPage, headerPage });
+//     // await signupPage.fillSignUpFormAndSubmit();
+//     // const userResponse = await signupPage.verifyPageAfterLogin();
+//     // await headerPage.verifyWelcomeText(userResponse.user.user_metadata.name);
+//   },
+// );
 
-signupTest(
-  `Should verify 'how it works' and 'additional info' sections in the signup screen`,
-  async ({
-    rootPage,
-    headerPage,
-    signupPage,
-    howItWorksPage,
-    additionalInfoPage,
-  }) => {
-    // await verifynavigationToSignUpScreen({ signupPage, rootPage, headerPage });
-    // await howItWorksPage.verifyHowItWorksPage();
-    // await additionalInfoPage.verifyAdditionalIngoPage();
-  },
-);
+// signupTest(
+//   `Should verify 'how it works' and 'additional info' sections in the signup screen`,
+//   async ({
+//     rootPage,
+//     headerPage,
+//     signupPage,
+//     howItWorksPage,
+//     additionalInfoPage,
+//   }) => {
+//     // await verifynavigationToSignUpScreen({ signupPage, rootPage, headerPage });
+//     // await howItWorksPage.verifyHowItWorksPage();
+//     // await additionalInfoPage.verifyAdditionalIngoPage();
+//   },
+// );
 
-signupTest.afterAll(async () => {
-  // TODO: Delete user requires edge function in Supabase. Parking this for now
-  // await deleteUser(user.user.id);
-});
+// signupTest.afterAll(async () => {
+//   // TODO: Delete user requires edge function in Supabase. Parking this for now
+//   // await deleteUser(user.user.id);
+// });
