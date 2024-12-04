@@ -7,6 +7,7 @@ import { HomeTestimonialsPage } from "./page-objects/Home/home-testimonials-page
 import { HomeRatingsPage } from "./page-objects/Home/home-ratings-page";
 import { HomeMealsShippedPage } from "./page-objects/Home/home-meals-shipped-page";
 import { HomeMenuPage } from "./page-objects/Home/home-menu-page";
+import test from "@playwright/test";
 
 const verifyHomePage = async (
   homeHeroPage: HomeHeroPage,
@@ -44,64 +45,70 @@ homeTest(
     viewport,
     browserName,
   }) => {
-    // await verifyRootPage(rootPage);
-    // await verifyHomePage(
-    //   homeHeroPage,
-    //   homeBannerPage,
-    //   homeRatingsPage,
-    //   homeTestimonialsPage,
-    //   homeGettingStartedPage,
-    //   homeMealsShippedPage,
-    //   viewport?.width!,
-    //   homeMenuPage,
-    // );
-    // await verifyWhatsCookingPage(
-    //   whatsCookingPage,
-    //   viewport?.width!,
-    //   browserName,
-    // );
+    test.skip(
+      browserName === "firefox" ||
+        browserName === "webkit" ||
+        viewport?.width !== 1412,
+      "This test only works on chrome atm",
+    );
+    await verifyRootPage(rootPage);
+    await verifyHomePage(
+      homeHeroPage,
+      homeBannerPage,
+      homeRatingsPage,
+      homeTestimonialsPage,
+      homeGettingStartedPage,
+      homeMealsShippedPage,
+      viewport?.width!,
+      homeMenuPage,
+    );
+    await verifyWhatsCookingPage(
+      whatsCookingPage,
+      viewport?.width!,
+      browserName,
+    );
   },
 );
 
-homeTest(
-  "Navigate to Login Screen and then back to home screen and verify the details",
-  async ({
-    rootPage,
-    headerPage,
-    loginPage,
-    ourVisionPage,
-    homeHeroPage,
-    homeBannerPage,
-    homeRatingsPage,
-    homeMealsShippedPage,
-    homeTestimonialsPage,
-    homeGettingStartedPage,
-    whatsCookingPage,
-    homeMenuPage,
-    viewport,
-    browserName,
-  }) => {
-    // await verifyRootPage(rootPage);
-    // await headerPage.goToLoginScreen();
-    // await loginPage.verifyNavigationToLoginScreen();
-    // await headerPage.navigateToOurVisionScreen();
-    // await ourVisionPage.verifyOurVisionPageContent();
-    // await headerPage.goToHomeScreen();
-    // await verifyHomePage(
-    //   homeHeroPage,
-    //   homeBannerPage,
-    //   homeRatingsPage,
-    //   homeTestimonialsPage,
-    //   homeGettingStartedPage,
-    //   homeMealsShippedPage,
-    //   viewport?.width!,
-    //   homeMenuPage,
-    // );
-    // await verifyWhatsCookingPage(
-    //   whatsCookingPage,
-    //   viewport?.width!,
-    //   browserName,
-    // );
-  },
-);
+// homeTest(
+//   "Navigate to Login Screen and then back to home screen and verify the details",
+//   async ({
+//     rootPage,
+//     headerPage,
+//     loginPage,
+//     ourVisionPage,
+//     homeHeroPage,
+//     homeBannerPage,
+//     homeRatingsPage,
+//     homeMealsShippedPage,
+//     homeTestimonialsPage,
+//     homeGettingStartedPage,
+//     whatsCookingPage,
+//     homeMenuPage,
+//     viewport,
+//     browserName,
+//   }) => {
+//     // await verifyRootPage(rootPage);
+//     // await headerPage.goToLoginScreen();
+//     // await loginPage.verifyNavigationToLoginScreen();
+//     // await headerPage.navigateToOurVisionScreen();
+//     // await ourVisionPage.verifyOurVisionPageContent();
+//     // await headerPage.goToHomeScreen();
+//     // await verifyHomePage(
+//     //   homeHeroPage,
+//     //   homeBannerPage,
+//     //   homeRatingsPage,
+//     //   homeTestimonialsPage,
+//     //   homeGettingStartedPage,
+//     //   homeMealsShippedPage,
+//     //   viewport?.width!,
+//     //   homeMenuPage,
+//     // );
+//     // await verifyWhatsCookingPage(
+//     //   whatsCookingPage,
+//     //   viewport?.width!,
+//     //   browserName,
+//     // );
+//   },
+// );
     

@@ -45,3 +45,26 @@ export type HomeMenu = {
   pancake: HomeMenuItem;
   salad: HomeMenuItem;
 };
+
+type Link = {
+  href: string;
+  title: string;
+};
+
+type SelfNextLinks = {
+  self: Link;
+  next: Link;
+};
+
+export type RecipeHit = {
+  recipe: Recipe;
+  _links: SelfNextLinks;
+};
+
+export type RecipeResponse = {
+  from: number;
+  to: number;
+  count: number;
+  _links: SelfNextLinks;
+  hits: RecipeHit[];
+};
