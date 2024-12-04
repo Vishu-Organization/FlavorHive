@@ -70,45 +70,45 @@ homeTest(
   },
 );
 
-// homeTest(
-//   "Navigate to Login Screen and then back to home screen and verify the details",
-//   async ({
-//     rootPage,
-//     headerPage,
-//     loginPage,
-//     ourVisionPage,
-//     homeHeroPage,
-//     homeBannerPage,
-//     homeRatingsPage,
-//     homeMealsShippedPage,
-//     homeTestimonialsPage,
-//     homeGettingStartedPage,
-//     whatsCookingPage,
-//     homeMenuPage,
-//     viewport,
-//     browserName,
-//   }) => {
-//     // await verifyRootPage(rootPage);
-//     // await headerPage.goToLoginScreen();
-//     // await loginPage.verifyNavigationToLoginScreen();
-//     // await headerPage.navigateToOurVisionScreen();
-//     // await ourVisionPage.verifyOurVisionPageContent();
-//     // await headerPage.goToHomeScreen();
-//     // await verifyHomePage(
-//     //   homeHeroPage,
-//     //   homeBannerPage,
-//     //   homeRatingsPage,
-//     //   homeTestimonialsPage,
-//     //   homeGettingStartedPage,
-//     //   homeMealsShippedPage,
-//     //   viewport?.width!,
-//     //   homeMenuPage,
-//     // );
-//     // await verifyWhatsCookingPage(
-//     //   whatsCookingPage,
-//     //   viewport?.width!,
-//     //   browserName,
-//     // );
-//   },
-// );
+homeTest(
+  "Navigate to Login Screen and then back to home screen and verify the details",
+  async ({
+    rootPage,
+    headerPage,
+    loginPage,
+    ourVisionPage,
+    homeHeroPage,
+    homeBannerPage,
+    homeRatingsPage,
+    homeMealsShippedPage,
+    homeTestimonialsPage,
+    homeGettingStartedPage,
+    whatsCookingPage,
+    homeMenuPage,
+    viewport,
+    browserName,
+  }) => {
+    await verifyRootPage(rootPage);
+    await headerPage.goToLoginScreen();
+    await loginPage.verifyNavigationToLoginScreen();
+    await headerPage.navigateToOurVisionScreen();
+    await ourVisionPage.verifyOurVisionPageContent();
+    await headerPage.goToHomeScreen();
+    await verifyHomePage(
+      homeHeroPage,
+      homeBannerPage,
+      homeRatingsPage,
+      homeTestimonialsPage,
+      homeGettingStartedPage,
+      homeMealsShippedPage,
+      viewport?.width!,
+      homeMenuPage,
+    );
+    await verifyWhatsCookingPage(
+      whatsCookingPage,
+      viewport?.width!,
+      browserName,
+    );
+  },
+);
     
