@@ -45,12 +45,6 @@ homeTest(
     viewport,
     browserName,
   }) => {
-    test.skip(
-      browserName === "firefox" ||
-        browserName === "webkit" ||
-        viewport?.width !== 1412,
-      "This test only works on chrome atm",
-    );
     await verifyRootPage(rootPage);
     await verifyHomePage(
       homeHeroPage,
