@@ -59,15 +59,6 @@ const getHomeRecipe = async (url: string): Promise<Recipe> => {
   }
 };
 
-const getHomeRecipes = async (url: string): Promise<Recipe[]> => {
-  try {
-    const hits = getHits(await axios.get(url));
-    return hits.map((hit: RecipeHit) => hit.recipe);
-  } catch (error) {
-    throw error;
-  }
-};
-
 /**
  * This function is used to get the Menus to be displayed on the Home Screen.
  * Selector is used to filter the recipes on the 'on the menu' screen.
