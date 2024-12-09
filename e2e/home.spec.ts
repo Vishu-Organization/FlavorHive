@@ -7,7 +7,6 @@ import { HomeTestimonialsPage } from "./page-objects/Home/home-testimonials-page
 import { HomeRatingsPage } from "./page-objects/Home/home-ratings-page";
 import { HomeMealsShippedPage } from "./page-objects/Home/home-meals-shipped-page";
 import { HomeMenuPage } from "./page-objects/Home/home-menu-page";
-import test from "@playwright/test";
 
 const verifyHomePage = async (
   homeHeroPage: HomeHeroPage,
