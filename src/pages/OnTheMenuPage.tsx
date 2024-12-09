@@ -5,6 +5,7 @@ const OnTheMenuPage = () => {
   return (
     <section id="on-the-menu">
       <OnTheMenuHeader />
+      <div className="h-96"></div>
     </section>
   );
 };
