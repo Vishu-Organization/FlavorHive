@@ -117,7 +117,7 @@ const Header = () => {
             <Button
               data-testid="btn-logout"
               type="button"
-              display="inline-block"
+              display="flex"
               variant="icon"
               onClick={onSignout}
             >

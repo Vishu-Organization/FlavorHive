@@ -55,6 +55,9 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
     [OnTheMenuFilterOptions.Ingredients]: [],
   };
 
+  
+  const handleClearAll = () => {};
+  const handleClear = () => {};
   const handleDone = () => {
     localStorage.setItem("filters", JSON.stringify(filters));
   };
@@ -63,14 +66,15 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
     <div
       ref={ref}
       role="dialog"
-      className={`absolute left-1/2 top-10 z-10 w-[600px] min-w-96 -translate-x-1/2 transform space-y-2 bg-white p-4 pb-0 shadow-lg`}
+      className={`absolute left-1/2 top-10 z-10 w-[600px] min-w-96 -translate-x-1/2 transform space-y-2 bg-white py-4 pb-0 shadow-lg`}
     >
-      <div className="flex">
+      <div className="flex px-4">
         <nav className="w-1/5 border-r border-slate-100 text-sm">
           <ul>
             {Object.keys(filtersData).map((filterType) => (
               <li key={filterType} className="p-2">
                 <a
+                  data-testid={`link-${filterType.toLocaleLowerCase()}`}
                   className="cursor-pointer rounded-md p-2 text-primary transition-all hover:bg-slate-100 hover:no-underline"
                   onClick={() => handleFilterTypeSelect(filterType)}
                 >
@@ -81,11 +85,12 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
           </ul>
         </nav>
 
-        <ul className="mx-5 grid auto-rows-min grid-cols-3 gap-4 text-xs">
+        <ul className="mx-5 my-2 grid auto-rows-min grid-cols-3 gap-4 text-xs">
           {filtersData[selectedFilterType]?.map(({ label, value }, index) => {
             return (
               <li className="flex items-center gap-2" key={index}>
                 <input
+                  data-testid={`input-checkbox-${value}`}
                   type="checkbox"
                   id={`input-checkbox-${value}`}
                   name={value}
@@ -98,6 +103,7 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
                 <label
                   className="cursor-pointer capitalize"
                   htmlFor={`input-checkbox-${value}`}
+                  data-testid={`lbl-checkbox-${value}`}
                 >
                   {label || value}
                 </label>
@@ -107,23 +113,31 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
         </ul>
       </div>
 
-      <footer className="flex justify-between p-4 capitalize">
+      <footer className="flex justify-between bg-gray-50 px-8 py-4">
         <Button
-          variant="white"
-          className="rounded-none p-0 text-xs capitalize text-gray20 hover:bg-transparent"
+          data-testid="btn-filter-clear-all"
+          variant="clean"
+          rounded="none"
+          className="p-0 text-xs capitalize text-gray20"
+          onClick={handleClearAll}
         >
           Clear all
         </Button>
         <div className="flex space-x-6">
           <Button
-            variant="white"
-            className="rounded-none p-0 text-xs capitalize text-gray20 hover:bg-transparent"
+            data-testid="btn-filter-clear"
+            variant="clean"
+            rounded="none"
+            className="p-0 text-xs capitalize text-gray20"
+            onClick={handleClear}
           >
             Clear
           </Button>
           <Button
+            data-testid="btn-filter-done"
             onClick={handleDone}
-            className="rounded-md font-medium capitalize"
+            className="font-medium capitalize"
+            rounded="medium"
           >
             Done
           </Button>

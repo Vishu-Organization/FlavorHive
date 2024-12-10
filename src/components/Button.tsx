@@ -7,11 +7,9 @@ export const buttonStyles = cva(
     "transition-colors",
     "duration-200",
     "ease-in",
-    "rounded-3xl",
     "text-sm",
     "font-semibold",
     "tracking-widest",
-    "uppercase",
   ],
   {
     variants: {
@@ -22,12 +20,14 @@ export const buttonStyles = cva(
       },
       variant: {
         default: [
+          "uppercase",
           "bg-primary",
           "hover:bg-primary-hover",
           "text-white",
           "hover:border-blue20",
         ],
         white: [
+          "uppercase",
           "bg-white",
           "text-primary",
           "hover:bg-gray30",
@@ -56,19 +56,29 @@ export const buttonStyles = cva(
           "bg-transparent",
           "hover:border-transparent",
           "hover:bg-gray-200",
-          "flex",
-          "items-center",
+        ],
+        clean: [
+          "hover:bg-transparent",
+          "bg-transparent",
+          "hover:border-transparent",
         ],
       },
       size: {
         full: ["w-full"],
         default: ["w-fit"],
       },
+      rounded: {
+        none: ["rounded-none"],
+        medium: ["rounded-md"],
+        full: ["rounded-full"],
+        triplexl: ["rounded-3xl"],
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
       display: "default",
+      rounded: "none",
     },
   },
 );
@@ -76,12 +86,18 @@ export const buttonStyles = cva(
 type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, display, className, ...props }: ButtonProps, ref) => {
+  (
+    { variant, size, display, rounded, className, ...props }: ButtonProps,
+    ref,
+  ) => {
     return (
       <button
         ref={ref}
         {...props}
-        className={twMerge(buttonStyles({ variant, size, display }), className)}
+        className={twMerge(
+          buttonStyles({ variant, size, display, rounded }),
+          className,
+        )}
       >
         {props.children}
       </button>

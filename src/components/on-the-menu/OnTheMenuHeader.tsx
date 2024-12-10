@@ -84,7 +84,10 @@ const OnTheMenuHeader = () => {
         </p>
       </article>
       {!isInView && (
-        <div id="search-filters" className="sticky top-12 z-10 bg-slate-50">
+        <div
+          id="search-filters"
+          className="sticky top-12 z-10 bg-slate-50 lg:top-[4.5rem]"
+        >
           <div className="relative flex h-10 justify-center py-2">
             <p rel="search-filters" className="flex items-center">
               <span
