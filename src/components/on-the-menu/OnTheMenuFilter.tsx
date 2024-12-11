@@ -1,5 +1,6 @@
 import { forwardRef, useState } from "react";
 import { OnTheMenuFilterOptions } from "../../types/on-the-menu/on-the-menu-filter";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   useGetCuisineTypes,
   useGetDietTypes,
@@ -55,7 +56,6 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
     [OnTheMenuFilterOptions.Ingredients]: [],
   };
 
-  
   const handleClearAll = () => {};
   const handleClear = () => {};
   const handleDone = () => {
@@ -66,16 +66,16 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
     <div
       ref={ref}
       role="dialog"
-      className={`absolute left-1/2 top-10 z-10 w-[600px] min-w-96 -translate-x-1/2 transform space-y-2 bg-white py-4 pb-0 shadow-lg`}
+      className={`absolute left-1/2 top-10 z-10 w-[630px] min-w-96 -translate-x-1/2 transform space-y-2 bg-white py-4 pb-0 shadow-lg`}
     >
-      <div className="flex px-4">
+      <div className="flex min-h-56 px-4">
         <nav className="w-1/5 border-r border-slate-100 text-sm">
           <ul>
             {Object.keys(filtersData).map((filterType) => (
               <li key={filterType} className="p-2">
                 <a
                   data-testid={`link-${filterType.toLocaleLowerCase()}`}
-                  className="cursor-pointer rounded-md p-2 text-primary transition-all hover:bg-slate-100 hover:no-underline"
+                  className={`cursor-pointer rounded-md p-2 text-primary transition-all hover:bg-slate-100 hover:no-underline ${filterType === selectedFilterType ? "bg-slate-100" : ""}`}
                   onClick={() => handleFilterTypeSelect(filterType)}
                 >
                   {filterType}
@@ -85,32 +85,44 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, {}>((_, ref) => {
           </ul>
         </nav>
 
-        <ul className="mx-5 my-2 grid auto-rows-min grid-cols-3 gap-4 text-xs">
-          {filtersData[selectedFilterType]?.map(({ label, value }, index) => {
-            return (
-              <li className="flex items-center gap-2" key={index}>
-                <input
-                  data-testid={`input-checkbox-${value}`}
-                  type="checkbox"
-                  id={`input-checkbox-${value}`}
-                  name={value}
-                  className="cursor-pointer"
-                  checked={
-                    filters[selectedFilterType]?.includes(value) || false
-                  }
-                  onChange={() => handleOptionChange(value)}
-                />
-                <label
-                  className="cursor-pointer capitalize"
-                  htmlFor={`input-checkbox-${value}`}
-                  data-testid={`lbl-checkbox-${value}`}
+        <AnimatePresence>
+          <motion.ul
+            key={selectedFilterType} // Trigger re-render on filter type change
+            initial={{ x: "50%", opacity: 0 }} // Start from the right
+            animate={{ x: 0, opacity: 1 }} // Move into view
+            transition={{ duration: 0.5 }}
+            className="mx-5 my-2 grid auto-rows-min grid-cols-3 gap-4 text-xs"
+          >
+            {filtersData[selectedFilterType]?.map(({ label, value }, index) => {
+              const isChecked =
+                filters[selectedFilterType]?.includes(value) || false;
+
+              return (
+                <li
+                  className="flex items-center gap-2 hover:text-primary"
+                  key={index}
                 >
-                  {label || value}
-                </label>
-              </li>
-            );
-          })}
-        </ul>
+                  <input
+                    data-testid={`input-checkbox-${value}`}
+                    type="checkbox"
+                    id={`input-checkbox-${value}`}
+                    name={value}
+                    className="custom-checkbox"
+                    checked={isChecked}
+                    onChange={() => handleOptionChange(value)}
+                  />
+                  <label
+                    data-testid={`lbl-checkbox-${value}`}
+                    className={`cursor-pointer capitalize ${isChecked ? "font-semibold" : ""}`}
+                    htmlFor={`input-checkbox-${value}`}
+                  >
+                    {label || value}
+                  </label>
+                </li>
+              );
+            })}
+          </motion.ul>
+        </AnimatePresence>
       </div>
 
       <footer className="flex justify-between bg-gray-50 px-8 py-4">
