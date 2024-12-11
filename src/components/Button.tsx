@@ -61,6 +61,7 @@ export const buttonStyles = cva(
           "hover:bg-transparent",
           "bg-transparent",
           "hover:border-transparent",
+          "focus:outline-none",
         ],
       },
       size: {
