@@ -13,6 +13,8 @@ const OnTheMenuHeader = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { mutate: getOnTheMenuData, data } = useGetOnTheMenuData();
 
+  console.log(data);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
