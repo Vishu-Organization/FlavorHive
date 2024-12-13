@@ -6,45 +6,9 @@ import {
   RecipeHit,
   RecipeResponse,
 } from "../types/home";
-
-type SelectorMap = {
-  fields: string[];
-  mealType?: string;
-  cuisineType?: string;
-  health?: string;
-  dishType?: string;
-  diet?: string;
-};
-
-const appId = "7f563e49";
-const appKeys = [
-  "4be7f47dd4dc6fd6ed0b7644e352f6aa",
-  "7bbf70c600c349da70d8d807a2949f29",
-];
+import { buildUrl } from "./helper-functions";
 
 const homeRecipeFields = ["label", "image", "images"];
-
-const getBaseUrl = () =>
-  `https://api.edamam.com/api/recipes/v2?type=public&app_id=${appId}&app_key=${appKeys[Math.floor(Math.random() * appKeys.length)]}`;
-
-const buildUrl = (selectorMap: SelectorMap) => {
-  const selectors = Object.entries(selectorMap)
-    .map(([key, value]) => {
-      if (key !== "fields") {
-        return `&${key}=${value}`;
-      }
-    })
-    .join("");
-
-  return `${getBaseUrl()}${appendFields(selectorMap.fields)}${selectors}`;
-};
-
-const appendFields = (fields: string[]) => {
-  const urlPart = fields.map((field) => {
-    return `&field=${field}`;
-  });
-  return urlPart.join("");
-};
 
 const getHits = (response: AxiosResponse<RecipeResponse>): RecipeHit[] =>
   response?.data?.hits;
@@ -54,6 +18,15 @@ const getHomeRecipe = async (url: string): Promise<Recipe> => {
     const hits = getHits(await axios.get(url));
     const [{ recipe }] = hits;
     return recipe;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const getRecipes = async (url: string): Promise<RecipeHit[]> => {
+  try {
+    const hits: RecipeHit[] = getHits(await axios.get(url));
+    return hits;
   } catch (error) {
     throw error;
   }
@@ -70,55 +43,70 @@ export const getHomeMenu = async (): Promise<HomeMenu> => {
     return {
       mediterranean: {
         recipe: await getHomeRecipe(
-          buildUrl({ fields, cuisineType: "mediterranean" }),
+          buildUrl({ fields, cuisineType: ["mediterranean"] }),
         ),
-        selector: HomeMenuSelector.cuisineType,
+        selector: HomeMenuSelector.cuisine,
       },
       breakFast: {
         recipe: await getHomeRecipe(
-          buildUrl({ fields, mealType: "breakfast" }),
+          buildUrl({ fields, mealType: ["breakfast"] }),
         ),
-        selector: HomeMenuSelector.mealType,
+        selector: HomeMenuSelector.meal,
       },
       vegetarian: {
-        recipe: await getHomeRecipe(buildUrl({ fields, health: "vegetarian" })),
+        recipe: await getHomeRecipe(
+          buildUrl({ fields, health: ["vegetarian"] }),
+        ),
         selector: HomeMenuSelector.health,
       },
       french: {
         recipe: await getHomeRecipe(
-          buildUrl({ fields, cuisineType: "french" }),
+          buildUrl({ fields, cuisineType: ["french"] }),
         ),
-        selector: HomeMenuSelector.cuisineType,
+        selector: HomeMenuSelector.cuisine,
       },
       indian: {
         recipe: await getHomeRecipe(
-          buildUrl({ fields, cuisineType: "indian" }),
+          buildUrl({ fields, cuisineType: ["indian"] }),
         ),
-        selector: HomeMenuSelector.cuisineType,
+        selector: HomeMenuSelector.cuisine,
       },
       starter: {
-        recipe: await getHomeRecipe(buildUrl({ fields, dishType: "starter" })),
-        selector: HomeMenuSelector.dishType,
+        recipe: await getHomeRecipe(
+          buildUrl({ fields, dishType: ["starter"] }),
+        ),
+        selector: HomeMenuSelector.dish,
       },
       snack: {
-        recipe: await getHomeRecipe(buildUrl({ fields, mealType: "snack" })),
-        selector: HomeMenuSelector.mealType,
+        recipe: await getHomeRecipe(buildUrl({ fields, mealType: ["snack"] })),
+        selector: HomeMenuSelector.meal,
       },
       mexican: {
         recipe: await getHomeRecipe(
-          buildUrl({ fields, cuisineType: "mexican" }),
+          buildUrl({ fields, cuisineType: ["mexican"] }),
         ),
-        selector: HomeMenuSelector.cuisineType,
+        selector: HomeMenuSelector.cuisine,
       },
       pancake: {
-        recipe: await getHomeRecipe(buildUrl({ fields, dishType: "pancake" })),
-        selector: HomeMenuSelector.dishType,
+        recipe: await getHomeRecipe(
+          buildUrl({ fields, dishType: ["pancake"] }),
+        ),
+        selector: HomeMenuSelector.dish,
       },
       salad: {
-        recipe: await getHomeRecipe(buildUrl({ fields, dishType: "salad" })),
-        selector: HomeMenuSelector.dishType,
+        recipe: await getHomeRecipe(buildUrl({ fields, dishType: ["salad"] })),
+        selector: HomeMenuSelector.dish,
       },
     };
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getOnTheMenuData = async (filters: any): Promise<RecipeHit[]> => {
+  const url = buildUrl({ fields: homeRecipeFields, ...filters });
+  try {
+    return getRecipes(url);
   } catch (error) {
     throw error;
   }

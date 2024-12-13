@@ -9,17 +9,13 @@ export type Recipe = {
   };
 };
 
-export type HomeMenuSelector =
-  | "cuisineType"
-  | "mealType"
-  | "health"
-  | "dishType";
+export type HomeMenuSelector = "cuisine" | "meal" | "health" | "dish";
 
 export const HomeMenuSelector = {
-  cuisineType: "cuisineType" as HomeMenuSelector,
-  mealType: "mealType" as HomeMenuSelector,
+  cuisine: "cuisine" as HomeMenuSelector,
+  meal: "meal" as HomeMenuSelector,
   health: "health" as HomeMenuSelector,
-  dishType: "dishType" as HomeMenuSelector,
+  dish: "dish" as HomeMenuSelector,
 };
 
 type HomeMenuItem = {

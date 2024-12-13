@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import OnTheMenuFilter from "./OnTheMenuFilter";
 import { ArrowDropDown } from "@mui/icons-material";
 import Button from "../Button";
+import { useGetOnTheMenuData } from "../../services/use-mutations";
 
 const OnTheMenuHeader = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,6 +11,9 @@ const OnTheMenuHeader = () => {
   const targetRef = useRef(null);
   const modalRef = useRef<HTMLDivElement>(null); // Reference for the modal
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const { mutate: getOnTheMenuData, data } = useGetOnTheMenuData();
+
+  console.log(data);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,8 +37,6 @@ const OnTheMenuHeader = () => {
   // Close modal when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      console.log(modalRef);
-
       if (
         modalRef.current &&
         !modalRef.current.contains(event.target as Node) &&
@@ -56,8 +58,8 @@ const OnTheMenuHeader = () => {
     };
   }, [isModalOpen]);
 
-  const toggleModal = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const toggleModal = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setIsModalOpen((prev) => !prev);
   };
 
@@ -106,7 +108,13 @@ const OnTheMenuHeader = () => {
                 <ArrowDropDown />
               </Button>
             </p>
-            {isModalOpen && <OnTheMenuFilter ref={modalRef} />}
+            {isModalOpen && (
+              <OnTheMenuFilter
+                ref={modalRef}
+                onToggleModal={toggleModal}
+                getOnTheMenuData={getOnTheMenuData}
+              />
+            )}
           </div>
         </div>
       )}
