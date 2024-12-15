@@ -1,12 +1,21 @@
 export type Recipe = {
   label: string;
   image: string;
-  images: {
-    LARGE?: ImageContent;
-    REGULAR: ImageContent;
-    SMALL: ImageContent;
-    THUMBNAIL: ImageContent;
-  };
+  images: RecipeImages;
+  source: string;
+  url: string;
+  healthLabels: string[];
+  ingredientLines: string[];
+  calories: number;
+  totalTime: number;
+  dietLabels: string[];
+};
+
+type RecipeImages = {
+  LARGE?: ImageContent;
+  REGULAR: ImageContent;
+  SMALL: ImageContent;
+  THUMBNAIL: ImageContent;
 };
 
 export type HomeMenuSelector = "cuisine" | "meal" | "health" | "dish";
