@@ -7,8 +7,7 @@ import {
   RecipeResponse,
 } from "../types/home";
 import { buildUrl } from "./helper-functions";
-
-const homeRecipeFields = ["label", "image", "images"];
+import { homeRecipeFields } from "../types/types";
 
 const getHits = (response: AxiosResponse<RecipeResponse>): RecipeHit[] =>
   response?.data?.hits;
@@ -23,10 +22,9 @@ const getHomeRecipe = async (url: string): Promise<Recipe> => {
   }
 };
 
-const getRecipes = async (url: string): Promise<RecipeHit[]> => {
+const getRecipes = async (url: string): Promise<RecipeResponse> => {
   try {
-    const hits: RecipeHit[] = getHits(await axios.get(url));
-    return hits;
+    return (await axios.get(url)).data;
   } catch (error) {
     throw error;
   }
@@ -103,22 +101,13 @@ export const getHomeMenu = async (): Promise<HomeMenu> => {
   }
 };
 
-export const getOnTheMenuData = async (filters: any): Promise<RecipeHit[]> => {
-
-  const fields = [
-    ...homeRecipeFields,
-    "source",
-    "url",
-    "healthLabels",
-    "ingredientLines",
-    "calories",
-    "totalTime",
-    "dietLabels",
-  ];
-
-  const url = buildUrl({ fields, ...filters });
+export const getOnTheMenuData = async ({
+  pageParam,
+}: {
+  pageParam: string;
+}): Promise<RecipeResponse> => {
   try {
-    return getRecipes(url);
+    return getRecipes(pageParam);
   } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.status === 401) {

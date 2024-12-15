@@ -1,4 +1,8 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import {
+  keepPreviousData,
+  useInfiniteQuery,
+  useQuery,
+} from "@tanstack/react-query";
 import {
   getAllCustomerSupportLinks,
   getAllDiscountedPeopleLinks,
@@ -19,6 +23,8 @@ import {
 import { queryClient } from "../App";
 import { getHomeMenu, getOnTheMenuData } from "./edamam-api";
 import { Filters } from "../types/on-the-menu/on-the-menu-filter";
+import { buildUrl } from "./helper-functions";
+import { homeRecipeFields } from "../types/types";
 
 const staticDataStaleTime = 300000; // 5 minutes. Data wouldn't change that quickly
 // const staticDataStaleTime = 20 * 60000; // 20 minutes. Data wouldn't change that quickly
@@ -170,11 +176,25 @@ export const useGetOnTheMenuData = (filters: Filters) => {
     ...filters,
     time: ["14-60"],
   };
-  return useQuery({
-    _optimisticResults: "optimistic",
+
+  const fields = [
+    ...homeRecipeFields,
+    "source",
+    "url",
+    "healthLabels",
+    "ingredientLines",
+    "calories",
+    "totalTime",
+    "dietLabels",
+  ];
+
+  return useInfiniteQuery({
     queryKey: ["on the menu", filters],
-    queryFn: () => getOnTheMenuData(filters),
-    staleTime: staticDataStaleTime,
+    queryFn: ({ pageParam }) => {
+      return getOnTheMenuData({ pageParam });
+    },
+    initialPageParam: buildUrl({ fields, ...filters }),
     placeholderData: keepPreviousData,
+    getNextPageParam: (lastPage, _) => lastPage._links?.next?.href || undefined,
   });
 };
