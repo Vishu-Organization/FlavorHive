@@ -6,8 +6,8 @@ import { replaceKeysInObject } from "../services/helper-functions";
 import { useGetOnTheMenuData } from "../services/use-queries";
 import Loader from "../components/layout/Loader";
 import OnTheMenuRecipes from "../components/on-the-menu/OnTheMenuRecipes";
-import { RecipeHit } from "../types/home";
 import { Filters } from "../types/on-the-menu/on-the-menu-filter";
+import Button from "../components/Button";
 
 const OnTheMenuPage = () => {
   const [appliedFilters, setAppliedFilters] = useState<Filters | null>(() => {
@@ -17,21 +17,40 @@ const OnTheMenuPage = () => {
       : null;
   });
   const {
-    data: recipes,
+    data: recipePages,
+    hasNextPage,
     isPending,
-    isFetching,
-    isLoading,
     isError,
     error,
+    isFetchingNextPage,
+    fetchNextPage,
   } = useGetOnTheMenuData(appliedFilters || {});
 
-  console.log(recipes, isPending, isFetching, isLoading, isError, error);
+  console.log(hasNextPage, recipePages, isError, error);
 
   return (
     <section id="on-the-menu">
       <OnTheMenuHeader setAppliedFilters={setAppliedFilters} />
       {isPending && <Loader />}
-      <OnTheMenuRecipes recipes={recipes as RecipeHit[]} />
+      {recipePages?.pages.map(({ hits }, index) => {
+        return <OnTheMenuRecipes recipes={hits} key={index} />;
+      })}
+
+      {!isPending && hasNextPage && (
+        <div className="flex items-center justify-center p-5">
+          <Button
+            onClick={() => fetchNextPage()}
+            rounded="medium"
+            disabled={!hasNextPage || isFetchingNextPage}
+          >
+            {isFetchingNextPage
+              ? "Loading more..."
+              : hasNextPage
+                ? "Load More"
+                : "Nothing more to load"}
+          </Button>
+        </div>
+      )}
     </section>
   );
 };
