@@ -73,12 +73,12 @@ export class HomeMenuPage {
   async verifyNavigation() {
     await expect(this.mediterraneanLink).toBeVisible();
     await this.mediterraneanLink.click();
-    expect(this.page.url()).toContain(`on-the-menu?cuisineType=mediterranean`);
+    expect(this.page.url()).toContain(`on-the-menu?cuisine=mediterranean`);
     await this.page.goBack({ waitUntil: "commit" });
     await this.interceptRecipeMenuApi();
     await expect(this.starterLink).toBeVisible();
     await this.starterLink.click();
-    expect(this.page.url()).toContain(`on-the-menu?dishType=starter`);
+    expect(this.page.url()).toContain(`on-the-menu?dish=starter`);
     await this.page.goBack({ waitUntil: "commit" });
     await this.interceptRecipeMenuApi();
   }
