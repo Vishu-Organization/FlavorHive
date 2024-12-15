@@ -1,6 +1,6 @@
 
 
-![Badge](https://img.shields.io/badge/Tech_Stack-HTML-orange) ![Badge](https://img.shields.io/badge/CSS-blue) ![Badge](https://img.shields.io/badge/React_Js-cyan)
+![Badge](https://img.shields.io/badge/Tech_Stack-HTML-orange) ![Badge](https://img.shields.io/badge/React_Js-cyan)
  ![Badge](https://img.shields.io/badge/-Java_Script-yellow) ![Badge](https://img.shields.io/badge/Version-1.0-green) 
 
 </div>
@@ -10,7 +10,7 @@
 </h3>
 <br />
 
-## Tech Stack : <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/react%20-%2314354C.svg?&style=for-the-badge&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/> <img src="https://img.shields.io/badge/Chakra_UI-6066C7?style=for-the-badge&logo=chakraui&logoColor=white"/> 
+## Tech Stack : <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/react%20-%2314354C.svg?&style=for-the-badge&logo=react&logoColor=white"/>
 
 
 - **Frontend:** HTML5, Tailwind CSS, React 18, JavaScript, Tanstack Router, Tanstack Query, Tanstack Form
@@ -24,7 +24,7 @@
 
 # Overview
 
-This Recipes website is built using React. The current version is 18.
+This Recipes website is built using React. The current react version is 18.
 
 Few Screenshots of the website functionalities -- 
 
