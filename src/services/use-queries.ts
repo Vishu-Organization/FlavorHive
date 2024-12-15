@@ -17,9 +17,11 @@ import {
   getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
-import { getHomeMenu } from "./edamam-api";
+import { getHomeMenu, getOnTheMenuData } from "./edamam-api";
+import { Filters } from "../types/on-the-menu/on-the-menu-filter";
 
 const staticDataStaleTime = 300000; // 5 minutes. Data wouldn't change that quickly
+// const staticDataStaleTime = 20 * 60000; // 20 minutes. Data wouldn't change that quickly
 
 export const useGetAllCustomerSupportLinks = () => {
   return useQuery({
@@ -160,5 +162,19 @@ export const useGetMealTypes = () => {
     queryKey: ["Meal types"],
     queryFn: getMealTypes,
     staleTime: staticDataStaleTime,
+  });
+};
+
+export const useGetOnTheMenuData = (filters: Filters) => {
+  filters = {
+    ...filters,
+    time: ["14-60"],
+  };
+  return useQuery({
+    _optimisticResults: "optimistic",
+    queryKey: ["on the menu", filters],
+    queryFn: () => getOnTheMenuData(filters),
+    staleTime: staticDataStaleTime,
+    placeholderData: keepPreviousData,
   });
 };

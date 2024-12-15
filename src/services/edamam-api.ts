@@ -104,10 +104,30 @@ export const getHomeMenu = async (): Promise<HomeMenu> => {
 };
 
 export const getOnTheMenuData = async (filters: any): Promise<RecipeHit[]> => {
-  const url = buildUrl({ fields: homeRecipeFields, ...filters });
+
+  const fields = [
+    ...homeRecipeFields,
+    "source",
+    "url",
+    "healthLabels",
+    "ingredientLines",
+    "calories",
+    "totalTime",
+    "dietLabels",
+  ];
+
+  const url = buildUrl({ fields, ...filters });
   try {
     return getRecipes(url);
   } catch (error) {
-    throw error;
+    if (axios.isAxiosError(error)) {
+      if (error.status === 401) {
+        throw new Error("You don't have acces to this feature");
+      } else {
+        throw new Error("Something went wrong");
+      }
+    } else {
+      throw error;
+    }
   }
 };

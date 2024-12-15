@@ -44,6 +44,7 @@ export default {
 
         black10: "var(--black10)",
         black20: "var(--black20)",
+        "checkbox-tick-blue": "var(--checkbox-tick-blue)",
 
         "input-error": "var(--input-error)",
 

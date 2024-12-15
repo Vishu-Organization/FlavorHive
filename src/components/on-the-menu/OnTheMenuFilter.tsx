@@ -1,5 +1,9 @@
 import { forwardRef, useState } from "react";
-import { OnTheMenuFilterOption } from "../../types/on-the-menu/on-the-menu-filter";
+import {
+  Filter,
+  Filters,
+  OnTheMenuFilterOption,
+} from "../../types/on-the-menu/on-the-menu-filter";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   useGetCuisineTypes,
@@ -11,28 +15,17 @@ import {
 import Button from "../Button";
 import { replaceKeysInObject } from "../../services/helper-functions";
 
-interface Filter {
-  id: number;
-  value: string;
-  label?: string | null;
-  description?: string | null;
-}
-
-interface Filters {
-  [key: string]: string[];
-}
-
 interface ModalProps {
   onToggleModal: (e?: React.MouseEvent) => void;
-  getOnTheMenuData: (filter: any) => void;
+  setAppliedFilters: React.Dispatch<React.SetStateAction<Filters | null>>;
 }
 
 const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
-  ({ onToggleModal, getOnTheMenuData }: ModalProps, ref) => {
+  ({ onToggleModal, setAppliedFilters }: ModalProps, ref) => {
     const [selectedFilterType, setSelectedFilterType] = useState(
       OnTheMenuFilterOption.cuisineType,
     );
-    const [filters, setFilters] = useState<Filters>(() => {
+    const [filters, setFilters] = useState<Filters | null>(() => {
       const savedFilters = localStorage.getItem("filters");
       return savedFilters ? (JSON.parse(savedFilters) as Filters) : {};
     });
@@ -44,7 +37,7 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
     const handleOptionChange = (option: string) => {
       if (!selectedFilterType) return;
       setFilters((prev) => {
-        const currentOptions = prev[selectedFilterType] || [];
+        const currentOptions = prev![selectedFilterType] || [];
         const updatedOptions = currentOptions.includes(option)
           ? currentOptions.filter((o) => o !== option) // Remove if already selected
           : [...currentOptions, option]; // Add if not selected
@@ -77,7 +70,9 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
 
     const handleDone = () => {
       localStorage.setItem("filters", JSON.stringify(filters));
-      getOnTheMenuData(replaceKeysInObject(filters));
+      setAppliedFilters &&
+        filters &&
+        setAppliedFilters(replaceKeysInObject(filters));
       onToggleModal();
     };
 
@@ -115,7 +110,8 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
               {filtersData[selectedFilterType]?.map(
                 ({ label, value }, index) => {
                   const isChecked =
-                    filters[selectedFilterType]?.includes(value) || false;
+                    (filters && filters[selectedFilterType]?.includes(value)) ||
+                    false;
 
                   return (
                     <li
@@ -158,7 +154,10 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
           </Button>
           <span className="text-xs tracking-widest">
             Total filter(s):
-            {Object.values(filters).reduce((sum, arr) => sum + arr.length, 0)}
+            {Object.values(filters || {}).reduce(
+              (sum, arr) => sum + arr.length,
+              0,
+            )}
           </span>
           <div className="flex space-x-6">
             <Button

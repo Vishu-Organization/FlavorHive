@@ -2,25 +2,26 @@ import { useEffect, useRef, useState } from "react";
 import OnTheMenuFilter from "./OnTheMenuFilter";
 import { ArrowDropDown } from "@mui/icons-material";
 import Button from "../Button";
-import { useGetOnTheMenuData } from "../../services/use-mutations";
+import { Filters } from "../../types/on-the-menu/on-the-menu-filter";
 
-const OnTheMenuHeader = () => {
+interface Props {
+  setAppliedFilters: React.Dispatch<React.SetStateAction<Filters | null>>;
+}
+
+const OnTheMenuHeader = ({ setAppliedFilters }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [isInView, setIsInView] = useState(false);
   const targetRef = useRef(null);
   const modalRef = useRef<HTMLDivElement>(null); // Reference for the modal
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const { mutate: getOnTheMenuData, data } = useGetOnTheMenuData();
-
-  console.log(data);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.3 }, // 10% of the element should be visible
+      { threshold: 0.5 },
     );
 
     if (targetRef.current) {
@@ -112,7 +113,7 @@ const OnTheMenuHeader = () => {
               <OnTheMenuFilter
                 ref={modalRef}
                 onToggleModal={toggleModal}
-                getOnTheMenuData={getOnTheMenuData}
+                setAppliedFilters={setAppliedFilters}
               />
             )}
           </div>
