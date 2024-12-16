@@ -94,6 +94,11 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
                   >
                     {filterType}
                   </a>
+                  {filters && filters[filterType]?.length ? (
+                    <span className="rounded-full bg-primary px-[10px] py-1 text-xs text-white">
+                      {filters[filterType]?.length}
+                    </span>
+                  ) : null}
                 </li>
               ))}
             </ul>
