@@ -1,7 +1,6 @@
-import { createLazyRoute } from "@tanstack/react-router";
+import { createLazyRoute, useSearch } from "@tanstack/react-router";
 import OnTheMenuHeader from "../components/on-the-menu/OnTheMenuHeader";
 import { useState } from "react";
-
 import { replaceKeysInObject } from "../services/helper-functions";
 import { useGetOnTheMenuData } from "../services/use-queries";
 import Loader from "../components/layout/Loader";
@@ -10,23 +9,32 @@ import { Filters } from "../types/on-the-menu/on-the-menu-filter";
 import Button from "../components/Button";
 
 const OnTheMenuPage = () => {
+  const filterParams = useSearch({ from: "/on-the-menu" });
+
   const [appliedFilters, setAppliedFilters] = useState<Filters | null>(() => {
-    const savedFilters = localStorage.getItem("filters");
-    return savedFilters
-      ? replaceKeysInObject(JSON.parse(savedFilters) as Filters)
-      : null;
+    if (!Object.entries(filterParams).length) {
+      const savedFilters = localStorage.getItem("filters");
+      return savedFilters
+        ? replaceKeysInObject(JSON.parse(savedFilters) as Filters)
+        : null;
+    } else {
+      const filterForParam = Object.fromEntries(
+        Object.entries(filterParams).map(([key, value]) => [
+          key,
+          Array.isArray(value) ? value : [value],
+        ]),
+      );
+      localStorage.setItem("filters", JSON.stringify(filterForParam));
+      return replaceKeysInObject(filterForParam);
+    }
   });
   const {
     data: recipePages,
     hasNextPage,
     isPending,
-    isError,
-    error,
     isFetchingNextPage,
     fetchNextPage,
   } = useGetOnTheMenuData(appliedFilters || {});
-
-  console.log(hasNextPage, recipePages, isError, error);
 
   return (
     <section id="on-the-menu">

@@ -10,30 +10,9 @@ interface Props {
 
 const OnTheMenuHeader = ({ setAppliedFilters }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const [isInView, setIsInView] = useState(false);
   const targetRef = useRef(null);
   const modalRef = useRef<HTMLDivElement>(null); // Reference for the modal
   const buttonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.5 },
-    );
-
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
-
-    return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
-    };
-  }, []);
 
   // Close modal when clicking outside
   useEffect(() => {
@@ -66,6 +45,37 @@ const OnTheMenuHeader = ({ setAppliedFilters }: Props) => {
 
   return (
     <>
+      <div
+        id="search-filters"
+        className="sticky top-12 z-10 bg-slate-50 lg:top-[4.5rem]"
+      >
+        <div className="relative flex h-10 justify-center py-2">
+          <p rel="search-filters" className="flex items-center">
+            <span
+              data-testid="text-filter-header-text"
+              className="text-[10px] uppercase tracking-wider text-black20 lg:text-xs"
+            >
+              Refine search
+            </span>
+            <Button
+              data-testid="btn-toggle-filter-modal"
+              ref={buttonRef}
+              variant="icon"
+              className={`h-fit w-fit transform p-0 text-primary transition-transform duration-200 hover:bg-transparent focus:outline-none ${!isModalOpen ? "rotate-0" : "-rotate-180"}`}
+              onClick={toggleModal}
+            >
+              <ArrowDropDown />
+            </Button>
+          </p>
+          {isModalOpen && (
+            <OnTheMenuFilter
+              ref={modalRef}
+              onToggleModal={toggleModal}
+              setAppliedFilters={setAppliedFilters}
+            />
+          )}
+        </div>
+      </div>
       <article
         ref={targetRef}
         className="flex flex-col items-center gap-2 pt-10"
@@ -86,39 +96,6 @@ const OnTheMenuHeader = ({ setAppliedFilters }: Props) => {
           —the more you order, the more you save.
         </p>
       </article>
-      {!isInView && (
-        <div
-          id="search-filters"
-          className="sticky top-12 z-10 bg-slate-50 lg:top-[4.5rem]"
-        >
-          <div className="relative flex h-10 justify-center py-2">
-            <p rel="search-filters" className="flex items-center">
-              <span
-                data-testid="text-filter-header-text"
-                className="text-[10px] uppercase tracking-wider text-black20"
-              >
-                Refine search
-              </span>
-              <Button
-                data-testid="btn-toggle-filter-modal"
-                ref={buttonRef}
-                variant="icon"
-                className={`h-fit w-fit transform p-0 text-primary transition-transform duration-200 hover:bg-transparent focus:outline-none ${!isModalOpen ? "rotate-0" : "-rotate-180"}`}
-                onClick={toggleModal}
-              >
-                <ArrowDropDown />
-              </Button>
-            </p>
-            {isModalOpen && (
-              <OnTheMenuFilter
-                ref={modalRef}
-                onToggleModal={toggleModal}
-                setAppliedFilters={setAppliedFilters}
-              />
-            )}
-          </div>
-        </div>
-      )}
     </>
   );
 };

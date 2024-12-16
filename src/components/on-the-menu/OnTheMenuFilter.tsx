@@ -89,7 +89,7 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
                 <li key={filterType} className="p-2">
                   <a
                     data-testid={`link-${filterType.toLocaleLowerCase()}`}
-                    className={`cursor-pointer rounded-md p-2 text-primary transition-all hover:bg-slate-100 hover:no-underline ${filterType === selectedFilterType ? "bg-slate-100" : ""}`}
+                    className={`cursor-pointer rounded-md p-2 capitalize text-primary transition-all hover:bg-slate-100 hover:no-underline ${filterType === selectedFilterType ? "bg-slate-100" : ""}`}
                     onClick={() => handleFilterTypeSelect(filterType)}
                   >
                     {filterType}

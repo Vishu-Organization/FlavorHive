@@ -1,10 +1,10 @@
 export const OnTheMenuFilterOption = {
-  cuisineType: "Cuisine",
-  dietType: "Diet",
-  dishType: "Dish",
-  health: "Health",
-  mealType: "Meal",
-  ingr: "Ingredients",
+  cuisineType: "cuisine",
+  dietType: "diet",
+  dishType: "dish",
+  health: "health",
+  mealType: "meal",
+  ingr: "ingredients",
 };
 
 export type Filters = {
