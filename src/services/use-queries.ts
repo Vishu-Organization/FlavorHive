@@ -9,6 +9,7 @@ import {
   getCuisineTypes,
   getDietTypes,
   getDishTypes,
+  getFoodBlogs,
   getHealthLabels,
   getHowItWorks,
   getLegalLinks,
@@ -167,6 +168,14 @@ export const useGetMealTypes = () => {
   return useQuery({
     queryKey: ["Meal types"],
     queryFn: getMealTypes,
+    staleTime: staticDataStaleTime,
+  });
+};
+
+export const useGetFoodBlogs = (top: number, isHomeScreen = true) => {
+  return useQuery({
+    queryKey: ["food blogs", isHomeScreen],
+    queryFn: () => getFoodBlogs(top),
     staleTime: staticDataStaleTime,
   });
 };

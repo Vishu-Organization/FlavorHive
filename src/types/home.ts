@@ -73,3 +73,13 @@ export type RecipeResponse = {
   _links: SelfNextLinks;
   hits: RecipeHit[];
 };
+
+export type BlogResponse = {
+  recipes: BlogRecipe[];
+};
+
+export type BlogRecipe = {
+  image: string;
+  sourceUrl: string;
+  title: string;
+};
