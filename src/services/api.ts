@@ -1,5 +1,7 @@
+import axios from "axios";
 import supabase from "../supabaseClient";
 import { User } from "../types/types";
+import { BlogResponse } from "../types/home";
 
 export const getAllCustomerSupportLinks = async () => {
   const { data: customerSupportLinks } = await supabase
@@ -214,3 +216,21 @@ export const getMealTypes = async () => {
   return mealTypes;
 };
 
+const SPOONACULAR_API_KEY = "0ad73f1850d44208bf7af88a748ec9fd"; // Replace with your Spoonacular API key
+const SPOONACULAR_BASE_URL = "https://api.spoonacular.com/recipes/random";
+
+export const getFoodBlogs = async (number = 10): Promise<BlogResponse> => {
+  try {
+    const response = await axios.get(SPOONACULAR_BASE_URL, {
+      params: {
+        number, // Number of results
+        apiKey: SPOONACULAR_API_KEY,
+      },
+    });
+
+    return response.data || [];
+  } catch (error) {
+    console.error("Error fetching data from Spoonacular API:", error);
+    throw error;
+  }
+};
