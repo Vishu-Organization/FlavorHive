@@ -13,13 +13,9 @@ const getHits = (response: AxiosResponse<RecipeResponse>): RecipeHit[] =>
   response?.data?.hits;
 
 const getHomeRecipe = async (url: string): Promise<Recipe> => {
-  try {
-    const hits = getHits(await axios.get(url));
-    const [{ recipe }] = hits;
-    return recipe;
-  } catch (error) {
-    throw error;
-  }
+  const hits = getHits(await axios.get(url));
+  const [{ recipe }] = hits;
+  return recipe;
 };
 
 const getRecipes = async (url: string): Promise<RecipeResponse> => {
