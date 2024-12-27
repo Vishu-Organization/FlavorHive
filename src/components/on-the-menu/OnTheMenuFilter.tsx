@@ -128,7 +128,7 @@ const OnTheMenuFilter = forwardRef<HTMLDivElement, ModalProps>(
                         type="checkbox"
                         id={`input-checkbox-${value}`}
                         name={value}
-                        className="custom-checkbox"
+                        className="custom-checkbox cursor-pointer"
                         checked={isChecked}
                         onChange={() => handleOptionChange(value)}
                       />

@@ -41,7 +41,7 @@ const OnTheMenuRecipeCard = ({
   );
 
   return (
-    <article className="flex w-64 flex-col items-stretch justify-between overflow-hidden rounded-md border border-gray-200 bg-gray-50 shadow-md transition-all duration-300 hover:border-gray-300 hover:no-underline hover:shadow-lg md:w-80 lg:w-72 2xl:w-80">
+    <article className="md:w-76 flex w-64 flex-col items-stretch justify-between overflow-hidden rounded-md border border-gray-200 bg-gray-50 shadow-md transition-all duration-300 hover:border-gray-300 hover:no-underline hover:shadow-lg lg:w-72 2xl:w-80">
       <Link className="hover:no-underline">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <img
