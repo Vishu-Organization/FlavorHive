@@ -23,11 +23,8 @@ const getHomeRecipe = async (url: string): Promise<Recipe> => {
 };
 
 const getRecipes = async (url: string): Promise<RecipeResponse> => {
-  try {
-    return (await axios.get(url)).data;
-  } catch (error) {
-    throw error;
-  }
+  // We don't need try-catch block here because we are handling the error in the caller function.
+  return (await axios.get(url)).data;
 };
 
 /**
@@ -97,7 +94,8 @@ export const getHomeMenu = async (): Promise<HomeMenu> => {
       },
     };
   } catch (error) {
-    throw error;
+    throw new Error(`We failed to fetch the recipes. Please reload or navigate to the menu
+          screen.`);
   }
 };
 
@@ -107,13 +105,20 @@ export const getOnTheMenuData = async ({
   pageParam: string;
 }): Promise<RecipeResponse> => {
   try {
-    return getRecipes(pageParam);
+    // getRecipes() returns a Promise and the error occurs inside the Promise chain,
+    // you need to await it properly to trigger the catch block.
+    // Otherwise, the error will propagate outside the try-catch block.
+    return await getRecipes(pageParam);
   } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.status === 401) {
-        throw new Error("You don't have acces to this feature");
+        throw new Error(
+          "The credentials used for accessing the recipes are wrong. Please contact the admin for more information!!",
+        );
       } else {
-        throw new Error("Something went wrong");
+        throw new Error(
+          "Failed to fetch the recipes. Please try again later!!",
+        );
       }
     } else {
       throw error;

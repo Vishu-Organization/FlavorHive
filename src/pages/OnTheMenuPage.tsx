@@ -33,6 +33,8 @@ const OnTheMenuPage = () => {
     hasNextPage,
     isPending,
     isFetchingNextPage,
+    isError,
+    error,
     fetchNextPage,
   } = useGetOnTheMenuData(appliedFilters || {});
 
@@ -40,6 +42,7 @@ const OnTheMenuPage = () => {
     <section id="on-the-menu">
       <OnTheMenuHeader setAppliedFilters={setAppliedFilters} />
       {isPending && <Loader />}
+      {isError && <p className="my-20 text-center">{error?.message}</p>}
       {recipePages?.pages.map(({ hits }, index) => {
         return <OnTheMenuRecipes recipes={hits} key={index} />;
       })}

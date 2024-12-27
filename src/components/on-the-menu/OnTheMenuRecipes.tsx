@@ -25,11 +25,18 @@ const OnTheMenuRecipes = ({ recipes }: Props) => {
 
   return (
     <section id="recipes-list" className="container mx-auto p-4">
-      <div className="grid grid-cols-2 justify-items-center gap-y-10 sm:grid-cols-2 md:gap-x-4 lg:grid-cols-3 xl:grid-cols-4">
-        {recipes?.map((recipe, index) => {
-          return <OnTheMenuRecipeCard key={index} recipe={recipe} />;
-        })}
-      </div>
+      {recipes.length ? (
+        <div className="grid grid-cols-2 justify-items-center gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-4 xl:grid-cols-4">
+          {recipes?.map((recipe, index) => {
+            return <OnTheMenuRecipeCard key={index} recipe={recipe} />;
+          })}
+        </div>
+      ) : (
+        <p className="my-10 text-center">
+          Your search didn't return any results. Please apply a different
+          filter.
+        </p>
+      )}
     </section>
   );
 };
