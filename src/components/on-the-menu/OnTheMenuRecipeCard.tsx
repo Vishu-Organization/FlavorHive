@@ -21,6 +21,9 @@ const OnTheMenuRecipeCard = ({
       url,
       dietLabels,
     },
+    _links: {
+      self: { href },
+    },
   },
 }: RecipeCardProps) => {
   const labelsForFiltering = [
@@ -40,9 +43,22 @@ const OnTheMenuRecipeCard = ({
       label.toLocaleLowerCase() === "vegetarian",
   );
 
+  const extractRecipeId = (url: string): string => {
+    const regex = /\/api\/recipes\/v2\/([^?]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : "";
+  };
+
+  const recipeId = extractRecipeId(href);
+
   return (
     <article className="md:w-76 flex w-64 flex-col items-stretch justify-between overflow-hidden rounded-md border border-gray-200 bg-gray-50 shadow-md transition-all duration-300 hover:border-gray-300 hover:no-underline hover:shadow-lg lg:w-72 2xl:w-80">
-      <Link className="hover:no-underline">
+      <Link
+        className="hover:no-underline"
+        from="/on-the-menu"
+        to={`recipe/$recipeId`}
+        params={{ recipeId }}
+      >
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <img
             src={image}
