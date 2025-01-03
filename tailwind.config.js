@@ -41,6 +41,10 @@ export default {
         gray10: "var(--gray10)",
         gray20: "var(--gray20)",
         gray30: "var(--gray30)",
+        gray40: "var(--gray40)",
+        gray50: "var(--gray50)",
+        gray60: "var(--gray60)",
+        info10: "var(--info10)",
 
         black10: "var(--black10)",
         black20: "var(--black20)",

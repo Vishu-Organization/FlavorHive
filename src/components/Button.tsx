@@ -62,6 +62,12 @@ export const buttonStyles = cva(
           "bg-transparent",
           "hover:border-transparent",
         ],
+        gray: [
+          "hover:border-transparent",
+          "bg-gray40",
+          " hover:bg-gray60",
+          "text-primary-info",
+        ],
       },
       size: {
         full: ["w-full"],
