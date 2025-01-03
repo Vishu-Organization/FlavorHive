@@ -8,6 +8,7 @@ import {
   getHomeData,
   getSignupData,
   useGetOurVisionScreenDetails,
+  useGetRecipeDetailData,
 } from "./services/use-queries";
 import DefaultLayout from "./components/layout/DefaultLayout";
 
@@ -101,6 +102,7 @@ const recipeIndexRoute = createRoute({
 const recipeDetailRoute = createRoute({
   getParentRoute: () => recipeRoute,
   path: "$recipeId",
+  loader: ({ params: { recipeId } }) => useGetRecipeDetailData(recipeId),
 }).lazy(() => import("./pages/RecipeDetailPage").then((d) => d.Route));
 
 const helpCenterRoute = createRoute({

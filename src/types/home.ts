@@ -9,9 +9,10 @@ export type Recipe = {
   calories: number;
   totalTime: number;
   dietLabels: string[];
+  yield: number;
 };
 
-type RecipeImages = {
+export type RecipeImages = {
   LARGE?: ImageContent;
   REGULAR: ImageContent;
   SMALL: ImageContent;

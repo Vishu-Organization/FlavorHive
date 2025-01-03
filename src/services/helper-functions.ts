@@ -32,8 +32,8 @@ export function replaceKeysInObject(
   return newObj;
 }
 
-const appId = "7f563e49";
-const appKeys = [
+export const appId = "7f563e49";
+export const appKeys = [
   "4be7f47dd4dc6fd6ed0b7644e352f6aa",
   "7bbf70c600c349da70d8d807a2949f29",
 ];
@@ -59,4 +59,23 @@ export const buildUrl = (selectorMap: SelectorMap) => {
     .join("");
 
   return `${getBaseUrl()}${appendFields(selectorMap.fields)}${selectors}`;
+};
+
+export const labelsForFiltering = [
+  "Sugar-Conscious",
+  "High-Protein",
+  "Low-Fat",
+  "Low-Carb",
+];
+
+export const isVeganVegetarion = (labels: string[]) =>
+  labels.some(
+    (label) =>
+      label.toLocaleLowerCase() === "vegan" ||
+      label.toLocaleLowerCase() === "vegetarian",
+  );
+
+export const getMatchingLabels = (labels: string[]) => {
+  const labelSet = new Set(labels);
+  return labelsForFiltering.filter((label) => labelSet.has(label));
 };

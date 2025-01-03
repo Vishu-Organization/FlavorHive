@@ -22,7 +22,11 @@ import {
   getTestimonials,
 } from "./api";
 import { queryClient } from "../App";
-import { getHomeMenu, getOnTheMenuData } from "./edamam-api";
+import {
+  getHomeMenu,
+  getOnTheMenuData,
+  getRecipeDetailData,
+} from "./edamam-api";
 import { Filters } from "../types/on-the-menu/on-the-menu-filter";
 import { buildUrl } from "./helper-functions";
 import { homeRecipeFields } from "../types/types";
@@ -205,5 +209,14 @@ export const useGetOnTheMenuData = (filters: Filters) => {
     initialPageParam: buildUrl({ fields, ...filters }),
     placeholderData: keepPreviousData,
     getNextPageParam: (lastPage, _) => lastPage._links?.next?.href || undefined,
+  });
+};
+
+export const useGetRecipeDetailData = (id: string) => {
+  return queryClient.ensureQueryData({
+    queryKey: ["recipe detail", id],
+    queryFn: () => getRecipeDetailData(id),
+    revalidateIfStale: true,
+    staleTime: staticDataStaleTime,
   });
 };

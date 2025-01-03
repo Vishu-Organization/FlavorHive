@@ -6,7 +6,7 @@ import {
   RecipeHit,
   RecipeResponse,
 } from "../types/home";
-import { buildUrl } from "./helper-functions";
+import { appId, appKeys, buildUrl } from "./helper-functions";
 import { homeRecipeFields } from "../types/types";
 
 const getHits = (response: AxiosResponse<RecipeResponse>): RecipeHit[] =>
@@ -119,5 +119,46 @@ export const getOnTheMenuData = async ({
     } else {
       throw error;
     }
+  }
+};
+
+export const getRecipeDetailData = async (id: string): Promise<RecipeHit> => {
+  const fields = [
+    ...homeRecipeFields,
+    "source",
+    "url",
+    "healthLabels",
+    "ingredientLines",
+    "calories",
+    "totalTime",
+    "dietLabels",
+    "yield",
+  ];
+
+  try {
+    const { data } = await axios.get(
+      `https://api.edamam.com/api/recipes/v2/${id}`,
+      {
+        params: {
+          type: "public",
+          app_id: appId,
+          app_key: appKeys[Math.floor(Math.random() * appKeys.length)],
+        },
+        paramsSerializer: (params) => {
+          // Serialize base params
+          const searchParams = new URLSearchParams(params);
+
+          // Append fields dynamically
+          fields.forEach((field) => searchParams.append("field", field));
+
+          // Return the final query string
+          return searchParams.toString();
+        },
+      },
+    );
+
+    return data;
+  } catch (error) {
+    throw error;
   }
 };
